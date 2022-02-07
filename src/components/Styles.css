@@ -65,6 +65,56 @@
   margin: 15px;
 }
 
+/* RequestAppointment Component */
+.RequestAppointment, .form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--medium-green);
+  padding: 45px 55px;
+  margin: 20px;
+}
+
+/* RequestConfirmation Component */
+.RequestConfirmation {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--medium-green);
+  color: var(--black);
+  font-weight: normal;
+  font-size: 24px;
+  padding: 50px 55px;
+  margin: 20px;
+}
+
+/* Emergency Component */
+.Emergency {
+  border:none;
+  border-radius: 5px;
+  background-color: var(--medium-green);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 55px 50px;
+  margin: 25px;
+}
+
+/* OwnerProfile Component */
+.OwnerProfile {
+  background-color: var(--medium-green);
+}
+
+
+.update-contact-info {
+  display: hidden;
+}
+
 /* Footer Component */
 .Footer {
   background-color: var(--dark-green);
