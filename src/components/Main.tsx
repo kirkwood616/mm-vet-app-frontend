@@ -2,6 +2,7 @@
 
 import Footer from "./Footer";
 import Header from "./Header";
+import HomeMenu from "./HomeMenu";
 import LogIn from "./LogIn";
 
 function Main() {
@@ -10,6 +11,7 @@ function Main() {
       <h1>MAIN</h1>
       <Header />
       <LogIn />
+      <HomeMenu />
       <Footer />
     </div>
   );

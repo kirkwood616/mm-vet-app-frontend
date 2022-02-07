@@ -86,12 +86,21 @@
 }
 
 .Footer .footer-left {
-  width: 40%;
+  width: 50%;
 }
 
 .Footer h3 {
   color: var(--black);
   font: normal 36px 'Fira Sans', cursive;
+  margin: 0;
+}
+
+.Footer .footer-left img{
+  width: 35%;
+  height: 35%;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.5);
   margin: 0;
 }
 
@@ -121,21 +130,4 @@
   color: var(--light-green);
 }
 
-.Footer .footer-right{
-  width: 20%;
-  text-decoration: none;
-}
 
-.Footer .footer-right{
-  line-height: 20px;
-  font-size: 14px;
-  font-weight: normal;
-  margin: 0;
-}
-
-.Footer .footer-right span{
-  display: block;
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
