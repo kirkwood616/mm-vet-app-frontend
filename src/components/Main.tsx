@@ -9,9 +9,9 @@ function Main() {
   return (
     <div className="Main">
       <h1>MAIN</h1>
-      <Header />
+      {/* <Header /> */}
       <LogIn />
-      <HomeMenu />
+      {/* <HomeMenu /> */}
       <Footer />
     </div>
   );
