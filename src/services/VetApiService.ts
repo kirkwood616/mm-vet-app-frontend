@@ -16,6 +16,12 @@ export function fetchCustomer(id: string): Promise<Customer> {
     .then((res) => res.data);
 }
 
+export function fetchCustomerByEmail(email: string): Promise<Customer> {
+  return axios
+    .get(`http://localhost:5001/mm-vet-app/us-central1/api/customer/${email}`)
+    .then((res) => res.data);
+}
+
 // PETS
 export function fetchAllPets(): Promise<Pet[]> {
   return axios
