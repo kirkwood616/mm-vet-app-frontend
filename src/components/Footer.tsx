@@ -3,16 +3,15 @@
 function Footer() {
   return (
     <div className="Footer">
-      <h1>FOOTER</h1>
+      {/* <h1>FOOTER</h1> */}
       <div className="footer-left">
         <h3>
-          M&M Vet Clinic{" "}
-          <span>
+          M&M Veterinary Clinic{" "}
+        </h3> 
+        <span>
             {" "}
-            <img src="" alt="" />
-            Logo
-          </span>
-        </h3>
+            <img src="M&M logo plain.png" alt="logo" />
+        </span>
       </div>
 
       <div className="footer-center">
@@ -33,20 +32,6 @@ function Footer() {
           {" "}
           <a href="mailto:">info@m&m.vetclinic.com</a>
         </p>
-      </div>
-
-      <div className="footer-right">
-        <h3><span>
-          <a href="">About Us</a>
-          </span>
-          <p>
-            Lorem ipsom, Nap all day cat dog hate mouse eat string barf pillow no baths hate
-            everything but kitty poochy. Sleep on keyboard toy mouse squeak roll
-            over. Mesmerizing birds. Poop on grasses licks paws destroy couch
-            intently sniff hand. The dog smells bad gnaw the corn cob.
-
-          </p>
-        </h3>
       </div>
     </div>
   );
