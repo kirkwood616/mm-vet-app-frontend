@@ -1,16 +1,2 @@
-:root {
-  --white: white;
-  --black: black;
-  --light-green: #ebf6f1;
-  --medium-green: #dfebd3;
-  --dark-green: #9da653;
-}
 
-/* APP COMPONENT */
-.App {
-  /* background-color: var(--medium-green); */
-}
 
-/* MAIN COMPONENT */
-.Main {
-}
