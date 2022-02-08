@@ -9,10 +9,18 @@ function Emergency() {
         contact:
       </p>
       <li>
-        <a href="https://www.google.com/maps/search/emergency+animal+hospital+detroit/@42.437424,-83.3964379,10z/data=!3m1!4b1">Emergency animal hospital near Detroit</a>
+        <a
+          href="https://www.google.com/maps/search/emergency+animal+hospital+detroit/@42.437424,-83.3964379,10z/data=!3m1!4b1"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Emergency animal hospital near Detroit
+        </a>
       </li>
 
-      <button><a href="/homepage">Back to homepage</a></button>
+      <button>
+        <a href="/homepage">Back to homepage</a>
+      </button>
     </div>
   );
 }

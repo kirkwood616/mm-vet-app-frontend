@@ -115,6 +115,26 @@
   display: hidden;
 }
 
+/* AboutUs Components */
+.AboutUs {
+  display: block;
+  background-color: var(--light-green);
+  border-radius: 8px;
+  color: var(--dark-green);
+  padding: 55px 50px;
+  margin: 20px;
+}
+.AboutUs table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.AboutUs th, td{
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
 /* Footer Component */
 .Footer {
   background-color: var(--dark-green);

@@ -20,7 +20,7 @@ function Footer() {
         <p>
           {" "}
           <span>
-            M&M Vet Clinic: 555 Fifty Five St., Detroit, MI 48226
+            M&M Veterinary Clinic: 555 Fifty Five St., Detroit, MI 48226
           </span>{" "}
         </p>
         <i>Hours:</i>
