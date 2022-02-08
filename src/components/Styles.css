@@ -66,7 +66,8 @@
 }
 
 /* RequestAppointment Component */
-.RequestAppointment, .form-container {
+.RequestAppointment,
+.form-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -94,7 +95,7 @@
 
 /* Emergency Component */
 .Emergency {
-  border:none;
+  border: none;
   border-radius: 5px;
   background-color: var(--medium-green);
   display: flex;
@@ -105,11 +106,10 @@
   margin: 25px;
 }
 
-/* OwnerProfile Component */
-.OwnerProfile {
+/* UserProfile Component */
+.UserProfile {
   background-color: var(--medium-green);
 }
-
 
 .update-contact-info {
   display: hidden;
@@ -124,12 +124,13 @@
   padding: 55px 50px;
   margin: 20px;
 }
-.AboutUs table{
+.AboutUs table {
   border-collapse: collapse;
   width: 100%;
 }
 
-.AboutUs th, td{
+.AboutUs th,
+td {
   padding: 8px;
   text-align: left;
   border-bottom: 1px solid #ddd;

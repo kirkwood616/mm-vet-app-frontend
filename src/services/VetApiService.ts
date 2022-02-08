@@ -1,24 +1,24 @@
 import axios from "axios";
-import Customer from "../models/Customer";
+import User from "../models/User";
 import Pet from "../models/Pet";
-import MedicalRecord from "../models/MedicalRecord";
+// import MedicalRecord from "../models/MedicalRecord";
 
 // CUSTOMERS
-export function fetchAllCustomers(): Promise<Customer[]> {
+export function fetchAllUsers(): Promise<User[]> {
   return axios
-    .get("http://localhost:5001/mm-vet-app/us-central1/api/customers")
+    .get("http://localhost:5001/mm-vet-app/us-central1/api/users")
     .then((res) => res.data);
 }
 
-export function fetchCustomer(id: string): Promise<Customer> {
+export function fetchUser(id: string): Promise<User> {
   return axios
-    .get(`http://localhost:5001/mm-vet-app/us-central1/api/customers/${id}`)
+    .get(`http://localhost:5001/mm-vet-app/us-central1/api/users/${id}`)
     .then((res) => res.data);
 }
 
-export function fetchCustomerByEmail(email: string): Promise<Customer> {
+export function fetchUserByEmail(email: string): Promise<User> {
   return axios
-    .get(`http://localhost:5001/mm-vet-app/us-central1/api/customer/${email}`)
+    .get(`http://localhost:5001/mm-vet-app/us-central1/api/user/${email}`)
     .then((res) => res.data);
 }
 

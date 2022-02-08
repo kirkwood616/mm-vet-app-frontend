@@ -1,8 +1,6 @@
-// import "./OwnerProfile.css";
-
-function OwnerProfile() {
+function UserProfile() {
   return (
-    <div className="OwnerProfile">
+    <div className="UserProfile">
       {/* <h1>OWNER PROFILE</h1> */}
       {/* customer profile */}
       <h3>Welcome Name: </h3>
@@ -13,9 +11,16 @@ function OwnerProfile() {
       <p>Phone: </p>
       <p>Email: </p>
       <br />
-      <h2> <a href="/pet-profile">Your Pets</a></h2>
+      <h2>
+        {" "}
+        <a href="/pet-profile">Your Pets</a>
+      </h2>
       <br />
-      <h3><a href="/update-contact-info">Update your contact information click!</a></h3>
+      <h3>
+        <a href="/update-contact-info">
+          Update your contact information click!
+        </a>
+      </h3>
       <div className="update-contact-info">
         {/* set update info hidden till client click request the update */}
         {/* <form >
@@ -28,4 +33,4 @@ function OwnerProfile() {
   );
 }
 
-export default OwnerProfile;
+export default UserProfile;
