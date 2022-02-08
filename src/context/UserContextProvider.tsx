@@ -8,6 +8,7 @@ interface Props {
 }
 
 export default function UserContextProvider({ children }: Props) {
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
   const [email, setEmail] = useState<string>("");
   const [user, setUser] = useState<User>({
     _id: "",
@@ -23,10 +24,10 @@ export default function UserContextProvider({ children }: Props) {
     e.preventDefault();
     if (email) {
       fetchUserByEmail(email).then((data) => setUser(data));
+      if (user.email) setIsLoggedIn(true);
     } else {
       return;
     }
-    console.log(user);
   }
 
   function handleEmail(input: string): void {
@@ -38,7 +39,9 @@ export default function UserContextProvider({ children }: Props) {
   //   setUser(undefined);
   // }
   return (
-    <UserContext.Provider value={{ user, handleLogIn, handleEmail }}>
+    <UserContext.Provider
+      value={{ user, handleLogIn, handleEmail, isLoggedIn }}
+    >
       {children}
     </UserContext.Provider>
   );

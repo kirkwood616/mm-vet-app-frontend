@@ -1,13 +1,15 @@
 // import "./LogIn.css";
-import { FormEvent, useContext, useState } from "react";
+import { useContext } from "react";
 import UserContext from "../context/UserContext";
-import User from "../models/User";
-import { fetchUserByEmail } from "../services/VetApiService";
+import { Link } from "react-router-dom";
 
 function LogIn() {
-  let { user } = useContext(UserContext);
+  let { user, isLoggedIn } = useContext(UserContext);
   let { handleLogIn } = useContext(UserContext);
   let { handleEmail } = useContext(UserContext);
+
+  console.log(user);
+  console.log(isLoggedIn);
 
   return (
     <div className="LogIn">
@@ -36,10 +38,7 @@ function LogIn() {
 
           <p>
             Don't have an account?
-            <a href="">Create an account</a>
-          </p>
-          <p>
-            {user.firstName} {user.lastName}
+            <Link to="/">Create An Account</Link>
           </p>
         </div>
       </div>

@@ -13,7 +13,6 @@ function Header() {
           alt="M&M Veterinary Clinic Top Logo"
           height={150}
         />
-        <HomeMenu />
       </div>
     </div>
   );

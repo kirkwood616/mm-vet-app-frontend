@@ -14,6 +14,8 @@ import RequestAppointment from "./components/RequestAppointment";
 import RequestConfirmation from "./components/RequestConfirmation";
 import Services from "./components/Services";
 import YourPets from "./components/YourPets";
+import HomeMenu from "./components/HomeMenu";
+import LogIn from "./components/LogIn";
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
             path="/request-confirmation"
             element={<RequestConfirmation />}
           />
+          <Route path="/home-menu" element={<HomeMenu />} />
+          <Route path="/log-in" element={<LogIn />} />
           <Route path="/services" element={<Services />} />
           <Route path="/your-pets" element={<YourPets />} />
         </Routes>

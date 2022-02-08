@@ -5,6 +5,7 @@ interface UserContextModel {
   user: User;
   handleLogIn: (e: FormEvent) => void;
   handleEmail: (input: string) => void;
+  isLoggedIn: boolean;
   // handleLogOut: () => void;
 }
 
@@ -20,6 +21,7 @@ const defaultValue: UserContextModel = {
   },
   handleLogIn: () => {},
   handleEmail: () => {},
+  isLoggedIn: false,
   // handleLogOut: () => {},
 };
 
