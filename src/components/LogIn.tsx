@@ -1,27 +1,13 @@
 // import "./LogIn.css";
-import { FormEvent, useState } from "react";
+import { FormEvent, useContext, useState } from "react";
+import UserContext from "../context/UserContext";
 import User from "../models/User";
 import { fetchUserByEmail } from "../services/VetApiService";
 
 function LogIn() {
-  const [email, setEmail] = useState<string>("");
-  const [user, setUser] = useState<User>();
-
-  function handleLogIn(e: FormEvent): void {
-    e.preventDefault();
-    if (email) {
-      fetchUserByEmail(email).then((data) => setUser(data));
-    } else {
-      return;
-    }
-  }
-
-  function handleLogOut(): void {
-    setEmail("");
-    setUser(undefined);
-  }
-
-  console.log(user);
+  let { user } = useContext(UserContext);
+  let { handleLogIn } = useContext(UserContext);
+  let { handleEmail } = useContext(UserContext);
 
   return (
     <div className="LogIn">
@@ -35,7 +21,7 @@ function LogIn() {
               <input
                 type="email"
                 placeholder="info@email.com"
-                onChange={(e) => setEmail(e.target.value.toLowerCase())}
+                onChange={(e) => handleEmail(e.target.value.toLowerCase())}
               />
             </div>
 
@@ -50,7 +36,10 @@ function LogIn() {
 
           <p>
             Don't have an account?
-            <a href="#">Create an account</a>
+            <a href="">Create an account</a>
+          </p>
+          <p>
+            {user.firstName} {user.lastName}
           </p>
         </div>
       </div>

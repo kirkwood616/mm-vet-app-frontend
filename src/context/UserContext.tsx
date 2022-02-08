@@ -4,7 +4,8 @@ import User from "../models/User";
 interface UserContextModel {
   user: User;
   handleLogIn: (e: FormEvent) => void;
-  handleLogOut: () => void;
+  handleEmail: (input: string) => void;
+  // handleLogOut: () => void;
 }
 
 const defaultValue: UserContextModel = {
@@ -18,7 +19,8 @@ const defaultValue: UserContextModel = {
     pets: [],
   },
   handleLogIn: () => {},
-  handleLogOut: () => {},
+  handleEmail: () => {},
+  // handleLogOut: () => {},
 };
 
 const UserContext = createContext(defaultValue);
