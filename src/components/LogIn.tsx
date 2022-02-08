@@ -1,30 +1,27 @@
 // import "./LogIn.css";
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useState } from "react";
 import Customer from "../models/Customer";
 import { fetchCustomerByEmail } from "../services/VetApiService";
 
 function LogIn() {
   const [email, setEmail] = useState<string>("");
-  const [emailInput, setEmailInput] = useState<string>("");
   const [customer, setCustomer] = useState<Customer>();
 
-  function handleLogIn(e: FormEvent) {
+  function handleLogIn(e: FormEvent): void {
     e.preventDefault();
-    setEmail(emailInput);
-    console.log(customer);
-  }
-
-  // API CALL => SEARCH FOR USER BY E-MAIL
-  useEffect(() => {
     if (email) {
       fetchCustomerByEmail(email).then((data) => setCustomer(data));
     } else {
       return;
     }
-  }, [email]);
+  }
 
-  // console.log(emailInput);
-  // console.log(customer);
+  function handleLogOut(): void {
+    setEmail("");
+    setCustomer(undefined);
+  }
+
+  console.log(customer);
 
   return (
     <div className="LogIn">
@@ -38,7 +35,7 @@ function LogIn() {
               <input
                 type="email"
                 placeholder="info@email.com"
-                onChange={(e) => setEmailInput(e.target.value.toLowerCase())}
+                onChange={(e) => setEmail(e.target.value.toLowerCase())}
               />
             </div>
 
