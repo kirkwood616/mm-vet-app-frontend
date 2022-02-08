@@ -1,4 +1,4 @@
-import { FormEvent, ReactNode, useState } from "react";
+import { FormEvent, ReactNode, useEffect, useState } from "react";
 import UserContext from "./UserContext";
 import User from "../models/User";
 import { fetchUserByEmail } from "../services/VetApiService";
@@ -22,17 +22,16 @@ export default function UserContextProvider({ children }: Props) {
 
   function handleLogIn(e: FormEvent): void {
     e.preventDefault();
-    if (email) {
-      fetchUserByEmail(email).then((data) => setUser(data));
-      if (user.email) setIsLoggedIn(true);
-    } else {
-      return;
-    }
+    fetchUserByEmail(email).then((data) => setUser(data));
   }
 
   function handleEmail(input: string): void {
     setEmail(input);
   }
+
+  useEffect(() => {
+    if (user.email) setIsLoggedIn(true);
+  }, [user]);
 
   // function handleLogOut(): void {
   //   setEmail("");
