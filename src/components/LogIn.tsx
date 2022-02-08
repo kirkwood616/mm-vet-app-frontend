@@ -1,16 +1,16 @@
 // import "./LogIn.css";
 import { FormEvent, useState } from "react";
-import Customer from "../models/Customer";
-import { fetchCustomerByEmail } from "../services/VetApiService";
+import User from "../models/User";
+import { fetchUserByEmail } from "../services/VetApiService";
 
 function LogIn() {
   const [email, setEmail] = useState<string>("");
-  const [customer, setCustomer] = useState<Customer>();
+  const [user, setUser] = useState<User>();
 
   function handleLogIn(e: FormEvent): void {
     e.preventDefault();
     if (email) {
-      fetchCustomerByEmail(email).then((data) => setCustomer(data));
+      fetchUserByEmail(email).then((data) => setUser(data));
     } else {
       return;
     }
@@ -18,10 +18,10 @@ function LogIn() {
 
   function handleLogOut(): void {
     setEmail("");
-    setCustomer(undefined);
+    setUser(undefined);
   }
 
-  console.log(customer);
+  console.log(user);
 
   return (
     <div className="LogIn">

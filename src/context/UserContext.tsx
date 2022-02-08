@@ -1,14 +1,14 @@
 import { createContext, FormEvent } from "react";
-import Customer from "../models/Customer";
+import User from "../models/User";
 
-interface CustomerContextModel {
-  customer: Customer;
+interface UserContextModel {
+  user: User;
   handleLogIn: (e: FormEvent) => void;
   handleLogOut: () => void;
 }
 
-const defaultValue: CustomerContextModel = {
-  customer: {
+const defaultValue: UserContextModel = {
+  user: {
     _id: "",
     firstName: "",
     lastName: "",
@@ -21,5 +21,5 @@ const defaultValue: CustomerContextModel = {
   handleLogOut: () => {},
 };
 
-const CustomerContext = createContext(defaultValue);
-export default CustomerContext;
+const UserContext = createContext(defaultValue);
+export default UserContext;

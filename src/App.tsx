@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import OwnerProfile from "./components/OwnerProfile";
+import UserProfile from "./components/UserProfile";
 import AboutUs from "./components/AboutUs";
 import Emergency from "./components/Emergency";
 import HealthRecords from "./components/HealthRecords";
@@ -26,7 +26,7 @@ function App() {
           <Route path="/emergency" element={<Emergency />} />
           <Route path="/health-records" element={<HealthRecords />} />
           <Route path="/pet-profile" element={<PetProfile />} />
-          <Route path="/customer-profile" element={<OwnerProfile />} />
+          <Route path="/user-profile" element={<UserProfile />} />
           <Route path="/request-appointment" element={<RequestAppointment />} />
           <Route
             path="/request-confirmation"

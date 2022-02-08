@@ -1,6 +1,6 @@
 import Pet from "./Pet";
 
-interface Customer {
+interface User {
   _id?: string;
   firstName: string;
   lastName: string;
@@ -10,4 +10,4 @@ interface Customer {
   pets: Pet[];
 }
 
-export default Customer;
+export default User;
