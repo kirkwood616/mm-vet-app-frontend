@@ -7,14 +7,18 @@ function LogIn() {
   const [email, setEmail] = useState<string>("");
   const [customer, setCustomer] = useState<Customer>();
 
-  function handleLogIn(e: FormEvent) {
+  function handleLogIn(e: FormEvent): void {
     e.preventDefault();
     if (email) {
       fetchCustomerByEmail(email).then((data) => setCustomer(data));
     } else {
       return;
     }
-    // console.log(customer);
+  }
+
+  function handleLogOut(): void {
+    setEmail("");
+    setCustomer(undefined);
   }
 
   console.log(customer);
