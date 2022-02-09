@@ -8,9 +8,6 @@ function LogIn() {
   let { handleLogIn } = useContext(UserContext);
   let { handleEmail } = useContext(UserContext);
 
-  console.log(user);
-  console.log(isLoggedIn);
-
   return (
     <div className="LogIn">
       <div className="logInForm">
