@@ -1,24 +1,24 @@
-// import "./YourPets.css";
+import "./YourPets.css";
 import { useContext } from "react";
 import UserContext from "../context/UserContext";
 
 function YourPets() {
   let { userPets } = useContext(UserContext);
-  console.log(userPets);
+  // console.log(userPets);
 
   return (
     <div className="YourPets">
       <h1>YOUR PETS</h1>
-      <div className="pet-card">
-        {/* <a href="/pet-profile">
-          {" "}
-          <img src="" alt="" height={300} width={300} />
-          Pet Name
-        </a> */}
-        {userPets.map((pet) => (
-          <p>{pet.petFirstName + " " + pet.petLastName}</p>
-        ))}
-      </div>
+      {userPets.map((pet) => (
+        <div className="yourPetBar">
+          <img
+            src="https://www.freeiconspng.com/uploads/png-file-png-file-png-file-png-file-png-file-30.png"
+            width="100"
+            alt="paw icon"
+          />
+          <h2>{pet.petFirstName}</h2>
+        </div>
+      ))}
     </div>
   );
 }

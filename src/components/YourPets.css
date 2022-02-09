@@ -1,0 +1,29 @@
+.YourPets {
+  background-color: #dfebd3;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 100%;
+}
+
+.YourPets h2 {
+  color: white;
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+.YourPets .yourPetsContainer {
+  width: 100%;
+}
+
+.YourPets .yourPetBar {
+  background-color: #9da653;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  width: 300px;
+  margin: 1rem;
+  padding: 0.5rem;
+}
