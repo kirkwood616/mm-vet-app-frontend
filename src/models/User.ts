@@ -1,4 +1,4 @@
-import Pet from "./Pet";
+// import Pet from "./Pet";
 
 interface User {
   _id?: string;
@@ -14,7 +14,7 @@ interface User {
   ];
   phone: string;
   email: string;
-  pets: Pet[];
+  pets: string[];
 }
 
 export default User;
