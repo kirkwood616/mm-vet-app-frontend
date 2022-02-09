@@ -4,16 +4,16 @@ function Services() {
   return (
     <div className="Services">
       <img src="" alt="" />
-      <h1>OUR SERVICES</h1>
+      <h1>Our Services</h1>
       <br />
       <button>
         <a href="/home-menu">Back to homepage</a>
       </button>
+      <br />
       <div className="Services-cards">
-        <div className="Services-cards pet-wellness">
-          <h1>PET WELLNESS</h1>
-          <img src="" alt="" />
-
+        <div className="Services-cards item pet-wellness">
+          <h1>Pet Wellness</h1>
+          <img src="./animal-photos/well.jpg" alt="pet-wellness-services" />
           <p>
             Annual wellness exams evaluate your pets overall health, detect
             problems before they become serious, and keep them on track to live
@@ -109,9 +109,9 @@ function Services() {
           <br />
         </div>
         <br />
-        <div className="Services-cards dentistry">
-          <h1>DENTISTRY</h1>
-          <img src="" alt="" />
+        <div className="Services-cards item dentistry">
+          <h1>Dentistry</h1>
+          <img src="./animal-photos/dental.jpg" alt="dental-services" />
           <p>
             Imagine if you never brushed your teeth or had them cleaned. Pretty
             frightening, right? As you can imagine, things would eventually
@@ -162,9 +162,9 @@ function Services() {
           </p>
         </div>
         <br />
-        <div className="Services-cards diet-nutriion">
-          <h1>DIET & NUTRITION</h1>
-          <img src="" alt="" />
+        <div className="Services-cards item diet-nutrition">
+          <h1>Diet & Nutrition</h1>
+          <img src="./animal-photos/diet.jpg" alt="diet-nutrition-services" />
           <p>
             Proper diet and nutrition can help your pet fight against disease,
             maintain a proper weight, and promote the overall well-being of your
@@ -238,9 +238,9 @@ function Services() {
           </p>
         </div>
         <br />
-        <div className="Services-cards vaccinations">
-          <h1>VACCINATIONS</h1>
-          <img src="" alt="" />
+        <div className="Services-cards item vaccinations">
+          <h1>Vaccinations</h1>
+          <img src="./animal-photos/vaccinations.jpg" alt="vaccinations-services" />
           <p>
             Young animals are like kids—it’s a never-ending job to keep them
             safe and happy. Vaccinating your pet is a relatively inexpensive but
@@ -294,10 +294,10 @@ function Services() {
           </p>
           <br />
         </div>
-
-        <div className="Services-cards spay-neuter">
+        <br />
+        <div className="Services-cards item spay-neuter">
           <h1>SPAY/NEUTER</h1>
-          <img src="" alt="" />
+          <img src="./animal-photos/spay-neuter.jpg" alt="spay-neuter-services" />
           <br />
           <p>
             Spaying or neutering your pet can help them live a longer, healthier
@@ -380,9 +380,60 @@ function Services() {
           </p>
           <br />
         </div>
-        <div className="Services-cards parasite-control">
-          <h1>PARASITE CONTROL(Fleas, Ticks & Heartworms)</h1>
-          <img src="" alt="" />
+        <br />
+        <div className="Services-cards item surgery">
+          <h1>Surgery</h1>
+          <img src="./animal-photos/surgery.jpg" alt="sergery-services" />
+          <p>
+            Our clinic is equipped to perform a wide variety of soft tissue and
+            orthopedic surgical procedures. Some of the common procedures
+            include: spays and neuters, growth removals, and foreign body
+            removal. Orthopedic procedures commonly performed include: fracture
+            repair with plates, pins, or external fixators, cruciate ligament
+            repair, luxating patellas, and FHO surgeries for hip dysplasia.
+          </p>
+          <br />
+          <p>
+            Surgery is often the most effective way to treat many serious
+            injuries and disorders, and Fowlerville Veterinary Clinic is proud
+            to offer state-of-the-art facilities and equipment. Our hospital
+            provides a full range of surgical services ranging from standard
+            spaying and neutering to advanced, highly specialized procedures.
+          </p>
+          <br />
+          <p>
+            <ul>Surgery specialties</ul>
+            <li>Soft-tissue</li>
+            <li>Orthopedic</li>
+            <li>Neurological</li>
+            <li>Dental</li>
+            <li>Ophthalmic</li>
+            <li>Foreign body removal</li>
+          </p>
+          <p>
+            Patient safety and comfort is our main priority. Fowlerville
+            Veterinary Clinic’s experienced veterinary anesthesiologists provide
+            skilled pain management during and after all surgical procedures,
+            ensuring your pet recovers quickly and with minimum discomfort.
+          </p>
+          <p>
+            Our veterinary team will walk you through the entire process, giving
+            you the tools to make informed decisions regarding your pet’s
+            treatment options. We understand surgery is a stressful time for any
+            owner, and we’re available every step of the way to answer questions
+            and put your mind at ease.
+          </p>
+          <p>
+            If you are considering veterinary surgery for your pet, please
+            contact us at (555)555-5555 to schedule a consultation with your M&M
+            Veterinary Clinic veterinarian.
+          </p>
+        </div>
+        <br />
+        <div className="Services-cards item parasite-control">
+          <h1>Parasite Control</h1>
+          <h2>(Fleas, Ticks & Heartworms)</h2>
+          <img src="./animal-photos/parasite-control-ser.jpg" alt="" />
           <p>
             Parasites such as fleas and ticks can be very damaging to your pet’s
             health. Preventive measures should be taken year-round to inhibit
@@ -446,6 +497,7 @@ function Services() {
           </p>
           <br />
           <h3>When should I seek treatment for parasites?</h3>
+          <img src="./animal-photos/treatment.jpg" alt="treatment-for-parasites-service" />
           <br />
           <h4>Fleas:</h4>
           <p>
@@ -491,9 +543,10 @@ function Services() {
           </p>
           <br />
         </div>
-        <div className="Services-cards microchipping">
-          <h1>MICROCHIPPING</h1>
-          <img src="" alt="" />
+        <br />
+        <div className="Services-cards item microchipping">
+          <h1>Microchipping</h1>
+          <img src="./animal-photos/microchipping.jpg" alt="microchipping-services" />
           <br />
           <p>
             Microchip identification is the most reliable way to reunite lost
@@ -549,19 +602,29 @@ function Services() {
           <br />
           <p>
             Looking for your pet?{" "}
-            <a href="https://www.aaha.org/petmicrochiplookup">Click here</a> 
-            to
-            access the Universal Pet Microchip Lookup.
+            <a href="https://www.aaha.org/petmicrochiplookup">Click here</a>
+            to access the Universal Pet Microchip Lookup.
           </p>
           <br />
         </div>
-
-        <div className="Services-cards grooming">
-          <h1>GROOMING</h1>
-          <img src="" alt="" />
+        <br />
+        <div className="Services-cards item grooming">
+          <h1>Grooming</h1>
+          <img src="./animal-photos/dogG.png" alt="grooming-services" />
           <br />
-          <p></p>
-
+          <p>
+            We offer the finest in all breed grooming services for your pet. Our
+            groomers are experienced, kind, and hard-working! Let us pamper your
+            pet and make them look their best. We are happy to employ
+            professional groomers in our hospital because we believe that it
+            offers many conveniences to you as a client. Two main points would
+            be that you can have your pet’s preventive healthcare updated the
+            same day as grooming and most importantly, sometimes the groomer is
+            the one to first notice ear infections, cysts, tumors, and skin
+            conditions which can be early signs of other more serious medical
+            conditions.
+          </p>
+          <img src="./animal-photos/catG.png" alt="grooming-services" />
         </div>
       </div>
     </div>
