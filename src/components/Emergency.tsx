@@ -1,4 +1,4 @@
-// import "./Emergency.css";
+import "./Emergency.css";
 
 function Emergency() {
   return (

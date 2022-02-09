@@ -1,4 +1,4 @@
-// import "./NavMenu.css";
+import "./NavMenu.css";
 
 function NavMenu() {
   return (

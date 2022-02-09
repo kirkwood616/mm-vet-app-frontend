@@ -1,4 +1,4 @@
-// import "./AboutUs.css";
+import "./AboutUs.css";
 
 function AboutUs() {
   return (
@@ -11,6 +11,7 @@ function AboutUs() {
         height={450}
         width={600}
       />
+
       <br />
       <div className="AboutUs Our-Doctor">
       <h2>Our Mission</h2>
@@ -27,6 +28,9 @@ function AboutUs() {
         technology with decades of experience to provide the highest level of
         care for your pet.
       </p>
+
+      <p>Discription for vet</p>
+
       <br />
       <h2>OUR DOCTOR</h2>
       <h3>Doctor ipsum</h3>

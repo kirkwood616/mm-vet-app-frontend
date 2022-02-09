@@ -1,4 +1,4 @@
-// import "./RequestAppointment.css";
+import "./RequestAppointment.css";
 
 function RequestAppointment() {
   return (

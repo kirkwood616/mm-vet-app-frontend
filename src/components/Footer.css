@@ -1,0 +1,63 @@
+.Footer {
+  background-color: var(--dark-green);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  font-family: "Fira Sans", "Sans-serif";
+  width: 100%;
+  height: 50vh;
+  font-size: 12px;
+  text-align: left;
+  display: inline-block;
+  padding: 55px 50px;
+}
+.Footer .footer-left,
+.Footer .footer-center,
+.Footer .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.Footer .footer-left {
+  width: 50%;
+}
+
+.Footer h3 {
+  color: var(--black);
+  font: normal 36px "Fira Sans", cursive;
+  margin: 0;
+}
+
+.Footer .footer-left img {
+  width: 35%;
+  height: 35%;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+.Footer .footer-center {
+  width: 35%;
+}
+
+.Footer .footer-center i {
+  font-size: 24px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.Footer .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+.Footer .footer-center p a {
+  text-decoration: none;
+  color: var(--light-green);
+}

@@ -1,0 +1,6 @@
+.Main {
+  background-color: var(--medium-green);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
