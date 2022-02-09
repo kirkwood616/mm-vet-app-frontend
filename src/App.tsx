@@ -27,7 +27,7 @@ function App() {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/emergency" element={<Emergency />} />
           <Route path="/health-records" element={<HealthRecords />} />
-          <Route path="/pet-profile/:id" element={<PetProfile />} />
+          <Route path="/pet-profile/:index" element={<PetProfile />} />
           <Route path="/user-profile" element={<UserProfile />} />
           <Route path="/request-appointment" element={<RequestAppointment />} />
           <Route
