@@ -19,7 +19,7 @@ function Emergency() {
       </li>
 
       <button>
-        <a href="/homepage">Back to homepage</a>
+        <a href="/home-menu">Back to homepage</a>
       </button>
     </div>
   );

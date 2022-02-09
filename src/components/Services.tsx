@@ -5,6 +5,14 @@ function Services() {
     <div className="Services">
       <img src="" alt="" />
       <h1>Our Services</h1>
+      <p>
+        We understand that a pet is part of the family. Our goal is to provide
+        each one with a long, healthy and happy life. The day your pet enters
+        our hospital it becomes part of our family too. From new puppy and
+        kittens to graying seniors, we are there every step of the way. Our
+        comprehensive suite of veterinary services ensures that every aspect of
+        their well-being is given the excellent care they deserve.
+      </p>
       <br />
       <button>
         <a href="/home-menu">Back to homepage</a>
@@ -240,7 +248,10 @@ function Services() {
         <br />
         <div className="Services-cards item vaccinations">
           <h1>Vaccinations</h1>
-          <img src="./animal-photos/vaccinations.jpg" alt="vaccinations-services" />
+          <img
+            src="./animal-photos/vaccinations.jpg"
+            alt="vaccinations-services"
+          />
           <p>
             Young animals are like kids—it’s a never-ending job to keep them
             safe and happy. Vaccinating your pet is a relatively inexpensive but
@@ -297,7 +308,10 @@ function Services() {
         <br />
         <div className="Services-cards item spay-neuter">
           <h1>SPAY/NEUTER</h1>
-          <img src="./animal-photos/spay-neuter.jpg" alt="spay-neuter-services" />
+          <img
+            src="./animal-photos/spay-neuter.jpg"
+            alt="spay-neuter-services"
+          />
           <br />
           <p>
             Spaying or neutering your pet can help them live a longer, healthier
@@ -497,7 +511,10 @@ function Services() {
           </p>
           <br />
           <h3>When should I seek treatment for parasites?</h3>
-          <img src="./animal-photos/treatment.jpg" alt="treatment-for-parasites-service" />
+          <img
+            src="./animal-photos/treatment.jpg"
+            alt="treatment-for-parasites-service"
+          />
           <br />
           <h4>Fleas:</h4>
           <p>
@@ -546,7 +563,10 @@ function Services() {
         <br />
         <div className="Services-cards item microchipping">
           <h1>Microchipping</h1>
-          <img src="./animal-photos/microchipping.jpg" alt="microchipping-services" />
+          <img
+            src="./animal-photos/microchipping.jpg"
+            alt="microchipping-services"
+          />
           <br />
           <p>
             Microchip identification is the most reliable way to reunite lost
