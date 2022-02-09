@@ -14,7 +14,14 @@ const defaultValue: UserContextModel = {
     _id: "",
     firstName: "",
     lastName: "",
-    address: [],
+    address: [
+      {
+        street: "",
+        city: "",
+        state: "",
+        zip: "",
+      },
+    ],
     phone: "",
     email: "",
     pets: [],
