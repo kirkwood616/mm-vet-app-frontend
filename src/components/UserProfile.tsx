@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import UserContext from "../context/UserContext";
+import { Link } from "react-router-dom";
 
 function UserProfile() {
   let { user } = useContext(UserContext);
@@ -23,14 +24,10 @@ function UserProfile() {
       <br />
       <h2>
         {" "}
-        <a href="/pet-profile">Your Pets</a>
+        <Link to="/your-pets">Your Pets</Link>
       </h2>
       <br />
-      <h3>
-        <a href="/update-contact-info">
-          Update your contact information click!
-        </a>
-      </h3>
+      <h3>Update your contact information</h3>
       <div className="update-contact-info">
         {/* set update info hidden till client click request the update */}
         {/* <form >

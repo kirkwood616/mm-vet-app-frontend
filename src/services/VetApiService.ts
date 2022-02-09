@@ -31,7 +31,7 @@ export function fetchAllPets(): Promise<Pet[]> {
 
 export function fetchPet(id: string): Promise<Pet> {
   return axios
-    .get(`http://localhost:5001/mm-vet-app/us-central1/api/pets/${id}`)
+    .get(`http://localhost:5001/mm-vet-app/us-central1/api/pet/${id}`)
     .then((res) => res.data);
 }
 

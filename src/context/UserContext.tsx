@@ -1,8 +1,10 @@
 import { createContext, FormEvent } from "react";
+import Pet from "../models/Pet";
 import User from "../models/User";
 
 interface UserContextModel {
   user: User;
+  userPets: Pet[];
   handleLogIn: (e: FormEvent) => void;
   handleEmail: (input: string) => void;
   isLoggedIn: boolean;
@@ -26,6 +28,7 @@ const defaultValue: UserContextModel = {
     email: "",
     pets: [],
   },
+  userPets: [],
   handleLogIn: () => {},
   handleEmail: () => {},
   isLoggedIn: false,
