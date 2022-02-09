@@ -1,4 +1,4 @@
-// import "./Main.css";
+import "./Main.css";
 import Footer from "./Footer";
 import HomeMenu from "./HomeMenu";
 import LogIn from "./LogIn";

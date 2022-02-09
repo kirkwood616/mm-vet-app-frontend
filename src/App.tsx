@@ -1,9 +1,7 @@
 import React from "react";
 import "./App.css";
-import "./components/Styles.css";
 import Header from "./components/Header";
 import Main from "./components/Main";
-import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import UserProfile from "./components/UserProfile";
 import AboutUs from "./components/AboutUs";

@@ -1,0 +1,11 @@
+.RequestAppointment,
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--medium-green);
+  padding: 45px 55px;
+  margin: 20px;
+}

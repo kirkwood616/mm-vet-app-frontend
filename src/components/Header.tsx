@@ -1,11 +1,8 @@
-// import "./Header.css";
-
-import HomeMenu from "./HomeMenu";
+import "./Header.css";
 
 function Header() {
   return (
     <div className="Header">
-      {/* <h1>HEADER</h1> */}
       <div className="">
         <img
           className="headerLogo"
