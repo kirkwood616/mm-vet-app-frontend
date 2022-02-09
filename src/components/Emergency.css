@@ -1,0 +1,11 @@
+.Emergency {
+  border: none;
+  border-radius: 5px;
+  background-color: var(--medium-green);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 55px 50px;
+  margin: 25px;
+}

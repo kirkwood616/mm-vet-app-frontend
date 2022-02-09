@@ -1,0 +1,7 @@
+.UserProfile {
+  background-color: var(--medium-green);
+}
+
+.update-contact-info {
+  display: hidden;
+}

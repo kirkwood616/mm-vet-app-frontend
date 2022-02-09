@@ -1,11 +1,16 @@
-// import "./AboutUs.css";
+import "./AboutUs.css";
 
 function AboutUs() {
   return (
     <div className="AboutUs">
       <h1>ABOUT US</h1>
       <h2>WELCOME TO M&M VETERINARY CLINIC</h2>
-      <img src="./animal-photos/aboutUs.png" alt="cute cats and dog" height={450} width={600} />
+      <img
+        src="./animal-photos/aboutUs.png"
+        alt="cute cats and dog"
+        height={450}
+        width={600}
+      />
       <p>Discription for vet</p>
       <br />
       <h2>OUR DOCTOR</h2>

@@ -1,0 +1,13 @@
+.RequestConfirmation {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--medium-green);
+  color: var(--black);
+  font-weight: normal;
+  font-size: 24px;
+  padding: 50px 55px;
+  margin: 20px;
+}
