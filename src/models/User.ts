@@ -4,7 +4,14 @@ interface User {
   _id?: string;
   firstName: string;
   lastName: string;
-  address: Object[];
+  address: [
+    {
+      street: string;
+      city: string;
+      state: string;
+      zip: string;
+    }
+  ];
   phone: string;
   email: string;
   pets: Pet[];

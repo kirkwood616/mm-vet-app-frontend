@@ -1,15 +1,25 @@
+import { useContext } from "react";
+import UserContext from "../context/UserContext";
+
 function UserProfile() {
+  let { user } = useContext(UserContext);
+
   return (
     <div className="UserProfile">
       {/* <h1>OWNER PROFILE</h1> */}
       {/* customer profile */}
-      <h3>Welcome Name: </h3>
-      <br />
-      <h2>Your INFORMATION</h2>
-      <p>Name:</p>
-      <p>Address:</p>
-      <p>Phone: </p>
-      <p>Email: </p>
+      <h2>Your Information</h2>
+      <p>
+        Name: {user.firstName} {user.lastName}
+      </p>
+      <p>
+        Address:{" "}
+        {user.address.map(
+          (item) => `${item.street} | ${item.city}, ${item.state} ${item.zip}`
+        )}
+      </p>
+      <p>Phone: {user.phone}</p>
+      <p>Email: {user.email}</p>
       <br />
       <h2>
         {" "}
