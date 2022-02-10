@@ -35,6 +35,9 @@
 }
 
 .Footer a {
+  color: black;
+}
+.Footer a:hover {
   color: white;
 }
 
