@@ -1,7 +1,23 @@
 .UserProfile {
   background-color: var(--medium-green);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .update-contact-info {
   display: hidden;
+}
+
+.UserProfile h1 {
+  margin: 1rem;
+}
+
+.UserProfile .infoContainer {
+  text-align: center;
+  background-color: var(--light-green);
+  max-width: 420px;
+  border-radius: 1rem;
+  padding: 2rem;
 }

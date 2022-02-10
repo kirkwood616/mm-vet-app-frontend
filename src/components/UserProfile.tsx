@@ -10,23 +10,30 @@ function UserProfile() {
     <div className="UserProfile">
       {/* <h1>OWNER PROFILE</h1> */}
       {/* customer profile */}
-      <h2>Your Information</h2>
-      <p>
-        Name: {user.firstName} {user.lastName}
-      </p>
-      <p>
-        Address:{" "}
-        {user.address.map(
-          (item) => `${item.street} | ${item.city}, ${item.state} ${item.zip}`
-        )}
-      </p>
-      <p>Phone: {user.phone}</p>
-      <p>Email: {user.email}</p>
-      <br />
-      <h2>
-        {" "}
-        <Link to="/your-pets">Your Pets</Link>
-      </h2>
+      <h1>Your Information</h1>
+      <div className="infoContainer">
+        <p>
+          <strong>Name:</strong> {user.firstName} {user.lastName}
+        </p>
+        <p>
+          <strong>Address:</strong>{" "}
+          {user.address.map(
+            (item) => `${item.street} / ${item.city}, ${item.state} ${item.zip}`
+          )}
+        </p>
+        <p>
+          <strong>Phone: </strong>
+          {user.phone}
+        </p>
+        <p>
+          <strong>Email: {user.email}</strong>
+        </p>
+        <br />
+        <h3>
+          {" "}
+          <Link to="/your-pets">Your Pets</Link>
+        </h3>
+      </div>
       <br />
       <h3>Update your contact information</h3>
       <div className="update-contact-info">
