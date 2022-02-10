@@ -4,14 +4,13 @@ function AboutUs() {
   return (
     <div className="AboutUs">
       <h1>ABOUT US</h1>
+      <br />
       <h2>WELCOME TO M&M VETERINARY CLINIC</h2>
-      <img
+     <br />
+     <img id="welcome-img"
         src="./animal-photos/aboutUs.png"
         alt="cute cats and dog"
-        height={450}
-        width={600}
       />
-
       <br />
       <div className="AboutUs Our-Doctor">
       <h2>Our Mission</h2>
@@ -22,6 +21,7 @@ function AboutUs() {
         medical and surgical care to our patients. We strive to offer clients
         the best possible customer service in a welcoming environment.{" "}
       </p>
+      <br />
       <p>
         M&M Veterinary Clinic veterinarians and technicians are committed to
         excellence. Our world-class staff combines cutting-edge veterinary
@@ -33,7 +33,9 @@ function AboutUs() {
 
       <br />
       <h2>OUR DOCTOR</h2>
+      <br />
       <h3>Doctor ipsum</h3>
+      <img className="img doctor" src="./animal-photos/DR.jpg" alt="Veterinarian" />
       <br />
       <p>
         Eh? Doctor who? What's he talking about…? We're trying to defeat the
@@ -47,6 +49,7 @@ function AboutUs() {
         opposition, I tend to forget the delights and satisfaction of the gentle
         art of fisticuffs.
       </p>
+      <br />
       <p>
         Right! So stop dilly-dallying, and cross it! So these are my
         replacements. A dandy and a clown. One day, I shall come back. Yes, I
@@ -58,6 +61,7 @@ function AboutUs() {
         out as a mild curiosity in the junkyard, and now it's turned out to be
         quite a great spirit of adventure.
       </p>
+      <br />
       <p>
         I am the Doctor! The original, you might say! Your ideas are too narrow
         and crippled. I am a citizen of the universe and a gentleman to boot.
@@ -70,6 +74,7 @@ function AboutUs() {
       </p>
       <br />
       <h3>Dr.Ipsum </h3>
+      <img className="img doctor" src="./animal-photos/drIpsum.jpg" alt="Veterinarian" />
       <br />
       <p>
         You may disguise your features but you can never disguise your intent.
@@ -81,6 +86,7 @@ function AboutUs() {
         of—actually, the exact size of Belgium. That's a bit undramatic, isn't
         it? 'Belgium'?
       </p>
+      <br />
       <p>
         Safety precaution. I'm allergic to certain gases in the praxis range of
         the spectrum. If the gas is present, the celery turns purple… I eat the
@@ -94,6 +100,7 @@ function AboutUs() {
       <br />
 
       <h3>Dr.Ipsum too</h3>
+      <img className="img doctor" src="./animal-photos/drToo.jpg" alt="Veterinarian" />
       <br />
       <p>
         Why are you pointing your screwdrivers like that? They're scientific
@@ -105,6 +112,7 @@ function AboutUs() {
         What is it that makes you so ashamed of being a grown-up? Then, all
         things considered...it's time I grew up.
       </p>
+      <br />
       <p>
         Shall we ask for a better quality of door so we can escape? Doctor no
         more. And in that battle there was a man with more blood on his hands
@@ -118,6 +126,7 @@ function AboutUs() {
       <br />
 
       <h3>Doctor Also Ipsum</h3>
+      <img className="img doctor" src="./animal-photos/drAlso.jpg" alt="Veterinarian" />
       <br />
       <p>
         You may be a doctor. But I'm the Doctor. The definite article, you might
@@ -132,6 +141,7 @@ function AboutUs() {
         your mind, it's very difficult to stop them from obeying the original
         order. But not impossible.
       </p>
+      <br />
       <p>
         Would you like a jelly baby? The trouble with computers, of course, is
         that they're very sophisticated idiots. They do exactly what you tell
@@ -145,6 +155,7 @@ function AboutUs() {
       <br />
 
       <h3>Vet Tech Ipsum</h3>
+      <img className="img doctor" src="./animal-photos/vetTech.png" alt="Veterinarian" />
       <p>
         People assume that time is a strict progression of cause-and-effect...
         but actually, from a non-linear, non-subjective viewpoint, it's more
@@ -156,6 +167,7 @@ function AboutUs() {
         I can't spend the rest of mine with you. I have to live on. Alone.
         That's the curse of the Time Lords.
       </p>
+      <br />
       <p>
         I'm Dr. James McCrimmon from the township of Balamory. Oh, yes. Harmless
         is just the word: that's why I like it! Doesn't kill, doesn't wound,
@@ -167,14 +179,13 @@ function AboutUs() {
         caption'll read 'Over my dead body'.
       </p>
       <br />
-
-      <div></div>
-      <div></div>
       </div>
       <div className="AboutUs Our-Contact">
+        <br />
       <h1>VISIT US</h1>
-      <h2>Address: M&M Veterinary Clinic: 555 Fifty Five St., Detroit, MI 48226</h2>
-      <div className="overflow-x: auto">
+      <br />
+      <h2>M&M Veterinary Clinic: 555 Fifty Five St., Detroit, MI 48226</h2>
+      <div className="AboutUs overflow-x: auto">
         <table>
           <tr>
             <th>
@@ -211,7 +222,9 @@ function AboutUs() {
           </tr>
         </table>
       </div>
+      <br />
       <h2>Contact:+1.555-555-5555</h2>
+      <br />
       <h2>Email:info@m&m.vetclinic.com</h2>
       </div>
     </div>

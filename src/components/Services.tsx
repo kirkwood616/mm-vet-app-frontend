@@ -15,7 +15,7 @@ function Services() {
       </p>
       <br />
       <button>
-        <a href="/home-menu">Back to homepage</a>
+        <a href="/home-menu">Back to Home-Menu</a>
       </button>
       <br />
       <div className="Services-cards">
@@ -65,33 +65,28 @@ function Services() {
             <br />
 
             <p>
-              <span>
-                Finally, wellness exams help us establish a relationship with
-                you and your pet. Through your pet’s physical exams, other
-                wellness procedures and our consultations with you, we get to
-                know your pet and learn about his or her lifestyle, personality,
-                health risks, home environment and other important information.
-                We encourage you to use wellness exams to take an active role in
-                your pet’s health care. Your pet’s health is always our number
-                one priority, which is why for most pets we recommend annual
-                wellness exams to ensure that your animal companion remains in
-                good health. If your pet is a senior–over seven for dogs, over
-                nine for cats–we strongly suggest twice-yearly exams and blood
-                screenings. That’s because pets age more rapidly than humans,
-                meaning disease and illness develop faster as well.
-              </span>
+              Finally, wellness exams help us establish a relationship with you
+              and your pet. Through your pet’s physical exams, other wellness
+              procedures and our consultations with you, we get to know your pet
+              and learn about his or her lifestyle, personality, health risks,
+              home environment and other important information. We encourage you
+              to use wellness exams to take an active role in your pet’s health
+              care. Your pet’s health is always our number one priority, which
+              is why for most pets we recommend annual wellness exams to ensure
+              that your animal companion remains in good health. If your pet is
+              a senior–over seven for dogs, over nine for cats–we strongly
+              suggest twice-yearly exams and blood screenings. That’s because
+              pets age more rapidly than humans, meaning disease and illness
+              develop faster as well.
             </p>
             <br />
-
-            <p>
+            <div>
               {" "}
               <ul>
-                <p>
-                  {" "}
-                  M&M Veterinary Clinic’s veterinarian-performed physical exams
-                  comprehensively assess every aspect of your pet’s health.
-                  Wellness exams typically include:
-                </p>
+                {" "}
+                M&M Veterinary Clinic’s veterinarian-performed physical exams
+                comprehensively assess every aspect of your pet’s health.
+                Wellness exams typically include:
               </ul>
               <br />
               <li>Ear exam</li>
@@ -106,7 +101,7 @@ function Services() {
               <li>Nutrition consultation</li>
               <li>Behavior counseling</li>
               <br />
-            </p>
+            </div>
             <br />
             <p>
               Taking care of your precious pet’s health starts with a thorough
@@ -135,7 +130,7 @@ function Services() {
             proper oral hygiene and prevent future problems.
           </p>
           <br />
-          <p>
+          <div>
             <ul>
               M&M Veterinary Clinic offers complete pet oral health services,
               including:
@@ -145,7 +140,7 @@ function Services() {
             <li>Dental X-rays</li>
             <li>Extractions</li>
             <li>Oral surgery</li>
-          </p>
+          </div>
           <br />
           <p>
             Following American Veterinary Medical Association guidelines, M&M
@@ -157,16 +152,13 @@ function Services() {
           <p>Preventive Dental Care</p>
           <br />
           <p>
-            <span>
-              Brushing your pet’s teeth several times per week is the best way
-              to prevent plaque and tartar build-up. Interested in learning how
-              to brush your pet’s teeth? Just ask and our veterinarians will be
-              happy to help you get started. If you have a pet that won’t
-              tolerate brushing, our veterinarians can also recommend products
-              that will help keep your pet’s mouth healthy in between cleanings.
-              To make an appointment for a dental exam or cleaning, call us at
-              (555)555-5555.
-            </span>
+            Brushing your pet’s teeth several times per week is the best way to
+            prevent plaque and tartar build-up. Interested in learning how to
+            brush your pet’s teeth? Just ask and our veterinarians will be happy
+            to help you get started. If you have a pet that won’t tolerate
+            brushing, our veterinarians can also recommend products that will
+            help keep your pet’s mouth healthy in between cleanings. To make an
+            appointment for a dental exam or cleaning, call us at (555)555-5555.
           </p>
         </div>
         <br />
@@ -219,17 +211,14 @@ function Services() {
           <br />
           <h3>How diet & nutrition can help your pet</h3>
           <br />
-          <p>
+          <div>
             {" "}
             <ul>
               {" "}
-              <p>
-                {" "}
-                We will help you make the right dietary changes for your pet so
-                that they can stay on track living their happy and healthy
-                lives. A healthy diet and good nutrition can reduce or even
-                eliminate the following problems:
-              </p>
+              We will help you make the right dietary changes for your pet so
+              that they can stay on track living their happy and healthy lives.
+              A healthy diet and good nutrition can reduce or even eliminate the
+              following problems:
             </ul>
             <li>pet allergies</li>
             <li>itching and scratching</li>
@@ -243,7 +232,7 @@ function Services() {
               and feeling their best. Arthritis and joint supplements can be
               helpful for many pets as they age.
             </p>
-          </p>
+          </div>
         </div>
         <br />
         <div className="Services-cards item vaccinations">
@@ -270,7 +259,7 @@ function Services() {
             when they do occur.
           </p>
           <br />
-          <p>
+          <div>
             <ul>
               Which vaccines should your pet have? “Core” vaccines are those
               recommended—and possibly mandated by law—for most pets. Core
@@ -285,7 +274,7 @@ function Services() {
               FVRCP – Feline Viral Rhinotracheitis, Calicivirus and
               Panleukopenia (cats)
             </li>
-          </p>
+          </div>
           <br />
           <p>
             Other non-core, but highly suggested vaccinations for cats include
@@ -415,7 +404,7 @@ function Services() {
             spaying and neutering to advanced, highly specialized procedures.
           </p>
           <br />
-          <p>
+          <div>
             <ul>Surgery specialties</ul>
             <li>Soft-tissue</li>
             <li>Orthopedic</li>
@@ -423,7 +412,7 @@ function Services() {
             <li>Dental</li>
             <li>Ophthalmic</li>
             <li>Foreign body removal</li>
-          </p>
+          </div>
           <p>
             Patient safety and comfort is our main priority. Fowlerville
             Veterinary Clinic’s experienced veterinary anesthesiologists provide
@@ -492,13 +481,11 @@ function Services() {
             fatal.
           </p>
           <p>
-            <span>
-              Note: If you see a tick and cannot remove it, we will gladly help
-              you. Call us immediately to limit the impact of the tick's
-              attachment. It’s much safer to have one of our trained
-              professionals remove the tick for you. Make an appointment with us
-              immediately to limit the impact of the tick.
-            </span>
+            Note: If you see a tick and cannot remove it, we will gladly help
+            you. Call us immediately to limit the impact of the tick's
+            attachment. It’s much safer to have one of our trained professionals
+            remove the tick for you. Make an appointment with us immediately to
+            limit the impact of the tick.
           </p>
           <br />
           <h4>Heartworm Disease:</h4>
@@ -622,7 +609,13 @@ function Services() {
           <br />
           <p>
             Looking for your pet?{" "}
-            <a href="https://www.aaha.org/petmicrochiplookup">Click here</a>
+            <a
+              href="https://www.aaha.org/petmicrochiplookup"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Click here
+            </a>
             to access the Universal Pet Microchip Lookup.
           </p>
           <br />
