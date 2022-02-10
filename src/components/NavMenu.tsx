@@ -28,7 +28,7 @@ function NavMenu() {
       <div className="navContainer">
         <button onClick={onClick} className="menuTrigger">
           <span>Menu</span>
-          <img src="hamburger_icon.svg" alt="" className="hamburger" />
+          <img src="hamburger_icon.svg" alt="" />
         </button>
         <nav
           ref={dropdownRef}
