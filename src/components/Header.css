@@ -4,3 +4,9 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.Header .headerLogo {
+  border-radius: 50%;
+  height: 100px;
+  margin: 0.75rem;
+}
