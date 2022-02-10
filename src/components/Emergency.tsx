@@ -1,4 +1,5 @@
 import "./Emergency.css";
+import { Link } from "react-router-dom";
 
 function Emergency() {
   return (
@@ -19,7 +20,7 @@ function Emergency() {
       </li>
 
       <button>
-        <a href="/home-menu">Back to Home-Menu</a>
+        <Link to={"/"}>Back to Home-Menu</Link>
       </button>
     </div>
   );

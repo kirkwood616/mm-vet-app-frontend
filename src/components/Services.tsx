@@ -1,4 +1,5 @@
 import "./Services.css";
+import { Link } from "react-router-dom";
 
 function Services() {
   return (
@@ -15,7 +16,7 @@ function Services() {
       </p>
       <br />
       <button>
-        <a href="/home-menu">Back to Home-Menu</a>
+        <Link to={"/"}>Back to Home-Menu</Link>
       </button>
       <br />
       <div className="Services-cards">

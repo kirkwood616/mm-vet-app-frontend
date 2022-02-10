@@ -1,18 +1,29 @@
 import "./RequestAppointment.css";
+import { Link } from "react-router-dom";
 
 function RequestAppointment() {
   return (
     <div className="RequestAppointment">
       <h1>REQUEST APPOINTMENT</h1>
-      <h3>We would love the see you! You can complete this form for general visit or request a prescription refill.</h3>
-      <p><ul>
-        However, it is best to click the Request Appointment button to schedule an appointment or Login into <a href="/your-pets">Your Pet</a> Portal for:
-      </ul></p>
+      <h3>
+        We would love the see you! You can complete this form for general visit
+        or request a prescription refill.
+      </h3>
+      <p>
+        <ul>
+          However, it is best to click the Request Appointment button to
+          schedule an appointment or Login into{" "}
+          <Link to={"/your-pets"}>Your Pet</Link> Portal for:
+        </ul>
+      </p>
       <li>Access your pet’s profile and medical records</li>
       <li>View upcoming services due</li>
       <li>View scheduled appointments</li>
       <br />
-      <h4>Request an appointment time or request a prescription refill By fillout the form below...</h4>
+      <h4>
+        Request an appointment time or request a prescription refill By fillout
+        the form below...
+      </h4>
       <form action="" className="form-container">
         <label htmlFor="name">Name:</label>
         <input type="text" name="name" id="name" />
