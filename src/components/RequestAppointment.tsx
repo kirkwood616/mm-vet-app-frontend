@@ -9,13 +9,11 @@ function RequestAppointment() {
         We would love the see you! You can complete this form for general visit
         or request a prescription refill.
       </h3>
-      <p>
-        <ul>
-          However, it is best to click the Request Appointment button to
-          schedule an appointment or Login into{" "}
-          <Link to={"/your-pets"}>Your Pet</Link> Portal for:
-        </ul>
-      </p>
+      <ul>
+        However, it is best to click the Request Appointment button to schedule
+        an appointment or Login into <Link to={"/your-pets"}>Your Pet</Link>{" "}
+        Portal for:
+      </ul>
       <li>Access your pet’s profile and medical records</li>
       <li>View upcoming services due</li>
       <li>View scheduled appointments</li>
