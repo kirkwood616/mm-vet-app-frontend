@@ -1,4 +1,5 @@
 import "./Header.css";
+import NavMenu from "./NavMenu";
 
 function Header() {
   return (
@@ -11,6 +12,7 @@ function Header() {
           height={150}
         />
       </div>
+      <NavMenu />
     </div>
   );
 }
