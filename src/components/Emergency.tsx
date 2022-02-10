@@ -5,20 +5,32 @@ function Emergency() {
   return (
     <div className="Emergency">
       <h1>EMERGENCY INFORMATION</h1>
-      <p>
-        If you have an emergency after our regular business hours please
-        contact:
-      </p>
-      <li>
-        <a
-          href="https://www.google.com/maps/search/emergency+animal+hospital+detroit/@42.437424,-83.3964379,10z/data=!3m1!4b1"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Emergency animal hospital near Detroit
-        </a>
-      </li>
-
+      <div className="Emergency info">
+        <img className="Emergency info" src="./animal-photos/er.jpg" alt="" />
+        <p>
+          If you have an emergency after our regular business hours please
+          contact:
+        </p>
+        <li>
+          Animal Poison Control Center at (888)426-4435 |(888) 426-4435.{" "}
+          <a
+            href="https://www.aspca.org/pet-care/animal-poison-control"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ASPCA Click here
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.google.com/maps/search/emergency+animal+hospital+detroit/@42.4367417,-83.3964396,10z/data=!4m3!2m2!5m1!2e3"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+             24 Hour Emergency Animal Hospitals Near Detroit
+          </a>
+        </li>
+      </div>
       <button>
         <Link to={"/"}>Back to Home-Menu</Link>
       </button>

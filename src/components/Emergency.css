@@ -1,11 +1,28 @@
+:root {
+  --white: white;
+  --black: black;
+  --light-green: #ebf6f1;
+  --medium-green: #dfebd3;
+  --dark-green: #9da653;
+}
+
 .Emergency {
   border: none;
-  border-radius: 5px;
+  border-radius: 1rem;
   background-color: var(--medium-green);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin: auto;
+}
+
+.Emergency .info {
   align-items: flex-start;
-  padding: 55px 50px;
-  margin: 25px;
+  background-color: var(--light-green);
+  width: 65%;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: auto;
 }

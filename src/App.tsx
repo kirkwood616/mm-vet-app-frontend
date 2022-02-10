@@ -15,6 +15,7 @@ import YourPets from "./components/YourPets";
 import HomeMenu from "./components/HomeMenu";
 import LogIn from "./components/LogIn";
 import Footer from "./components/Footer";
+import PetWellness from "./components/PetWellness";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path="/log-in" element={<LogIn />} />
           <Route path="/services" element={<Services />} />
           <Route path="/your-pets" element={<YourPets />} />
+          <Route path="/pet-wellness" element={<PetWellness />} />
         </Routes>
         <Footer />
       </Router>
