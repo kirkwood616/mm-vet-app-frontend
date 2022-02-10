@@ -21,10 +21,10 @@ function RequestAppointment() {
       <li>View scheduled appointments</li>
       <br />
       <h4>
-        Request an appointment time or request a prescription refill By fillout
-        the form below...
+        Request an appointment time or request a prescription refill by filling
+        out the form below.
       </h4>
-      <form action="" className="form-container">
+      <form action="submit" className="form-container">
         <label htmlFor="name">Name:</label>
         <input type="text" name="name" id="name" />
         <label htmlFor="pet-name">Pet Name:</label>
@@ -46,7 +46,9 @@ function RequestAppointment() {
         <label htmlFor="note">Reason For Request</label>
         <textarea name="note" id="note"></textarea>
         <br />
-        <button type="submit">Request Appointment</button>
+        <Link to={"/request-confirmation"}>
+          <button>Request Appointment</button>
+        </Link>
       </form>
     </div>
   );

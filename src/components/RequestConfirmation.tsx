@@ -1,9 +1,9 @@
 import "./RequestConfirmation.css";
+import { Link } from "react-router-dom";
 
 function RequestConfirmation() {
   return (
     <div className="RequestConfirmation">
-      {/* <h1>REQUEST CONFIRMATION</h1> */}
       <h2>
         Thank you for requesting an appointment with M&M Veterinary Clinic.
       </h2>
@@ -14,14 +14,15 @@ function RequestConfirmation() {
 
       <p>
         <span>
-          as the reminder this appointment request is for general visit if you
-          have an emergency please contact <a href="/emergency">Emergency</a>
+          As a reminder this appointment request is for a general visit. If you
+          have an emergency please see our{" "}
+          <Link to={"/emergency"}>Emergency</Link> page.
         </span>
       </p>
 
-      <button>
-        <a href="/homepage"> Back to homepage </a>
-      </button>
+      <Link to={"/"}>
+        <button>Back to Home</button>
+      </Link>
     </div>
   );
 }
