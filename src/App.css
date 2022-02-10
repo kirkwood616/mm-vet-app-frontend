@@ -10,3 +10,11 @@
   margin: 0;
   padding: 0;
 }
+
+.App {
+  background-color: var(--medium-green);
+  min-height: 100vh;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+}
