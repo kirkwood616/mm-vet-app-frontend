@@ -3,12 +3,11 @@ import "./Footer.css";
 function Footer() {
   return (
     <div className="Footer">
-      {/* <h1>FOOTER</h1> */}
       <div className="footer-left">
         <h3>M&M Veterinary Clinic </h3>
         <span>
           {" "}
-          <img src="M&M logo plain.png" alt="logo" />
+          <img src="M&M veterinary clinic.png" alt="logo" />
         </span>
       </div>
 

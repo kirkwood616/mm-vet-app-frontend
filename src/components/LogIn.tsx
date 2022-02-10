@@ -8,39 +8,39 @@ function LogIn() {
   let { handleLogIn } = useContext(UserContext);
   let { handleEmail } = useContext(UserContext);
 
-  console.log(user);
-  console.log(isLoggedIn);
-
   return (
     <div className="LogIn">
-      <h1>LOGIN</h1>
-      <div className="">
-        <div className="">
-          <img src="" alt="Logo" />
-          <h2>Sign In</h2>
-          <form method="get" className="form" onSubmit={handleLogIn}>
-            <div className="form_field">
-              <input
-                type="email"
-                placeholder="info@email.com"
-                onChange={(e) => handleEmail(e.target.value.toLowerCase())}
-              />
-            </div>
+      <div className="logInForm">
+        <h1>Log In</h1>
+        <form method="get" className="form" onSubmit={handleLogIn}>
+          <label htmlFor="email" className="formTitle">
+            E-Mail Address
+          </label>
+          <input
+            type="email"
+            id="email"
+            className="inputField"
+            placeholder="example@email.com"
+            onChange={(e) => handleEmail(e.target.value.toLowerCase())}
+          />
 
-            <div className="form_field">
-              <input type="password" placeholder="••••••••••••" />
-            </div>
+          <label htmlFor="password" className="formTitle">
+            Password
+          </label>
+          <input
+            type="password"
+            id="password"
+            className="inputField"
+            placeholder="••••••••••••"
+          />
 
-            <div className="form_field">
-              <input type="submit" value="Sign In" />
-            </div>
-          </form>
+          <input type="submit" value="Log In" className="logInButton" />
+        </form>
 
-          <p>
-            Don't have an account?
-            <Link to="/">Create An Account</Link>
-          </p>
-        </div>
+        <p>Don't have an account?</p>
+        <p>
+          <Link to="/">Create An Account</Link>
+        </p>
       </div>
     </div>
   );
