@@ -1,26 +1,105 @@
 .AboutUs {
-  display: block;
-  background-color: var(--light-green);
-  border-radius: 8px;
-  color: var(--dark-green);
-  /* padding: 55px 50px; */
   margin: 0;
-  padding: 20px;
+}
+.AboutUs.Mission {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  margin: 0.5em;
+  padding: 1rem;
+  padding-bottom: 0;
+  background-color: var(--light-green);
+}
+.AboutUs.Mission.image {
+  overflow: auto;
+}
+.AboutUs.Mission.image > img {
+  display: block;
+  width: 100vw;
+  max-height: 100vh;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  object-position: center;
 }
 
-#welcome-img {
+.doctorCardContainer {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.doctorCard:hover .doctorCard:focus{
+  transform: scale(1.025);
+}
+
+.doctorCard {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  transition: all 200ms ease-in-out ;
+}
+
+.doctorCard {
+  margin: 40px;
+  position: relative;
+  max-width: 400px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  border: none;
+  background-color: var(--light-green);
+}
+
+.doctorCard.title {
   display: block;
-  width: 60%;
-  /* height: 600px; */
-  align-self: center;
-  border-radius: 10px;
-  margin-right: auto;
-  margin-left: auto;
+  text-align: center;
+  color: #fff;
+  background-color: var(--dark-green);
+  padding: .8rem;
+  border-radius: 5px;
+}
+
+.doctorCard.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+}
+
+.doctorCard.desc {
+  display: block;
+  font-size: 1.2rem;
+  position: absolute;
+  height: 0;
+  top: 0;
+  opacity: 0;
+  padding: 18px 8%;
+  background-color: white;
+  overflow-y: scroll;
+  transition: 0.8s ease;
+}
+
+.doctorCard:hover .doctorCard.desc {
+  opacity: 1;
+  height: 100%;
+}
+
+.doctorCard h1 {
+  font-size: 2.8rem;
+  color: #fff;
+  margin: 40px 0 20px 0;
+  text-align: center;
 }
 
 .AboutUs table {
   border-collapse: collapse;
-  width: 100%;
+  width: 100vw;
+  max-height: 300px;
 }
 
 .AboutUs th,
@@ -30,13 +109,12 @@ td {
   border-bottom: 1px solid #ddd;
 }
 
-.AboutUs .doctor {
-  border: none;
-  border-radius: 50%;
-  display: block;
-  /* align-self: center; */
-  width: 35%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 5px;
+.AboutUsContact {
+  padding: 1rem;
+  margin: auto;
+  background-color: var(--light-green);
+}
+
+.AboutUsContact h1 {
+  font-size: larger;
 }
