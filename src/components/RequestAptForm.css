@@ -36,6 +36,7 @@
   font-family: inherit;
   height: 100px;
   max-width: 300px;
+  min-width: 300px;
 }
 
 .RequestAptForm input,
