@@ -7,27 +7,20 @@ function RequestAppointment() {
     <div className="RequestAppointment">
       <h1>REQUEST APPOINTMENT</h1>
       <div className="requestContainer">
-        <h3>
-          We would love the see you! You can complete this form for general
-          visit or request a prescription refill.
-        </h3>
-
+        <h2>We would love to see you!</h2>
+        <p>Request an appointment by filling out the form below.</p>
         <p>
-          However, it is best to click the Request Appointment button to
-          schedule an appointment or Login into{" "}
-          <Link to={"/your-pets"}>Your Pet</Link> Portal for:
+          Our staff will contact you to either confirm or reschedule your
+          requested appointment time based on appointment availability.
         </p>
-        <ul>
-          <li>Access your pet’s profile and medical records</li>
-          <li>View upcoming services due</li>
-          <li>View scheduled appointments</li>
-        </ul>
-        <br />
-        <h4>
-          Request an appointment time or request a prescription refill by
-          filling out the form below.
-        </h4>
+        <p>
+          If this is an emergency, please see our{" "}
+          <Link to={"/emergency"}>Emergency</Link> section.
+        </p>
         <RequestAptForm />
+        <p className="noGuarantee">
+          * We do not guarantee an appointment by submitting this form *
+        </p>
       </div>
     </div>
   );
