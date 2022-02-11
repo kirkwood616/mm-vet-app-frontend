@@ -16,6 +16,14 @@ import HomeMenu from "./components/HomeMenu";
 import LogIn from "./components/LogIn";
 import Footer from "./components/Footer";
 import PetWellness from "./components/PetWellness";
+import Dentistry from "./components/Dentistry";
+import Diet_Nutrition from "./components/Diet_Nutrition";
+import Vaccinations from "./components/Vaccinations";
+import Spay_Neuter from "./components/Spay_Neuter";
+import Surgery from "./components/Surgery";
+import Parasite_Control from "./components/Parasite_Control";
+import Microchipping from "./components/Microchipping";
+import Grooming from "./components/Grooming";
 
 function App() {
   return (
@@ -39,6 +47,15 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/your-pets" element={<YourPets />} />
           <Route path="/pet-wellness" element={<PetWellness />} />
+          <Route path="/dentistry" element={<Dentistry />} />
+          <Route path="/diet-nutrition" element={<Diet_Nutrition />} />
+          <Route path="/vaccinations" element={<Vaccinations />} />
+          <Route path="/spay-neuter" element={<Spay_Neuter/>} />
+          <Route path="/surgery" element={<Surgery/>} />
+          <Route path="/parasite-control" element={<Parasite_Control/>} />
+          <Route path="/microchipping" element={<Microchipping/>} />
+          <Route path="/grooming" element={<Grooming/>} />
+
         </Routes>
         <Footer />
       </Router>
