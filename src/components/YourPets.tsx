@@ -11,8 +11,8 @@ function YourPets() {
     <div className="YourPets">
       <h1>YOUR PETS</h1>
       {userPets.map((pet, index) => (
-        <Link to={`/pet-profile/${index}`}>
-          <div className="yourPetBar" key={index}>
+        <Link to={`/pet-profile/${index}`} key={index}>
+          <div className="yourPetBar">
             <img
               src="https://www.freeiconspng.com/uploads/png-file-png-file-png-file-png-file-png-file-30.png"
               width="100"
