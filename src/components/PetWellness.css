@@ -1,0 +1,16 @@
+:root {
+    --white: white;
+    --black: black;
+    --light-green: #ebf6f1;
+    --medium-green: #dfebd3;
+    --dark-green: #9da653;
+  }
+
+.PetWellness {
+    --padding: 1rem;
+}
+
+.PetWellness.image{
+    padding: var(--padding);
+    
+}

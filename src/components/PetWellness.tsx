@@ -1,12 +1,14 @@
-// import "./PetWellness.css";
+ import "./PetWellness.css";
 import "./Services.css"
 
 function PetWellness() {
     return (
         <div className="PetWellness">
-            <div className="Services-cards item pet-wellness">
           <h1>Pet Wellness</h1>
+          <div className="PetWellness image">
           <img src="./animal-photos/well.jpg" alt="pet-wellness-services" />
+          </div>
+          <div className="PetWellness paragraph">
           <p>
             Annual wellness exams evaluate your pets overall health, detect
             problems before they become serious, and keep them on track to live
@@ -95,7 +97,7 @@ function PetWellness() {
             </p>
           </p>
           <br />
-        </div>
+          </div>
         </div>
     );
 }

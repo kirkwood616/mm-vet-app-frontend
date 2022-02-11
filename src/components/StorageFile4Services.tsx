@@ -435,8 +435,7 @@ function Services() {
         </div>
         <br />
         <div className="Services-cards item parasite-control">
-          <h1>Parasite Control</h1>
-          <h2>(Fleas, Ticks & Heartworms)</h2>
+          <h1>Parasite Control (Fleas, Ticks & Heartworms)</h1>
           <img src="./animal-photos/parasite-control-ser.jpg" alt="" />
           <p>
             Parasites such as fleas and ticks can be very damaging to your pet’s
