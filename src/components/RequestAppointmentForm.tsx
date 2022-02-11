@@ -11,7 +11,7 @@ function RequestAptForm() {
     <div className="RequestAptForm">
       <form action="submit" className="formContainer">
         <label htmlFor="name">
-          <p>Name:</p>
+          <span className="formFieldTitle">Name:</span>
         </label>
         <input
           readOnly
@@ -21,7 +21,7 @@ function RequestAptForm() {
           defaultValue={`${user.firstName} ${user.lastName}`}
         />
         <label htmlFor="pet-name">
-          <p>Pet Name:</p>
+          <span className="formFieldTitle">Pet Name:</span>
         </label>
         {/* <input type="text" name="pet-name" id="pet-name" /> */}
         <select name="pet-name" id="pet-name" defaultValue={"select"} required>
@@ -35,7 +35,7 @@ function RequestAptForm() {
           ))}
         </select>
         <label htmlFor="calendar">
-          <p>Date:</p>
+          <span className="formFieldTitle">Date:</span>
         </label>
         <input
           type="date"
@@ -45,7 +45,7 @@ function RequestAptForm() {
           required
         ></input>
         <label htmlFor="time">
-          <p>Time:</p>
+          <span className="formFieldTitle">Time:</span>
         </label>
         <input
           type="time"
@@ -56,7 +56,7 @@ function RequestAptForm() {
           required
         />
         <label htmlFor="note">
-          <p>Reason For Request:</p>
+          <span className="formFieldTitle">Reason For Request:</span>
         </label>
         <textarea name="note" id="note" required></textarea>
         <Link to={"/request-confirmation"}>
