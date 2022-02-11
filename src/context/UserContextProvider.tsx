@@ -9,9 +9,7 @@ interface Props {
 }
 
 export default function UserContextProvider({ children }: Props) {
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
-  const [email, setEmail] = useState<string>("");
-  const [user, setUser] = useState<User>({
+  const initialUserState: User = {
     _id: "",
     firstName: "",
     lastName: "",
@@ -26,13 +24,14 @@ export default function UserContextProvider({ children }: Props) {
     phone: "",
     email: "",
     pets: [],
-  });
+  };
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+  const [email, setEmail] = useState<string>("");
+  const [user, setUser] = useState<User>(initialUserState);
   const [userPets, setUserPets] = useState<Pet[]>([]);
 
-  function handleUserPets(user: User): void {
-    user.pets.forEach((pet) => {
-      fetchPet(pet).then((data) => setUserPets((prev) => [...prev, data]));
-    });
+  function handleEmail(input: string): void {
+    setEmail(input);
   }
 
   function handleLogIn(e: FormEvent): void {
@@ -40,8 +39,17 @@ export default function UserContextProvider({ children }: Props) {
     fetchUserByEmail(email).then((data) => setUser(data));
   }
 
-  function handleEmail(input: string): void {
-    setEmail(input);
+  function handleLogOut(): void {
+    setIsLoggedIn(false);
+    setEmail("");
+    setUserPets([]);
+    setUser(initialUserState);
+  }
+
+  function handleUserPets(user: User): void {
+    user.pets.forEach((pet) => {
+      fetchPet(pet).then((data) => setUserPets((prev) => [...prev, data]));
+    });
   }
 
   useEffect(() => {
@@ -51,13 +59,16 @@ export default function UserContextProvider({ children }: Props) {
     }
   }, [user]);
 
-  // function handleLogOut(): void {
-  //   setEmail("");
-  //   setUser(undefined);
-  // }
   return (
     <UserContext.Provider
-      value={{ user, userPets, handleLogIn, handleEmail, isLoggedIn }}
+      value={{
+        user,
+        userPets,
+        handleLogIn,
+        handleLogOut,
+        handleEmail,
+        isLoggedIn,
+      }}
     >
       {children}
     </UserContext.Provider>

@@ -5,10 +5,10 @@ import User from "../models/User";
 interface UserContextModel {
   user: User;
   userPets: Pet[];
-  handleLogIn: (e: FormEvent) => void;
-  handleEmail: (input: string) => void;
   isLoggedIn: boolean;
-  // handleLogOut: () => void;
+  handleLogIn: (e: FormEvent) => void;
+  handleLogOut: () => void;
+  handleEmail: (input: string) => void;
 }
 
 const defaultValue: UserContextModel = {
@@ -29,10 +29,10 @@ const defaultValue: UserContextModel = {
     pets: [],
   },
   userPets: [],
-  handleLogIn: () => {},
-  handleEmail: () => {},
   isLoggedIn: false,
-  // handleLogOut: () => {},
+  handleLogIn: () => {},
+  handleLogOut: () => {},
+  handleEmail: () => {},
 };
 
 const UserContext = createContext(defaultValue);
