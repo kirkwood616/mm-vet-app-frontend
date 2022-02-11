@@ -5,11 +5,10 @@
   --medium-green: #dfebd3;
   --dark-green: #9da653;
 }
-*,*::before,*::after {
+/* *,*::before,*::after {
   font-family: 'Open Sans', sans-serif;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'); */
 
 /* font-family: 'Fira Sans', sans-serif;
   font-family: 'Lexend Exa', sans-serif;
@@ -19,8 +18,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Lexend+Exa:wght@200;500;700&family=Pacifico&family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Fira+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Lexend+Exa:wght@200;500;700&family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400&display=swap');
 
-/* Services Component */
-  .Services {
+/* All Cards in Services Component */
+  .Cards-- {
     padding: 1rem;
   }
   .cards-grid{
@@ -30,11 +29,11 @@
     
   }
   .cards {
-    --padding: 1rem;
+     overflow: hidden;
+     --padding: 1rem;
     border: none;
     border-radius: 1rem;
     background-color: var(--white);
-    overflow: hidden;
     /* border: 1px solid #777; */
     /* max-width: 300px; */
     align-items:stretch;
@@ -43,7 +42,7 @@
 
   /* .cards.cards-shadow{
     border: none;
-  } */
+  }  */
 
   .cards-header {
     font-size: 1.5rem;
@@ -53,8 +52,9 @@
   }
 
   .cards-header.card-image {
-    padding: 0;
     overflow: hidden;
+    padding: 0;
+    
   }
   .cards-header.card-image > img{
     display: block;
@@ -63,7 +63,7 @@
     aspect-ratio: 16/9;
     object-fit: cover;
     object-position: center;
-    transition: 0.3s transform ease-in-out;
+    transition: 200ms transform ease-in-out;
   }
 
   .card:hover > .cards-header.card-image > img{
@@ -82,9 +82,9 @@
   }
  
   .cards-footer a{
-    background-color: hsl(108, 20%, 51%);
+    background-color: var(--dark-green);
     color: var(--white);
-    border: 1px solid hsl(108, 20%, 51%);
+    border: 1px solid var(--dark-green);
     font-size: 1rem;
     text-decoration: none;
     padding: .5em .75em;
@@ -93,6 +93,6 @@
   }
 
   .cards-footer a:hover, a:focus{
-    background-color: hsl(108,20%,61%);
+    background-color: var(--medium-green);
+    color: #9da653;
   }
-

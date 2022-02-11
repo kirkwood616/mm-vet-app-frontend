@@ -6,13 +6,13 @@
     --dark-green: #9da653;
   }
 
-.PetWellness {
+.Diet_Nutrition {
     padding: 2rem;
     display: flex;
     flex-direction: column;
 }
 
-.PetWellness.image{
+.Diet_Nutrition.image{
     padding: 1rem;
     border: none;
     border-radius: 1rem;
@@ -21,14 +21,14 @@
     overflow: hidden;
 }
 
-.PetWellness.icon Link{
+.Diet_Nutrition.icon Link{
     display: block;
     text-decoration: none;
     color: #777;
     
 }
 
-.PetWellness.image > img {
+.Diet_Nutrition.image > img {
     display: block;
     width: 100%;
     max-height: 300px;
@@ -38,11 +38,11 @@
     transition: 200ms transform ease-in-out;
 }
 
-.PetWellness:hover > .PetWellness.PetWellness.image > img{
+.Diet_Nutrition:hover > .Diet_Nutrition.Diet_Nutrition.image > img{
     transform: scale3d(1.025);
 }
 
-.PetWellness.paragraph{
+.Diet_Nutrition.paragraph{
     margin-top: .5rem;
     padding: 2rem;
     padding-bottom: 0;
