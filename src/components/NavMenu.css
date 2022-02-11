@@ -32,15 +32,27 @@
   margin: 0;
 }
 
-.menu li {
+.menu li:not(:last-child) {
   border-bottom: 1px solid #dddddd;
 }
 
 .menu li a {
   text-decoration: none;
-  color: #333333;
+  color: black;
   padding: 15px 20px;
   display: block;
+}
+
+.menu li:hover {
+  background-color: var(--light-green);
+}
+
+.menu li:first-child:hover {
+  border-radius: 8px 8px 0 0;
+}
+
+.menu li:last-child:hover {
+  border-radius: 0 0 8px 8px;
 }
 
 .menuTrigger {
@@ -71,4 +83,10 @@
 
 .menuTrigger img {
   fill: black;
+}
+
+@media only screen and (max-width: 480px) {
+  .menu {
+    width: 275px;
+  }
 }

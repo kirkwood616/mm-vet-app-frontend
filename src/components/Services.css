@@ -5,18 +5,28 @@
   --medium-green: #dfebd3;
   --dark-green: #9da653;
 }
+
+/* *,
+*::before,
+*::after {
+  font-family: "Open Sans", sans-serif;
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
 /* *,*::before,*::after {
   font-family: 'Open Sans', sans-serif;
 }
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'); */
+
 
 /* font-family: 'Fira Sans', sans-serif;
   font-family: 'Lexend Exa', sans-serif;
   font-family: 'Pacifico', cursive;
   font-family: 'Poppins', sans-serif;
   font-family: 'Cookie', cursive; */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Lexend+Exa:wght@200;500;700&family=Pacifico&family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Fira+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Lexend+Exa:wght@200;500;700&family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Lexend+Exa:wght@200;500;700&family=Pacifico&family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Fira+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Lexend+Exa:wght@200;500;700&family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400&display=swap");
 
 /* All Cards in Services Component */
   .Cards-- {
@@ -40,17 +50,16 @@
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.2);
   }
 
-  /* .cards.cards-shadow{
+/* .cards.cards-shadow{
     border: none;
   }  */
 
-  .cards-header {
-    font-size: 1.5rem;
-    padding: var(--padding);
-    padding-bottom: 0;
-    margin-top: .5rem;
-  }
-
+.cards-header {
+  font-size: 1.5rem;
+  padding: var(--padding);
+  padding-bottom: 0;
+  margin-top: 0.5rem;
+}
   .cards-header.card-image {
     overflow: hidden;
     padding: 0;
@@ -66,14 +75,15 @@
     transition: 200ms transform ease-in-out;
   }
 
-  .card:hover > .cards-header.card-image > img{
-    transform: scale(1.025);
-  }
 
-  .cards-body {
-    font-size: .9rem;
-    padding: 0 var(--padding);
-  }
+.card:hover > .cards-header.card-image > img {
+  transform: scale(1.025);
+}
+
+.cards-body {
+  font-size: 0.9rem;
+  padding: 0 var(--padding);
+}
 
   .cards-footer {
     margin-top: 1rem;
@@ -96,3 +106,4 @@
     background-color: var(--medium-green);
     color: #9da653;
   }
+

@@ -32,6 +32,7 @@ function LogIn() {
             id="password"
             className="inputField"
             placeholder="••••••••••••"
+            autoComplete="on"
           />
 
           <input type="submit" value="Log In" className="logInButton" />
