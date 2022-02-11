@@ -1,11 +1,26 @@
-.RequestAppointment,
-.form-container {
+.RequestAppointment {
+  background-color: var(--medium-green);
+}
+
+.RequestAppointment h1,
+h4 {
+  text-align: center;
+  margin: 1rem;
+}
+
+.RequestAppointment .requestContainer {
+  background-color: var(--light-green);
+  border-radius: 1rem;
+}
+
+/* .RequestAppointment .formContainer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   border: none;
   border-radius: 5px;
-  background-color: var(--medium-green);
+  background-color: white;
   padding: 45px 55px;
-  margin: 20px;
-}
+  margin: 1rem;
+  width: 50%;
+} */

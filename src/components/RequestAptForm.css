@@ -1,0 +1,18 @@
+.RequestAptForm {
+  background-color: white;
+  border-radius: 1rem;
+  width: 50%;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.RequestAptForm input,
+textarea,
+select {
+  min-width: 300px;
+  text-align: center;
+}
+
+.RequestAptForm select {
+  display: block;
+}
