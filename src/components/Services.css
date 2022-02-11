@@ -37,8 +37,8 @@
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     gap: 1rem;
     
-  }
-  .cards {
+  } 
+.cards {
      overflow: hidden;
      --padding: 1rem;
     border: none;
@@ -48,8 +48,11 @@
     /* max-width: 300px; */
     align-items:stretch;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.2);
+    transition: all 0.1s ease-in;
   }
-
+.cards:hover{
+    transform: scale(1.05);
+  }
 /* .cards.cards-shadow{
     border: none;
   }  */
@@ -72,13 +75,9 @@
     aspect-ratio: 16/9;
     object-fit: cover;
     object-position: center;
-    transition: 200ms transform ease-in-out;
   }
 
 
-.card:hover > .cards-header.card-image > img {
-  transform: scale(1.025);
-}
 
 .cards-body {
   font-size: 0.9rem;
