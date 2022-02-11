@@ -38,7 +38,7 @@ function Services() {
                   </p>
                 </div>
                 <div className="cards-footer">
-                  <a href="/pet-wellness">Read more...</a>
+                  <Link to={"/pet-wellness"}>Read more...</Link>
                 </div>
               </div>
             </div>
@@ -106,7 +106,7 @@ function Services() {
                     Young animals are like kids—it’s a never-ending job to keep
                     them safe and happy. Vaccinating your pet is a relatively
                     inexpensive but very important way to protect his or her
-                    health. 
+                    health.
                   </p>
                 </div>
                 <div className="cards-footer">
@@ -152,7 +152,7 @@ function Services() {
                     Our clinic is equipped to perform a wide variety of soft
                     tissue and orthopedic surgical procedures. Some of the
                     common procedures include: spays and neuters, growth
-                    removals, and foreign body removal. 
+                    removals, and foreign body removal.
                   </p>
                 </div>
                 <div className="cards-footer">
