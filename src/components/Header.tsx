@@ -12,7 +12,7 @@ function Header() {
         src="M&M veterinary clinic.png"
         alt="M and M Veterinary Clinic Top Logo"
       />
-      {isLoggedIn ? <NavMenu /> : ""}
+      <NavMenu />
     </div>
   );
 }
