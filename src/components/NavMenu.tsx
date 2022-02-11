@@ -1,11 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import "./NavMenu.css";
 import { Link } from "react-router-dom";
+import UserContext from "../context/UserContext";
 
 function NavMenu() {
   const dropdownRef = useRef(null);
   const [isActive, setIsActive] = useState(false);
   const onClick = () => setIsActive(!isActive);
+  let { handleLogOut } = useContext(UserContext);
 
   useEffect(() => {
     const pageClickEvent = (e: any): void => {
@@ -57,7 +59,9 @@ function NavMenu() {
               <Link to={"/about-us"}>About Us</Link>
             </li>
             <li>
-              <Link to={"/"}>Logout</Link>
+              <Link to={"/"} onClick={handleLogOut}>
+                Logout
+              </Link>
             </li>
           </ul>
         </nav>

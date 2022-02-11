@@ -8,8 +8,6 @@ function UserProfile() {
 
   return (
     <div className="UserProfile">
-      {/* <h1>OWNER PROFILE</h1> */}
-      {/* customer profile */}
       <h1>Your Information</h1>
       <div className="infoContainer">
         <p>
@@ -26,7 +24,7 @@ function UserProfile() {
           {user.phone}
         </p>
         <p>
-          <strong>Email: {user.email}</strong>
+          <strong>Email:</strong> {user.email}
         </p>
         <br />
         <h3>
