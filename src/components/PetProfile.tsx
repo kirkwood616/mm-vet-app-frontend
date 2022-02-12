@@ -3,6 +3,7 @@ import { useContext } from "react";
 import UserContext from "../context/UserContext";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { getPetAge } from "../functions/functions";
 
 function PetProfile() {
   let { userPets } = useContext(UserContext);
@@ -23,6 +24,12 @@ function PetProfile() {
           {userPets[i].petLastName}
         </p>
         <p>
+          <strong>Age:</strong> {getPetAge(userPets[i])}
+        </p>
+        <p>
+          <strong>Date of Birth:</strong> {userPets[i].dateOfBirth}
+        </p>
+        <p>
           <strong>Species:</strong> {userPets[i].species}
         </p>
         <p>
@@ -39,8 +46,10 @@ function PetProfile() {
           {userPets[i].isFixed === true ? "Yes" : "No"}
         </p>
         <p>
-          <strong>Date of Birth:</strong> {userPets[i].dateOfBirth}
+          <strong>Microchipped:</strong>{" "}
+          {userPets[i].isMicroChipped ? "Yes" : "No"}
         </p>
+
         <p>
           <strong>Weight:</strong> {userPets[i].weight} lbs.
         </p>
