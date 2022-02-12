@@ -1,20 +1,47 @@
 .RequestConfirmation {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   border: none;
   border-radius: 5px;
-  background-color: var(--medium-green);
+  /* background-color: var(--light-green); */
   color: var(--black);
   font-weight: normal;
   font-size: 24px;
-  padding: 50px 55px;
-  margin: 20px;
+  padding: 3rem 4rem;
   text-align: center;
 }
 
+.RequestConfirmation h2 {
+  font-size: 2rem;
+}
+
+.RequestConfirmation p {
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+.RequestConfirmation a {
+  color: red;
+  font-weight: bold;
+}
+
+.RequestConfirmation .italic {
+  font-style: italic;
+}
+
+.RequestConfirmation .confirmContainer {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
 .RequestConfirmation button {
-  width: 400px;
-  padding: 0.5rem;
-  margin-top: 1rem;
+  background-color: var(--dark-green);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  max-width: 300px;
+  padding: 1rem;
 }
