@@ -11,6 +11,7 @@ interface Pet {
   sex: string;
   dateOfBirth: string;
   isFixed: boolean;
+  isMicroChipped: boolean;
   weight: number;
   diet: string;
   picture: string;
