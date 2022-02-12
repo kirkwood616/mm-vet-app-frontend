@@ -11,7 +11,7 @@ function RequestAppointment() {
         <p>Request an appointment by filling out the form below.</p>
         <p>
           Our staff will contact you to either confirm or reschedule your
-          requested appointment time based on appointment availability.
+          requested appointment based on availability.
         </p>
         <p>
           If this is an emergency, please see our{" "}
