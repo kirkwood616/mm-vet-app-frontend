@@ -6,18 +6,78 @@
   align-items: center;
 }
 
-.update-contact-info {
-  display: hidden;
+.UserProfile .infoContainer {
+  background-color: var(--light-green);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  width: 50%;
+  text-align: center;
 }
 
 .UserProfile h1 {
   margin: 1rem;
 }
 
-.UserProfile .infoContainer {
-  text-align: center;
-  background-color: var(--light-green);
-  max-width: 420px;
+.UserProfile span {
+  display: block;
+}
+
+.UserProfile a {
+  color: blue;
+}
+
+.UserProfile a:hover {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.UserProfile .updateLink {
+  margin-top: 1rem;
+}
+
+.UserProfile table {
+  background-color: white;
+  border-collapse: collapse;
   border-radius: 1rem;
-  padding: 2rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  margin: auto;
+  width: 375px;
+}
+
+.UserProfile tbody {
+  border: none;
+}
+
+.UserProfile th {
+  background-color: var(--medium-green);
+  padding: 0.5rem;
+}
+
+.UserProfile td {
+  text-align: center;
+  border: none;
+}
+
+.UserProfile table .first {
+  border-radius: 1rem 1rem 0 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .UserProfile .infoContainer {
+    width: 80%;
+  }
+
+  .UserProfile table {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .UserProfile .infoContainer {
+    width: 80%;
+  }
+
+  .UserProfile table {
+    width: 90%;
+  }
 }
