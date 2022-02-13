@@ -18,7 +18,7 @@ function PetProfile() {
         width="150"
         alt="paw icon"
       />
-      <Link to={`/pet-profile/image-upload/${i}`}>Upload Image</Link>
+      <Link to={`/pet-profile/image-upload/${id}`}>Upload Image</Link>
       <div className="petProfileInfo">
         <table>
           <tbody>

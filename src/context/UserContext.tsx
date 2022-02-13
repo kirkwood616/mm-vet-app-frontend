@@ -9,6 +9,7 @@ interface UserContextModel {
   handleLogIn: (e: FormEvent) => void;
   handleLogOut: () => void;
   handleEmail: (input: string) => void;
+  handleUserPets: (user: User) => void;
 }
 
 const defaultValue: UserContextModel = {
@@ -33,6 +34,7 @@ const defaultValue: UserContextModel = {
   handleLogIn: () => {},
   handleLogOut: () => {},
   handleEmail: () => {},
+  handleUserPets: () => {},
 };
 
 const UserContext = createContext(defaultValue);
