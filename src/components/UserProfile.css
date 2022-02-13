@@ -82,7 +82,7 @@
     width: 80%;
   }
 
-  .UserProfile table {
-    width: 90%;
+  .UserProfile .infoContainer table {
+    width: 100%;
   }
 }
