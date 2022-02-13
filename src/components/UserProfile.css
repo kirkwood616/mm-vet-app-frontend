@@ -18,7 +18,7 @@
   margin: 1rem;
 }
 
-.UserProfile span {
+.UserProfile .infoContainer span {
   display: block;
 }
 
@@ -31,11 +31,11 @@
   text-decoration: none;
 }
 
-.UserProfile .updateLink {
+.UserProfile .infoContainer .updateLink {
   margin-top: 1rem;
 }
 
-.UserProfile table {
+.UserProfile .infoContainer table {
   background-color: white;
   border-collapse: collapse;
   border-radius: 1rem;
@@ -44,21 +44,26 @@
   width: 375px;
 }
 
-.UserProfile tbody {
+.UserProfile .infoContainer tbody {
   border: none;
 }
 
-.UserProfile th {
-  background-color: var(--medium-green);
+.UserProfile .infoContainer table td .last {
+  border: none;
+}
+
+.UserProfile .infoContainer th {
+  background-color: rgba(0, 0, 0, 0.05);
   padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
 }
 
-.UserProfile td {
+.UserProfile .infoContainer td {
   text-align: center;
-  border: none;
+  border-bottom: 1px solid #ddd;
 }
 
-.UserProfile table .first {
+.UserProfile .infoContainer table .first {
   border-radius: 1rem 1rem 0 0;
 }
 
