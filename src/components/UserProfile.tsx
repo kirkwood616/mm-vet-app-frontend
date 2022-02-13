@@ -55,7 +55,9 @@ function UserProfile() {
               <td>
                 {userPets.map((pet, index) => (
                   <span key={index}>
-                    <Link to={`/pet-profile/${index}`}>{pet.petFirstName}</Link>
+                    <Link to={`/pet-profile/${pet._id}`}>
+                      {pet.petFirstName}
+                    </Link>
                   </span>
                 ))}
               </td>

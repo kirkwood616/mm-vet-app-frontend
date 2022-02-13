@@ -7,8 +7,8 @@ import { getPetAge } from "../functions/functions";
 
 function PetProfile() {
   let { userPets } = useContext(UserContext);
-  let { index } = useParams();
-  let i = Number(index);
+  let { id } = useParams();
+  let i = userPets.findIndex((pet) => pet._id === id);
 
   return (
     <div className="PetProfile">
@@ -18,6 +18,7 @@ function PetProfile() {
         width="150"
         alt="paw icon"
       />
+      <Link to={`/pet-profile/image-upload/${i}`}>Upload Image</Link>
       <div className="petProfileInfo">
         <table>
           <tbody>
