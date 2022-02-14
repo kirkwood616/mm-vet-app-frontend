@@ -3,6 +3,8 @@ import { FormEvent, useContext, useState } from "react";
 import UserContext from "../context/UserContext";
 import { useParams } from "react-router-dom";
 import Pet from "../models/Pet";
+import { updatePet } from "../services/VetApiService";
+import UserPicture from "../models/UserPicture";
 
 function PetImageUpload() {
   let { user } = useContext(UserContext);
@@ -40,6 +42,9 @@ function PetImageUpload() {
       return;
     } else {
       e.preventDefault();
+      let newImage: UserPicture = {
+        picture: baseImage,
+      };
       let newPetPicture: Pet = {
         ownerId: userPets[i].ownerId,
         petFirstName: userPets[i].petFirstName,
@@ -53,12 +58,13 @@ function PetImageUpload() {
         isMicroChipped: userPets[i].isMicroChipped,
         weight: userPets[i].weight,
         diet: userPets[i].diet,
-        picture: baseImage,
+        picture: newImage,
         medicalRecords: userPets[i].medicalRecords,
       };
+      updatePet(id!, newPetPicture);
       setBaseImage("");
       handleUserPets(user);
-      // console.log(newPetPicture);
+      console.log(newPetPicture);
     }
   }
 

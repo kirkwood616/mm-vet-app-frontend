@@ -1,4 +1,5 @@
 import MedicalRecord from "./MedicalRecord";
+import UserPicture from "./UserPicture";
 
 interface Pet {
   _id?: string;
@@ -14,7 +15,7 @@ interface Pet {
   isMicroChipped: boolean;
   weight: number;
   diet: string;
-  picture: string;
+  picture: UserPicture;
   medicalRecords: MedicalRecord[];
 }
 
