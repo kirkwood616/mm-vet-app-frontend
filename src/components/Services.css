@@ -29,7 +29,7 @@
 
 /* All Cards in Services Component */
 .cards-grid {
-  padding: .8rem;
+  padding: 0.8rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
@@ -75,23 +75,23 @@
 .cards-footer {
   margin-top: 1rem;
   padding: var(--padding);
-  padding-top: 0; 
+  padding-top: 0;
 }
 
-.cards-footer a {
+.cards-grid .cards-footer .readMore {
   background-color: var(--dark-green);
   color: var(--white);
   border: 1px solid var(--dark-green);
   font-size: 1rem;
   text-decoration: none;
-  align-items:end;
+  align-items: end;
   padding: 0.5em 0.75em;
   border-radius: 0.25em;
   cursor: pointer;
 }
 
-.cards-footer a:hover,
-a:focus {
+.cards-footer button:hover,
+button:focus {
   background-color: var(--medium-green);
   color: #9da653;
 }

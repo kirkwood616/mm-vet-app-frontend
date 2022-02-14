@@ -36,7 +36,9 @@ function Services() {
                   </p>
                 </div>
                 <div className="cards-footer">
-                  <Link to={"/pet-wellness"}>Read more...</Link>
+                  <Link to={"/pet-wellness"}>
+                    <button className="readMore">Read more...</button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -57,7 +59,9 @@ function Services() {
                   </p>
                 </div>
                 <div className="cards-footer">
-                  <a href="/dentistry">Read more...</a>
+                  <Link to={"/dentistry"}>
+                    <button className="readMore">Read more...</button>
+                  </Link>
                 </div>
               </div>
             </div>

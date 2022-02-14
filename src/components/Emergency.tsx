@@ -27,16 +27,14 @@ function Emergency() {
             target="_blank"
             rel="noopener noreferrer"
           >
-             24 Hour Emergency Animal Hospitals Near Detroit
+            24 Hour Emergency Animal Hospitals Near Detroit
           </a>
         </li>
       </div>
       <br />
-  
-      <button >
-        <Link className="backToHomeMenu" to={"/"}>Back to Home-Menu</Link>
-      </button>
-    
+      <Link to={"/"}>
+        <button className="backToHomeMenu">Back to Home-Menu</button>
+      </Link>
     </div>
   );
 }
