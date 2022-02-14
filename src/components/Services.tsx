@@ -4,9 +4,8 @@ import { Link } from "react-router-dom";
 function Services() {
   return (
     <div className="Services">
-      <div className="Cards--">
+      <div className="container">
         <img src="" alt="" />
-
         <h1>Our Services</h1>
         <p>
           We understand that a pet is part of the family. Our goal is to provide
@@ -16,7 +15,6 @@ function Services() {
           comprehensive suite of veterinary services ensures that every aspect
           of their well-being is given the excellent care they deserve.
         </p>
-
         {/* <button>
         <Link to={"/"}>Back to Home-Menu</Link>
         </button> */}

@@ -1,11 +1,3 @@
-:root {
-  --white: white;
-  --black: black;
-  --light-green: #ebf6f1;
-  --medium-green: #dfebd3;
-  --dark-green: #9da653;
-}
-
 .Emergency {
   border: none;
   border-radius: 1rem;
@@ -21,8 +13,22 @@
 .Emergency .info {
   align-items: flex-start;
   background-color: var(--light-green);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
   width: 65%;
   border-radius: 1rem;
   padding: 2rem;
   margin: auto;
+}
+
+.backToHomeMenu {
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  color: var(--white);
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--dark-green); 
+  border-radius: 5px;
+  padding: .5rem;
+  cursor: pointer;
 }

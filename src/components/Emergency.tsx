@@ -31,9 +31,12 @@ function Emergency() {
           </a>
         </li>
       </div>
-      <button>
-        <Link to={"/"}>Back to Home-Menu</Link>
+      <br />
+  
+      <button >
+        <Link className="backToHomeMenu" to={"/"}>Back to Home-Menu</Link>
       </button>
+    
     </div>
   );
 }
