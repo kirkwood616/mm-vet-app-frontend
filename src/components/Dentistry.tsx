@@ -4,21 +4,22 @@ import "./Dentistry.css";
 function Dentistry() {
   return (
     <div className="Dentistry">
-      <h1>Dentistry</h1>
-      <div className="Dentistry icon">
-        <img
-          src="./icons/double_arrow.svg"
-          alt="arrow-back"
-          height={20}
-          width={20}
-        />
-        <Link to={"/services"}>Back to Our Services</Link>
-        <div className="Dentistry image">
-          <img src="./animal-photos/dental.jpg" alt="dental-services" />
+      <div className="container">
+        <h1>Dentistry</h1>
+        <div className="Dentistry icon">
+          <img
+            src="./icons/double_arrow.svg"
+            alt="arrow-back"
+            height={20}
+            width={20}
+          /><Link to={"/services"}>Back to Our Services</Link>
         </div>
-      </div>
-      <div className="Dentistry paragraph">
-        <div className="Services-cards item dentistry">
+          <div className="Dentistry image">
+            <img src="./animal-photos/dental.jpg" alt="dental-services" />
+          </div>
+        <div className="Dentistry paragraph">
+          <h3>Overview</h3>
+          <br />
           <p>
             Imagine if you never brushed your teeth or had them cleaned. Pretty
             frightening, right? As you can imagine, things would eventually
@@ -26,25 +27,26 @@ function Dentistry() {
             decay, gums would become inflamed and infected. Bacteria from those
             rotting teeth would eventually travel into your bloodstream and
             could cause other serious health problems. And we haven’t even
-            mentioned the daily, debilitating pain. It’s the same scenario for
-            your dog or cat. While some people might laugh at the idea of
-            brushing their pet’s teeth or taking them for a dental cleaning, the
-            fact is that by age three, 80% of dogs and 70% of cats have some
-            evidence of periodontal disease. Periodic dental exams help maintain
-            proper oral hygiene and prevent future problems.
+            mentioned the daily, debilitating pain.
           </p>
           <br />
-          <div>
-            <ul>
-              M&M Veterinary Clinic offers complete pet oral health services,
-              including:
-            </ul>
+          <p>
+            It’s the same scenario for your dog or cat. While some people might
+            laugh at the idea of brushing their pet’s teeth or taking them for a
+            dental cleaning, the fact is that by age three, 80% of dogs and 70%
+            of cats have some evidence of periodontal disease. Periodic dental
+            exams help maintain proper oral hygiene and prevent future problems.
+          </p>
+          <br />
+          <ul>
+            M&M Veterinary Clinic offers complete pet oral health services,
+            including:
             <li>Dental exams</li>
             <li>Annual dental cleanings</li>
             <li>Dental X-rays</li>
             <li>Extractions</li>
             <li>Oral surgery</li>
-          </div>
+          </ul>
           <br />
           <p>
             Following American Veterinary Medical Association guidelines, M&M
@@ -64,8 +66,8 @@ function Dentistry() {
             help keep your pet’s mouth healthy in between cleanings. To make an
             appointment for a dental exam or cleaning, call us at (555)555-5555.
           </p>
+          <br />
         </div>
-        <br />
       </div>
     </div>
   );

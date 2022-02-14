@@ -17,10 +17,10 @@
 }
 .AboutUs.Mission.image > img {
   display: block;
-  width: 100vw;
-  max-height: 100vh;
-  aspect-ratio: 4/3;
-  object-fit: cover;
+  width: 100%;
+  max-height: 400px;
+  aspect-ratio: 16/9;
+  object-fit: scale-down;
   object-position: center;
 }
 
@@ -48,7 +48,8 @@
 .doctorCard {
   margin: 40px;
   position: relative;
-  max-width: 400px;
+  width: 60vw;
+  /* max-width: 300px; */
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
   border: none;
   background-color: var(--light-green);
@@ -73,7 +74,8 @@
 
 .doctorCard.desc {
   display: block;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: normal;
   position: absolute;
   height: 0;
   top: 0;

@@ -5,30 +5,31 @@ import "./PetWellness.css";
 function PetWellness() {
   return (
     <div className="PetWellness">
-      <h1>Pet Wellness</h1>
-      <div className="PetWellness icon">
+      <div className="container">
+        <h1>Pet Wellness</h1>
         <img
+          className="PetWellness icon"
           src="./icons/double_arrow.svg"
           alt="arrow-back"
           height={20}
           width={20}
-        />
-        <Link to={"/services"}>Back to Our Services</Link>
+        /> <Link to={"/services"}>Back to Our Services</Link>
+       
         <div className="PetWellness image">
           <img src="./animal-photos/well.jpg" alt="pet-wellness-services" />
         </div>
-      </div>
-      <div className="PetWellness paragraph">
-        <p>
-          Annual wellness exams evaluate your pets overall health, detect
-          problems before they become serious, and keep them on track to live a
-          long, healthy life.
-        </p>
-        <br />
-        <h2>Overview</h2>
-        <br />
 
-        <p>
+        <div className="PetWellness paragraph">
+          <br />
+          <h2>Overview</h2>
+          <br />
+          <p>
+            Annual wellness exams evaluate your pets overall health, detect
+            problems before they become serious, and keep them on track to live
+            a long, healthy life.
+          </p>
+          <br />
+
           <span>
             Your pet can benefit greatly from regular wellness exams or
             checkups. No matter the age, wellness exams provide an excellent
@@ -77,14 +78,11 @@ function PetWellness() {
             as well.
           </p>
           <br />
-          <div>
-            {" "}
-            <ul>
-              {" "}
-              M&M Veterinary Clinic’s veterinarian-performed physical exams
-              comprehensively assess every aspect of your pet’s health. Wellness
-              exams typically include:
-            </ul>
+
+          <ul>
+            M&M Veterinary Clinic’s veterinarian-performed physical exams
+            comprehensively assess every aspect of your pet’s health. Wellness
+            exams typically include:
             <br />
             <li>Ear exam</li>
             <li>Eye exam</li>
@@ -97,16 +95,16 @@ function PetWellness() {
             <li>Cardiovascular evaluation</li>
             <li>Nutrition consultation</li>
             <li>Behavior counseling</li>
-            <br />
-          </div>
+          </ul>
           <br />
+
           <p>
             Taking care of your precious pet’s health starts with a thorough
             veterinary exam. To schedule an appointment for your pet, call us at
-            (555)555-5555.{" "}
+            (555)555-5555.
           </p>
-        </p>
-        <br />
+          <br />
+        </div>
       </div>
     </div>
   );

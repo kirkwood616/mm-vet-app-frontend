@@ -1,16 +1,9 @@
-:root {
-    --white: white;
-    --black: black;
-    --light-green: #ebf6f1;
-    --medium-green: #dfebd3;
-    --dark-green: #9da653;
-  }
-
 .Dentistry {
     padding: 2rem;
     display: flex;
     flex-direction: column;
 }
+
 
 .Dentistry.image{
     padding: 1rem;
@@ -19,6 +12,7 @@
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .Dentistry.icon Link{
@@ -31,10 +25,11 @@
 .Dentistry.image > img {
     display: block;
     width: 100%;
-    max-height: 300px;
+     max-height: 300px;
     aspect-ratio: 16/9;
     object-fit: cover;
     object-position: center;
+    border-radius: 1rem;
     transition: 200ms transform ease-in-out;
 }
 
@@ -46,9 +41,9 @@
     margin-top: .5rem;
     padding: 2rem;
     padding-bottom: 0;
-    font-size: .9rem;
+    font-size: 1rem;
     background-color: var(--white);
-    border: 1px solid #777;
+    /* border: 1px solid #777; */
     border-radius: .25em;
 
 }

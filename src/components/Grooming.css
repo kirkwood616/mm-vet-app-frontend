@@ -48,7 +48,7 @@
     padding-bottom: 0;
     font-size: .9rem;
     background-color: var(--white);
-    border: 1px solid #777;
+    /* border: 1px solid #777; */
     border-radius: .25em;
 
 }
