@@ -13,7 +13,12 @@ function PetProfile() {
   return (
     <div className="PetProfile">
       <h1>{userPets[i].petFirstName}'s Profile</h1>
-      <img src={userPets[i].picture.picture} width="150" alt="paw icon" />
+      <img
+        src={userPets[i].picture.picture}
+        width="150"
+        alt="paw icon"
+        style={{ borderRadius: "50%" }}
+      />
       <Link to={`/pet-profile/image-upload/${id}`}>Upload Image</Link>
       <div className="petProfileInfo">
         <table>
