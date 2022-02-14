@@ -47,6 +47,7 @@ export default function UserContextProvider({ children }: Props) {
   }
 
   function handleUserPets(user: User): void {
+    setUserPets([]);
     user.pets.forEach((pet) => {
       fetchPet(pet).then((data) => setUserPets((prev) => [...prev, data]));
     });
@@ -67,6 +68,7 @@ export default function UserContextProvider({ children }: Props) {
         handleLogIn,
         handleLogOut,
         handleEmail,
+        handleUserPets,
         isLoggedIn,
       }}
     >

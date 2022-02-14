@@ -5,43 +5,70 @@ import { Link } from "react-router-dom";
 
 function UserProfile() {
   let { user } = useContext(UserContext);
+  let { userPets } = useContext(UserContext);
 
   return (
     <div className="UserProfile">
       <h1>Your Information</h1>
       <div className="infoContainer">
-        <p>
-          <strong>Name:</strong> {user.firstName} {user.lastName}
-        </p>
-        <p>
-          <strong>Address:</strong>{" "}
-          {user.address.map(
-            (item) => `${item.street} / ${item.city}, ${item.state} ${item.zip}`
-          )}
-        </p>
-        <p>
-          <strong>Phone: </strong>
-          {user.phone}
-        </p>
-        <p>
-          <strong>Email:</strong> {user.email}
-        </p>
-        <br />
-        <h3>
-          {" "}
-          <Link to="/your-pets">Your Pets</Link>
-        </h3>
+        <table>
+          <tbody>
+            <tr>
+              <th className="first">Name</th>
+            </tr>
+            <tr>
+              <td>
+                {user.firstName} {user.lastName}
+              </td>
+            </tr>
+            <tr>
+              <th>Address</th>
+            </tr>
+            <tr>
+              <td>
+                {user.address.map((item, index) => (
+                  <p key={index}>
+                    <span>{item.street}</span>
+                    <span>
+                      {item.city}, {item.state} {item.zip}
+                    </span>
+                  </p>
+                ))}
+              </td>
+            </tr>
+            <tr>
+              <th>Phone</th>
+            </tr>
+            <tr>
+              <td>{user.phone}</td>
+            </tr>
+            <tr>
+              <th>E-Mail</th>
+            </tr>
+            <tr>
+              <td>{user.email}</td>
+            </tr>
+            <tr>
+              <th>Your Pets</th>
+            </tr>
+            <tr>
+              <td>
+                {userPets.map((pet, index) => (
+                  <span key={index}>
+                    <Link to={`/pet-profile/${pet._id}`}>
+                      {pet.petFirstName}
+                    </Link>
+                  </span>
+                ))}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <span className="updateLink">
+          <Link to={"/"}>Update Your Contact Info</Link>
+        </span>
       </div>
       <br />
-      <h3>Update your contact information</h3>
-      <div className="update-contact-info">
-        {/* set update info hidden till client click request the update */}
-        {/* <form >
-          <input type="text">Address</input>
-          <input type="text">Phone</input> 
-          <input type="text">Email</input>
-        </form> */}
-      </div>
     </div>
   );
 }

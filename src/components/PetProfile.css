@@ -1,14 +1,125 @@
 .PetProfile {
-  background-color: #dfebd3;
-  text-align: center;
-  padding: 1rem;
+  background-color: var(--medium-green);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .PetProfile .petProfileInfo {
+  background-color: var(--light-green);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  width: 50%;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.PetProfile a {
+  color: blue;
+}
+
+.PetProfile .petProfileInfo table {
   background-color: white;
-  border: 1px solid black;
-  padding: 1rem;
-  width: fit-content;
+  border-collapse: collapse;
+  border-radius: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   margin: auto;
-  text-align: left;
+  display: flex;
+  width: 75%;
+}
+
+.PetProfile .petProfileInfo table tbody {
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.PetProfile .petProfileInfo table tbody tr {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+.PetProfile .petProfileInfo table tbody th {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+  padding: 0.75rem;
+  border-right: 1px solid #ddd;
+}
+
+.PetProfile .petProfileInfo table tbody td {
+  width: 65%;
+  border: none;
+  padding: 0.75rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.PetProfile .petProfileInfo table tbody tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.PetProfile .petProfileInfo table tbody tr:nth-child(12) {
+  border-radius: 0 0 1rem 1rem;
+  border: none;
+}
+
+.PetProfile .petProfileInfo table tbody tr:nth-child(1) {
+  border-radius: 1rem 1rem 0 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .PetProfile .petProfileInfo {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .PetProfile .petProfileInfo {
+    width: 85%;
+  }
+
+  .PetProfile .petProfileInfo table {
+    width: 100%;
+  }
+
+  .PetProfile .petProfileInfo table tbody {
+    border-radius: 1rem;
+  }
+
+  .PetProfile .petProfileInfo table tbody tr {
+    flex-direction: column;
+    border: none;
+  }
+
+  .PetProfile .petProfileInfo table tbody th {
+    border: none;
+    width: auto;
+  }
+
+  .PetProfile .petProfileInfo table tbody td {
+    width: auto;
+  }
+
+  .PetProfile .petProfileInfo table tbody th {
+    background-color: rgba(0, 0, 0, 0.05);
+    /* border-radius: 1rem; */
+  }
+
+  .PetProfile .petProfileInfo table tbody tr:nth-child(odd) {
+    background-color: white;
+  }
+
+  .PetProfile .petProfileInfo table .first {
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .PetProfile .petProfileInfo table .last {
+    border-radius: 1rem 1rem 0 0;
+  }
 }

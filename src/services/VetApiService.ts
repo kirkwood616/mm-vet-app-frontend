@@ -35,6 +35,12 @@ export function fetchPet(id: string): Promise<Pet> {
     .then((res) => res.data);
 }
 
+export function updatePet(id: string, pet: Pet): Promise<Pet> {
+  return axios
+    .put(`http://localhost:5001/mm-vet-app/us-central1/api/pet/${id}`, pet)
+    .then((res) => res.data);
+}
+
 // MEDICAL RECORDS
 // export function fetchAllMedicalRecords(): Promise<MedicalRecord[]> {
 //   return axios

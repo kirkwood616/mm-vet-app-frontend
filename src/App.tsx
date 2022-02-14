@@ -24,6 +24,7 @@ import Surgery from "./components/Surgery";
 import Parasite_Control from "./components/Parasite_Control";
 import Microchipping from "./components/Microchipping";
 import Grooming from "./components/Grooming";
+import PetImageUpload from "./components/PetImageUpload";
 
 function App() {
   return (
@@ -35,7 +36,11 @@ function App() {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/emergency" element={<Emergency />} />
           <Route path="/health-records" element={<HealthRecords />} />
-          <Route path="/pet-profile/:index" element={<PetProfile />} />
+          <Route path="/pet-profile/:id" element={<PetProfile />} />
+          <Route
+            path="/pet-profile/image-upload/:id"
+            element={<PetImageUpload />}
+          />
           <Route path="/user-profile" element={<UserProfile />} />
           <Route path="/request-appointment" element={<RequestAppointment />} />
           <Route
@@ -50,12 +55,11 @@ function App() {
           <Route path="/dentistry" element={<Dentistry />} />
           <Route path="/diet-nutrition" element={<Diet_Nutrition />} />
           <Route path="/vaccinations" element={<Vaccinations />} />
-          <Route path="/spay-neuter" element={<Spay_Neuter/>} />
-          <Route path="/surgery" element={<Surgery/>} />
-          <Route path="/parasite-control" element={<Parasite_Control/>} />
-          <Route path="/microchipping" element={<Microchipping/>} />
-          <Route path="/grooming" element={<Grooming/>} />
-
+          <Route path="/spay-neuter" element={<Spay_Neuter />} />
+          <Route path="/surgery" element={<Surgery />} />
+          <Route path="/parasite-control" element={<Parasite_Control />} />
+          <Route path="/microchipping" element={<Microchipping />} />
+          <Route path="/grooming" element={<Grooming />} />
         </Routes>
         <Footer />
       </Router>
