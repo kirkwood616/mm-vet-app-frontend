@@ -1,9 +1,9 @@
-// import "./PetImageUpload.css";
+import "./PetImageUpload.css";
 import { FormEvent, useContext, useState } from "react";
 import UserContext from "../context/UserContext";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Pet from "../models/Pet";
-import { updatePet } from "../services/VetApiService";
+import { fetchPet, updatePet } from "../services/VetApiService";
 import UserPicture from "../models/UserPicture";
 
 function PetImageUpload() {
@@ -13,11 +13,19 @@ function PetImageUpload() {
   let { id } = useParams();
   let i = userPets.findIndex((pet) => pet._id === id);
   const [baseImage, setBaseImage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
-  const uploadImage = async (e: any) => {
-    const file = e.target.files[0];
-    const base64 = await convertBase64(file);
-    setBaseImage(base64 as string);
+  // console.log(baseImage);
+
+  const onChangeImage = async (e: any) => {
+    if (e.target.files[0]) {
+      const file = e.target.files[0];
+      const base64 = await convertBase64(file);
+      setBaseImage(base64 as string);
+    } else {
+      setBaseImage("");
+    }
   };
 
   const convertBase64 = (file: any) => {
@@ -34,7 +42,17 @@ function PetImageUpload() {
       };
     });
   };
-  console.log(i);
+
+  function apiDelay() {
+    setTimeout(function () {
+      handleUserPets(user);
+    }, 3000);
+    setTimeout(function () {
+      setBaseImage("");
+      setIsLoading(false);
+      navigate(`/pet-profile/${userPets[i]._id}`);
+    }, 4000);
+  }
 
   function handleImageUpload(e: FormEvent) {
     if (!baseImage) {
@@ -42,6 +60,7 @@ function PetImageUpload() {
       return;
     } else {
       e.preventDefault();
+      setIsLoading(true);
       let newImage: UserPicture = {
         picture: baseImage,
       };
@@ -62,25 +81,54 @@ function PetImageUpload() {
         medicalRecords: userPets[i].medicalRecords,
       };
       updatePet(id!, newPetPicture);
-      setBaseImage("");
-      handleUserPets(user);
-      console.log(newPetPicture);
+      apiDelay();
     }
   }
 
   return (
     <div className="PetImageUpload">
-      <h1>HELLO CLARICE</h1>
-      <form action="put" onSubmit={handleImageUpload}>
-        <input
-          type="file"
-          onChange={(e) => {
-            uploadImage(e);
-          }}
-        />
-        <img src={baseImage} alt="" width={"200px"} />
-        <button type="submit">UPLOAD PICTURE</button>
-      </form>
+      <h1>UPLOAD PICTURE</h1>
+      <div className="petImageUploadForm">
+        <form action="put" className="imageUpload" onSubmit={handleImageUpload}>
+          <label htmlFor="petPicture">
+            <input
+              type="file"
+              id="petPicture"
+              name="petPicture"
+              key={baseImage || ""}
+              accept=".jpg, .jpeg, .png "
+              onChange={(e) => {
+                onChangeImage(e);
+              }}
+            />
+          </label>
+          {baseImage ? (
+            <p>
+              <img src={baseImage} alt="User Selected" />{" "}
+              <span
+                className="removeImage"
+                onClick={() => {
+                  setBaseImage("");
+                }}
+              >
+                REMOVE
+              </span>
+            </p>
+          ) : (
+            <p className="noImageSelected">No Image Selected</p>
+          )}
+          {baseImage ? (
+            <button type="submit" className="uploadButton">
+              UPLOAD PICTURE
+            </button>
+          ) : (
+            ""
+          )}
+        </form>
+      </div>
+      <div className={isLoading ? "loadingScreen" : "hiddenLoadScreen"}>
+        <div className={isLoading ? "lds-hourglass" : "hiddenLoadScreen"}></div>
+      </div>
     </div>
   );
 }

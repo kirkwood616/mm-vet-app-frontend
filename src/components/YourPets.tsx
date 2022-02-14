@@ -13,9 +13,9 @@ function YourPets() {
         <Link to={`/pet-profile/${pet._id}`} key={index}>
           <div className="yourPetBar">
             <img
-              src="https://www.freeiconspng.com/uploads/png-file-png-file-png-file-png-file-png-file-30.png"
-              width="100"
-              alt="paw icon"
+              src={userPets[index].picture.picture}
+              alt={`${userPets[index].petFirstName}`}
+              className="userPetPic"
             />
             <h2>{pet.petFirstName}</h2>
           </div>

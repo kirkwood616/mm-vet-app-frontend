@@ -3,7 +3,6 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   width: 100%;
 }
@@ -18,12 +17,18 @@
   text-decoration: none;
 }
 
+.YourPets .userPetPic {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
 .YourPets .yourPetsContainer {
   width: 100%;
 }
 
 .YourPets .yourPetBar {
-  background-color: #9da653;
+  background-color: var(--dark-green);
   border-radius: 15px;
   display: flex;
   align-items: center;

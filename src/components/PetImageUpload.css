@@ -1,0 +1,134 @@
+.PetImageUpload {
+  text-align: center;
+  height: 400px;
+  width: 100%;
+  margin: 0 auto 5rem auto;
+}
+
+.PetImageUpload .petImageUploadForm {
+  background-color: var(--light-green);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  width: 500px;
+  margin: auto;
+}
+
+.PetImageUpload h1 {
+  margin: 1rem;
+}
+
+input[type="file"] {
+  color: rgba(0, 0, 0, 0);
+  margin-left: 8rem;
+}
+
+input[type="file"]::file-selector-button {
+  background-color: lightgray;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+}
+
+.PetImageUpload img {
+  border-radius: 50%;
+  margin-top: 1rem;
+  width: 150px;
+  height: 150px;
+}
+
+.PetImageUpload .noImageSelected {
+  margin: 1rem;
+  font-weight: bold;
+}
+
+.PetImageUpload form {
+  text-align: center;
+}
+
+.petImageUploadForm .removeImage {
+  background-color: red;
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.5rem;
+  max-width: 150px;
+  margin: 1rem auto;
+}
+
+.uploadButton {
+  display: block;
+  background-color: var(--dark-green);
+  border: none;
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* ANIMATION */
+
+.loadingScreen {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hiddenLoadScreen {
+  display: none;
+}
+
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+  width: auto;
+  height: auto;
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 100px solid #fff;
+  border-color: var(--dark-green) transparent var(--medium-green) transparent;
+  animation: lds-hourglass 1.3s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .PetImageUpload .petImageUploadForm {
+    width: 75%;
+  }
+}
