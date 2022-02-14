@@ -28,14 +28,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Cookie&family=Fira+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Lexend+Exa:wght@200;500;700&family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400&display=swap");
 
 /* All Cards in Services Component */
-.cards-grid {
-  padding: 0.8rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
+
+.servicesHeader {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  max-width: 600px;
+  background-color: var(--light-green);
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
 }
-.cards {
+
+.cards-container {
+  /* display: grid; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  /* height: 100%; */
+  padding: 0.8rem;
+  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+  gap: 1rem;
+}
+
+.card {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* vertical-align: middle; */
   overflow: hidden;
   --padding: 1rem;
   border: none;
@@ -43,22 +68,22 @@
   background-color: var(--light-green);
   max-width: 300px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
-  transition: all 0.3ms transform ease-in;
+  transition: all 300ms transform ease-in;
 }
-.cards:hover {
+.card:hover {
   transform: scale(1.025);
 }
 
-.cards-header {
+.card-header {
   font-size: 1.5rem;
   padding: var(--padding);
   padding-bottom: 0;
 }
-.cards-header.card-image {
+.card-header.card-image {
   overflow: hidden;
   padding: 0;
 }
-.cards-header.card-image > img {
+.card-header.card-image > img {
   display: block;
   width: 100%;
   max-height: 200px;
@@ -67,31 +92,33 @@
   object-position: center;
 }
 
-.cards-body {
-  font-size: 0.9rem;
+.card-body {
+  font-size: 1rem;
   padding: 0 var(--padding);
 }
 
-.cards-footer {
+.card-footer {
   margin-top: 1rem;
   padding: var(--padding);
-  padding-top: 0;
+  /* padding-top: 0; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
-.cards-grid .cards-footer .readMore {
+.card-footer .readMore {
   background-color: var(--dark-green);
   color: var(--white);
   border: 1px solid var(--dark-green);
   font-size: 1rem;
   text-decoration: none;
-  align-items: end;
   padding: 0.5em 0.75em;
   border-radius: 0.25em;
   cursor: pointer;
 }
 
-.cards-footer button:hover,
-button:focus {
+.card-footer .readMore:hover,
+.readMore:focus {
   background-color: var(--medium-green);
   color: #9da653;
 }

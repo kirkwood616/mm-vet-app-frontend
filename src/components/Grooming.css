@@ -21,7 +21,7 @@
     overflow: hidden;
 }
 
-.Grooming.icon Link{
+.Grooming.icon > a{
     display: block;
     text-decoration: none;
     color: #777;

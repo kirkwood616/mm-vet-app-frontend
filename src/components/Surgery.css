@@ -13,7 +13,7 @@
     overflow: hidden;
 }
 
-.Surgery.icon Link{
+.Surgery.icon > a{
     display: block;
     text-decoration: none;
     color: #777;

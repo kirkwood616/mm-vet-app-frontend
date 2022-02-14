@@ -13,7 +13,7 @@
     overflow: hidden;
 }
 
-.Vaccinations.icon Link{
+.Vaccinations.icon > a{
     display: block;
     text-decoration: none;
     color: #777;

@@ -13,7 +13,7 @@
     overflow: hidden;
 }
 
-.Diet_Nutrition.icon Link{
+.Diet_Nutrition.icon > a {
     display: block;
     text-decoration: none;
     color: #777;
