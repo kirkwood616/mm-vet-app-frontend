@@ -13,7 +13,7 @@
     overflow: hidden;
 }
 
-.Spay_Neuter.icon Link{
+.Spay_Neuter.icon > a {
     display: block;
     text-decoration: none;
     color: #777;

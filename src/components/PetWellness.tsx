@@ -7,20 +7,21 @@ function PetWellness() {
     <div className="PetWellness">
       <div className="container">
         <h1>Pet Wellness</h1>
-        <img
-          className="PetWellness icon"
-          src="./icons/double_arrow.svg"
-          alt="arrow-back"
-          height={20}
-          width={20}
-        /> <Link to={"/services"}>Back to Our Services</Link>
-       
-        <div className="PetWellness image">
-          <img src="./animal-photos/well.jpg" alt="pet-wellness-services" />
+        <div className="PetWellness icon">
+          <img
+            src="./icons/double_arrow.svg"
+            alt="arrow-back"
+            height={20}
+            width={20}
+          />{" "}
+          <Link to={"/services"}>Back to Our Services</Link>
         </div>
-
+        <img
+          className="PetWellness image"
+          src="./animal-photos/well.jpg"
+          alt="pet-wellness-services"
+        />
         <div className="PetWellness paragraph">
-          <br />
           <h2>Overview</h2>
           <br />
           <p>
@@ -29,7 +30,6 @@ function PetWellness() {
             a long, healthy life.
           </p>
           <br />
-
           <span>
             Your pet can benefit greatly from regular wellness exams or
             checkups. No matter the age, wellness exams provide an excellent
@@ -40,7 +40,6 @@ function PetWellness() {
             option than treating an illness.
           </span>
           <br />
-
           <p>
             <span>
               A wellness exam includes an evaluation of all of your pet’s major
@@ -50,7 +49,6 @@ function PetWellness() {
             </span>
           </p>
           <br />
-
           <p>
             <span>
               A wellness exam is also your chance to have us address your
@@ -61,7 +59,6 @@ function PetWellness() {
             </span>
           </p>
           <br />
-
           <p>
             Finally, wellness exams help us establish a relationship with you
             and your pet. Through your pet’s physical exams, other wellness
@@ -78,7 +75,6 @@ function PetWellness() {
             as well.
           </p>
           <br />
-
           <ul>
             M&M Veterinary Clinic’s veterinarian-performed physical exams
             comprehensively assess every aspect of your pet’s health. Wellness
@@ -97,7 +93,6 @@ function PetWellness() {
             <li>Behavior counseling</li>
           </ul>
           <br />
-
           <p>
             Taking care of your precious pet’s health starts with a thorough
             veterinary exam. To schedule an appointment for your pet, call us at
