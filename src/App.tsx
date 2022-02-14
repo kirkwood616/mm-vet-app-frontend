@@ -17,14 +17,14 @@ import LogIn from "./components/LogIn";
 import Footer from "./components/Footer";
 import PetWellness from "./components/PetWellness";
 import Dentistry from "./components/Dentistry";
-import Diet_Nutrition from "./components/Diet_Nutrition";
 import Vaccinations from "./components/Vaccinations";
-import Spay_Neuter from "./components/Spay_Neuter";
 import Surgery from "./components/Surgery";
-import Parasite_Control from "./components/Parasite_Control";
 import Microchipping from "./components/Microchipping";
 import Grooming from "./components/Grooming";
 import PetImageUpload from "./components/PetImageUpload";
+import ParasiteControl from "./components/ParasiteControl";
+import DietNutrition from "./components/DietNutrition";
+import SpayNeuter from "./components/SpayNeuter";
 
 function App() {
   return (
@@ -53,11 +53,11 @@ function App() {
           <Route path="/your-pets" element={<YourPets />} />
           <Route path="/pet-wellness" element={<PetWellness />} />
           <Route path="/dentistry" element={<Dentistry />} />
-          <Route path="/diet-nutrition" element={<Diet_Nutrition />} />
+          <Route path="/diet-nutrition" element={<DietNutrition />} />
           <Route path="/vaccinations" element={<Vaccinations />} />
-          <Route path="/spay-neuter" element={<Spay_Neuter />} />
+          <Route path="/spay-neuter" element={<SpayNeuter />} />
           <Route path="/surgery" element={<Surgery />} />
-          <Route path="/parasite-control" element={<Parasite_Control />} />
+          <Route path="/parasite-control" element={<ParasiteControl />} />
           <Route path="/microchipping" element={<Microchipping />} />
           <Route path="/grooming" element={<Grooming />} />
         </Routes>

@@ -1,13 +1,18 @@
 import { Link } from "react-router-dom";
-import "./Parasite_Control.css";
+import "./ParasiteControl.css";
 
-function Parasite_Control() {
+function ParasiteControl() {
   return (
     <div className="Parasite_Control">
       <div className="container">
         <h1>Parasite Control (Fleas, Ticks & Heartworms)</h1>
         <div className="Parasite_Control icon">
-          <img src="./icons/double_arrow.svg" alt="arrow-back" height={20} width={20} />
+          <img
+            src="./icons/double_arrow.svg"
+            alt="arrow-back"
+            height={20}
+            width={20}
+          />
           <Link to={"/services"}>Back to Our Services</Link>
         </div>
         <div className="Parasite_Control image">
@@ -16,7 +21,7 @@ function Parasite_Control() {
             alt="Parasite-Control-Services"
           />
         </div>
-        
+
         <div className="Parasite_Control paragraph">
           <p>
             Parasites such as fleas and ticks can be very damaging to your pet’s
@@ -135,4 +140,4 @@ function Parasite_Control() {
   );
 }
 
-export default Parasite_Control;
+export default ParasiteControl;

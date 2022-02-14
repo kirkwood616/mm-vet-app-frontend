@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import "./Spay_Neuter.css";
+import "./SpayNeuter.css";
 
-function Spay_Neuter() {
+function SpayNeuter() {
   return (
     <div className="Spay_Neuter">
       <div className="container">
@@ -109,4 +109,4 @@ function Spay_Neuter() {
   );
 }
 
-export default Spay_Neuter;
+export default SpayNeuter;

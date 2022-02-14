@@ -15,20 +15,23 @@ function Grooming() {
           />
           <Link to={"/services"}>Back to Our Services</Link>
         </div>
-        <div className="Grooming image">
-          <img src="./animal-photos/dogG.png" alt="grooming-services" />
+        <div className="groomingImageContainer">
+          <img
+            src="./animal-photos/dogG.png"
+            alt="grooming-services"
+            className="groomingImage"
+          />
         </div>
         <div className="Grooming paragraph">
           <p>
             We offer the finest in all breed grooming services for your pet. Our
-            groomers are experienced, kind, and hard-working! 
-           </p> 
-           <br />
-           <p>
-            Let us pamper your
-            pet and make them look their best. We are happy to employ
-            professional groomers in our hospital because we believe that it
-            offers many conveniences to you as a client.
+            groomers are experienced, kind, and hard-working!
+          </p>
+          <br />
+          <p>
+            Let us pamper your pet and make them look their best. We are happy
+            to employ professional groomers in our hospital because we believe
+            that it offers many conveniences to you as a client.
           </p>
           <br />
           <p>
@@ -39,7 +42,7 @@ function Grooming() {
             more serious medical conditions.
           </p>
           <br />
-           {/* <img className="Grooming image" src="./animal-photos/catG.png" alt="grooming-services" /> */}
+          {/* <img className="Grooming image" src="./animal-photos/catG.png" alt="grooming-services" /> */}
           <br />
         </div>
       </div>

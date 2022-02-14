@@ -67,11 +67,12 @@
   border-radius: 1rem;
   background-color: var(--light-green);
   max-width: 300px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
-  transition: all 300ms transform ease-in;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.1s ease-in;
 }
 .card:hover {
-  transform: scale(1.025);
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .card-header {

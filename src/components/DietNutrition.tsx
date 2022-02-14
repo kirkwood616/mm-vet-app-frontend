@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import "./Diet_Nutrition.css";
+import "./DietNutrition.css";
 
-function Diet_Nutrition() {
+function DietNutrition() {
   return (
     <div className="Diet_Nutrition">
       <div className="container">
@@ -91,4 +91,4 @@ function Diet_Nutrition() {
   );
 }
 
-export default Diet_Nutrition;
+export default DietNutrition;

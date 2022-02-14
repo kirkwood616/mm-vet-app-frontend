@@ -1,54 +1,36 @@
-:root {
-    --white: white;
-    --black: black;
-    --light-green: #ebf6f1;
-    --medium-green: #dfebd3;
-    --dark-green: #9da653;
-  }
-
 .Grooming {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.Grooming.image{
-    padding: 1rem;
-    border: none;
-    border-radius: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
+.groomingImageContainer {
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  margin: 0 auto;
 }
 
-.Grooming.icon > a{
-    display: block;
-    text-decoration: none;
-    color: #777;
-    
+.Grooming.icon > a {
+  display: block;
+  text-decoration: none;
+  color: #777;
 }
 
-.Grooming.image > img {
-    display: block;
-    width: 100%;
-    max-height: 300px;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    object-position: center;
-    transition: 200ms transform ease-in-out;
+.groomingImageContainer,
+.groomingImage {
+  display: block;
+  max-height: 300px;
+  margin: 0 auto;
+  border-radius: 1rem;
 }
 
-.Grooming:hover > .Grooming.Grooming.image > img{
-    transform: scale3d(1.025);
-}
-
-.Grooming.paragraph{
-    margin-top: .5rem;
-    padding: 2rem;
-    padding-bottom: 0;
-    font-size: .9rem;
-    background-color: var(--white);
-    /* border: 1px solid #777; */
-    border-radius: .25em;
-
+.Grooming .paragraph {
+  margin-top: 0.5rem;
+  padding: 2rem;
+  padding-bottom: 0;
+  font-size: 0.9rem;
+  background-color: var(--white);
+  border: 1px solid #777;
+  border-radius: 0.25em;
 }
