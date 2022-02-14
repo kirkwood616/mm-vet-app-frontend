@@ -1,7 +1,7 @@
 import "./PetProfile.css";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import UserContext from "../context/UserContext";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { getPetAge } from "../functions/functions";
 
@@ -9,18 +9,28 @@ function PetProfile() {
   let { userPets } = useContext(UserContext);
   let { id } = useParams();
   let i = userPets.findIndex((pet) => pet._id === id);
+  const [isActive, setIsActive] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="PetProfile">
       <h1>{userPets[i].petFirstName}'s Profile</h1>
-      <img
-        src={userPets[i].picture.picture}
-        width="150"
-        alt="paw icon"
-        style={{ borderRadius: "50%" }}
-      />
-      <Link to={`/pet-profile/image-upload/${id}`}>Upload Image</Link>
       <div className="petProfileInfo">
+        <img
+          src={userPets[i].picture.picture}
+          alt="paw icon"
+          onClick={() => setIsActive(!isActive)}
+        />
+        <p className={isActive ? "isActive" : "notActive"}>
+          {/* <Link to={`/pet-profile/image-upload/${id}`}> */}
+          <span
+            className="uploadLink"
+            onClick={() => navigate(`/pet-profile/image-upload/${id}`)}
+          >
+            Upload Image
+          </span>
+          {/* </Link> */}
+        </p>
         <table>
           <tbody>
             <tr>
