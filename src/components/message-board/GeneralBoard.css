@@ -6,3 +6,14 @@
 .GeneralBoard .generalPostsContainer {
   background-color: white;
 }
+
+.GeneralBoard .generalPost {
+  /* background-color: yellowgreen; */
+  border-bottom: 1px solid lightgray;
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+.GeneralBoard .createPostFormContainer {
+  /* display: none; */
+}
