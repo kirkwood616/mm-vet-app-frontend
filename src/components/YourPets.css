@@ -8,7 +8,7 @@
 }
 
 .YourPets h2 {
-  color: white;
+  color: black;
   font-size: 2rem;
   margin-left: 1rem;
 }
@@ -19,6 +19,7 @@
 
 .YourPets .userPetPic {
   border-radius: 50%;
+  box-shadow: 0 0 5px black;
   height: 100px;
   width: 100px;
 }
@@ -28,11 +29,18 @@
 }
 
 .YourPets .yourPetBar {
-  background-color: var(--dark-green);
+  background-color: var(--light-green);
   border-radius: 15px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
   display: flex;
   align-items: center;
   width: 300px;
   margin: 1rem;
   padding: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.YourPets .yourPetBar:hover {
+  transform: scale(1.05);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.75);
 }
