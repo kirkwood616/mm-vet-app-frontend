@@ -4,7 +4,7 @@ interface MessageBoardPost {
   board: string;
   user: string;
   title: string;
-  post: string;
+  message: string;
   replies: MessageBoardPost[];
 }
 
