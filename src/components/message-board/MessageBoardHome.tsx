@@ -4,14 +4,18 @@ import { useContext } from "react";
 import UserContext from "../../context/UserContext";
 
 function MessageBoardHome() {
-  let { user } = useContext(UserContext);
+  // let { user } = useContext(UserContext);
+  let { handleGeneralMessageBoard } = useContext(UserContext);
   return (
     <div className="MessageBoardHome">
       <h1>Message Board</h1>
       <div className="messageBoardCategories">
         <div className="categoriesContainer">
           <div className="divider">
-            <Link to={"/message-board/general"}>
+            <Link
+              to={"/message-board/general"}
+              onClick={handleGeneralMessageBoard}
+            >
               <div className="category">
                 <h2>General Discussion</h2>
                 <p className="boardDescription">
