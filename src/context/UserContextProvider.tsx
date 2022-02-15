@@ -1,8 +1,13 @@
 import { FormEvent, ReactNode, useEffect, useState } from "react";
 import UserContext from "./UserContext";
 import User from "../models/User";
-import { fetchPet, fetchUserByEmail } from "../services/VetApiService";
+import {
+  fetchGeneralPosts,
+  fetchPet,
+  fetchUserByEmail,
+} from "../services/VetApiService";
 import Pet from "../models/Pet";
+import MessageBoardPost from "../models/MessageBoardPost";
 
 interface Props {
   children: ReactNode;
@@ -25,10 +30,18 @@ export default function UserContextProvider({ children }: Props) {
     email: "",
     pets: [],
   };
+  const [generalMessageBoard, setGeneralMessageBoard] = useState<
+    MessageBoardPost[]
+  >([]);
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
   const [email, setEmail] = useState<string>("");
   const [user, setUser] = useState<User>(initialUserState);
   const [userPets, setUserPets] = useState<Pet[]>([]);
+
+  function handleGeneralMessageBoard(): void {
+    setGeneralMessageBoard([]);
+    fetchGeneralPosts().then((data) => setGeneralMessageBoard(data));
+  }
 
   function handleEmail(input: string): void {
     setEmail(input);
@@ -44,6 +57,7 @@ export default function UserContextProvider({ children }: Props) {
     setEmail("");
     setUserPets([]);
     setUser(initialUserState);
+    setGeneralMessageBoard([]);
   }
 
   function handleUserPets(user: User): void {
@@ -69,6 +83,8 @@ export default function UserContextProvider({ children }: Props) {
         handleLogOut,
         handleEmail,
         handleUserPets,
+        handleGeneralMessageBoard,
+        generalMessageBoard,
         isLoggedIn,
       }}
     >
