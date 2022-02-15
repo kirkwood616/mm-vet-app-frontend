@@ -5,6 +5,7 @@ import UserContext from "../context/UserContext";
 
 function LoggedInMenu() {
   let { handleLogOut } = useContext(UserContext);
+  let { user } = useContext(UserContext);
   return (
     <ul>
       <li>
@@ -27,6 +28,9 @@ function LoggedInMenu() {
       </li>
       <li>
         <Link to={"/about-us"}>About Us</Link>
+      </li>
+      <li>
+        <Link to={"/message-board"}>Message Board</Link>
       </li>
       <li>
         <Link to={"/"} onClick={handleLogOut}>
