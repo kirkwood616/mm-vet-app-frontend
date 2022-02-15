@@ -50,7 +50,7 @@ export function updatePet(id: string, pet: Pet): Promise<Pet> {
 // }
 
 // MESSAGE BOARD
-export function fetchAllMessageBoardPosts(): Promise<MessageBoardPost[]> {
+export function fetchGeneralPosts(): Promise<MessageBoardPost[]> {
   return axios
     .get(
       `http://localhost:5001/mm-vet-app/us-central1/api/message-board/general`
