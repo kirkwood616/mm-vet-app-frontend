@@ -23,12 +23,17 @@
   margin: 1rem;
 }
 
-.PetProfile img {
+.PetProfile .imageContainer img {
   border-radius: 50%;
   box-shadow: 0 0 5px black;
   cursor: pointer;
   height: 150px;
   width: 150px;
+  transition: all 0.2s ease-in-out;
+}
+
+.PetProfile .imageContainer img:hover {
+  transform: scale(1.05);
 }
 
 .PetProfile .isActive {
