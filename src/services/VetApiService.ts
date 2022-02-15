@@ -58,7 +58,11 @@ export function fetchGeneralPosts(): Promise<MessageBoardPost[]> {
     .then((res) => res.data);
 }
 
-export function postMessage(post: MessageBoardPost): Promise<MessageBoardPost> {
+export function postMessageToBoard(
+  post: MessageBoardPost
+): Promise<MessageBoardPost> {
+  console.log("IN SERVICE!");
+
   return axios
     .post<MessageBoardPost>(
       "http://localhost:5001/mm-vet-app/us-central1/api/message-board",

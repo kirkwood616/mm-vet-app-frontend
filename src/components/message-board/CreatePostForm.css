@@ -1,3 +1,29 @@
 .CreatePostForm {
-  background-color: yellowgreen;
+  background-color: var(--light-green);
+}
+
+.CreatePostForm form input {
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+  text-align: center;
+  width: 300px;
+}
+
+.CreatePostForm form textarea {
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+  max-width: 400px;
+  min-width: 300px;
+}
+
+.CreatePostForm form button {
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  display: block;
+  margin: auto;
+  padding: 0.25rem;
+  text-align: center;
+  width: 300px;
 }

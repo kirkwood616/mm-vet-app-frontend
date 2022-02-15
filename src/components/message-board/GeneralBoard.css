@@ -8,12 +8,24 @@
 }
 
 .GeneralBoard .generalPost {
-  /* background-color: yellowgreen; */
   border-bottom: 1px solid lightgray;
   margin: 1rem;
   padding: 0.5rem;
 }
 
-.GeneralBoard .createPostFormContainer {
-  /* display: none; */
+.GeneralBoard .addCreatePostContainer {
+  background-color: var(--dark-green);
+  border: none;
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: auto;
+  padding: 0.75rem;
+  width: 200px;
+}
+
+.GeneralBoard .doNotShow {
+  display: none;
 }
