@@ -46,12 +46,12 @@ function PetImageUpload() {
   function apiDelay() {
     setTimeout(function () {
       handleUserPets(user);
-    }, 3000);
+    }, 2000);
     setTimeout(function () {
       setBaseImage("");
       setIsLoading(false);
       navigate(`/pet-profile/${userPets[i]._id}`);
-    }, 4000);
+    }, 3000);
   }
 
   function handleImageUpload(e: FormEvent) {
