@@ -1,0 +1,8 @@
+.GeneralBoard {
+  /* background-color: white; */
+  text-align: center;
+}
+
+.GeneralBoard .generalPostsContainer {
+  background-color: white;
+}

@@ -1,6 +1,7 @@
 import axios from "axios";
 import User from "../models/User";
 import Pet from "../models/Pet";
+import MessageBoardPost from "../models/MessageBoardPost";
 // import MedicalRecord from "../models/MedicalRecord";
 
 // CUSTOMERS
@@ -47,3 +48,23 @@ export function updatePet(id: string, pet: Pet): Promise<Pet> {
 //     .get("http://localhost:5001/mm-vet-app/us-central1/api/medical-records")
 //     .then((res) => res.data);
 // }
+
+// MESSAGE BOARD
+export function fetchAllMessageBoardPosts(): Promise<MessageBoardPost[]> {
+  return axios
+    .get(
+      `http://localhost:5001/mm-vet-app/us-central1/api/message-board/general`
+    )
+    .then((res) => res.data);
+}
+
+export function sendGeneralPost(
+  post: MessageBoardPost
+): Promise<MessageBoardPost> {
+  return axios
+    .post<MessageBoardPost>(
+      `http://localhost:5001/mm-vet-app/us-central1/api/message-board/general`,
+      post
+    )
+    .then((res) => res.data);
+}

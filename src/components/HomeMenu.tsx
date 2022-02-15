@@ -30,6 +30,9 @@ function HomeMenu() {
         <Link to="/about-us">
           <div className="menuItem">About Us</div>
         </Link>
+        <Link to={`/message-board`}>
+          <div className="menuItem">Message Board</div>
+        </Link>
       </div>
     </div>
   );

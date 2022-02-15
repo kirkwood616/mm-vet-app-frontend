@@ -10,9 +10,16 @@
 .messageBoardCategories {
   background-color: var(--light-green);
   border-radius: 1rem;
-  /* margin: auto; */
   padding: 1rem;
   width: 75%;
+}
+
+.MessageBoardHome h1 {
+  margin: 1rem;
+}
+
+.MessageBoardHome .boardDescription {
+  font-style: italic;
 }
 
 .categoriesContainer {
@@ -22,7 +29,6 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   margin: auto;
   max-width: 85%;
-
   z-index: 1;
 }
 
