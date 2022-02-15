@@ -58,13 +58,22 @@ export function fetchGeneralPosts(): Promise<MessageBoardPost[]> {
     .then((res) => res.data);
 }
 
-export function sendGeneralPost(
-  post: MessageBoardPost
-): Promise<MessageBoardPost> {
+export function postMessage(post: MessageBoardPost): Promise<MessageBoardPost> {
   return axios
     .post<MessageBoardPost>(
-      `http://localhost:5001/mm-vet-app/us-central1/api/message-board/general`,
+      "http://localhost:5001/mm-vet-app/us-central1/api/message-board",
       post
     )
     .then((res) => res.data);
 }
+
+// export function sendGeneralPost(
+//   post: MessageBoardPost
+// ): Promise<MessageBoardPost> {
+//   return axios
+//     .post<MessageBoardPost>(
+//       `http://localhost:5001/mm-vet-app/us-central1/api/message-board/general`,
+//       post
+//     )
+//     .then((res) => res.data);
+// }
