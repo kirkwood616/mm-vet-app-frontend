@@ -1,21 +1,48 @@
 import "./RequestAptForm.css";
-import { Link } from "react-router-dom";
-import { useContext, useState } from "react";
+import { FormEvent, useContext, useState } from "react";
 import UserContext from "../context/UserContext";
+import {
+  getFormattedDateFromInput,
+  getFormattedTimeFromInput,
+} from "../functions/functions";
+import AppointmentRequest from "../models/AppointmentRequest";
+import { sendAppointmentRequest } from "../services/VetApiService";
+import { useNavigate } from "react-router-dom";
 
 function RequestAptForm() {
   let { user } = useContext(UserContext);
   let { userPets } = useContext(UserContext);
+  const navigate = useNavigate();
   const name = `${user.firstName} ${user.lastName}`;
   const [petName, setPetName] = useState("");
   const [requestDate, setRequestDate] = useState("");
   const [requestTime, setRequestTime] = useState("");
   const [requestReason, setRequestReason] = useState("");
-  console.log(requestReason);
+
+  function handleRequestSubmit(e: FormEvent) {
+    e.preventDefault();
+    let newRequest: AppointmentRequest = {
+      userName: name,
+      userPet: petName,
+      requestDate: String(getFormattedDateFromInput(requestDate)),
+      requestTime: String(getFormattedTimeFromInput(requestTime)),
+      requestReason: requestReason,
+    };
+    sendAppointmentRequest(newRequest);
+    setPetName("");
+    setRequestDate("");
+    setRequestTime("");
+    setRequestReason("");
+    navigate("/request-confirmation");
+  }
 
   return (
     <div className="RequestAptForm">
-      <form action="submit" className="formContainer">
+      <form
+        action="submit"
+        className="formContainer"
+        onSubmit={handleRequestSubmit}
+      >
         <label htmlFor="name">
           <span className="formFieldTitle">Name:</span>
         </label>
@@ -78,9 +105,9 @@ function RequestAptForm() {
           required
           onChange={(e) => setRequestReason(e.target.value)}
         ></textarea>
-        <Link to={"/request-confirmation"}>
-          <button>Send Request</button>
-        </Link>
+        <button onClick={() => window.confirm("Are You Sure?")}>
+          Send Request
+        </button>
       </form>
     </div>
   );
