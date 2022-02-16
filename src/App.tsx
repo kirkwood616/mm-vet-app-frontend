@@ -27,6 +27,7 @@ import DietNutrition from "./components/DietNutrition";
 import SpayNeuter from "./components/SpayNeuter";
 import MessageBoardHome from "./components/message-board/MessageBoardHome";
 import GeneralBoard from "./components/message-board/GeneralBoard";
+import EditMessage from "./components/message-board/EditMessage";
 
 function App() {
   return (
@@ -64,6 +65,7 @@ function App() {
           <Route path="/grooming" element={<Grooming />} />
           <Route path="/message-board" element={<MessageBoardHome />} />
           <Route path="/message-board/general" element={<GeneralBoard />} />
+          <Route path="/message-board/edit/:id" element={<EditMessage />} />
         </Routes>
         <Footer />
       </Router>
