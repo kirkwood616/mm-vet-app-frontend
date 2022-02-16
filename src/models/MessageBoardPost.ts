@@ -1,5 +1,5 @@
 interface MessageBoardPost {
-  id?: string;
+  _id?: string;
   dateTime: string;
   board: string;
   user: string;
