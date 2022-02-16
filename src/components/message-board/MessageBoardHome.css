@@ -1,0 +1,71 @@
+.MessageBoardHome {
+  text-align: center;
+  height: 100%;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.messageBoardCategories {
+  background-color: var(--light-green);
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 75%;
+}
+
+.MessageBoardHome h1 {
+  margin: 1rem;
+}
+
+.MessageBoardHome .boardDescription {
+  font-style: italic;
+}
+
+.categoriesContainer {
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  margin: auto;
+  max-width: 85%;
+  z-index: 1;
+}
+
+.messageBoardCategories .category {
+  padding: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.categoriesContainer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.divider {
+  border-bottom: 1px solid lightgray;
+}
+
+div.categoriesContainer > div:hover {
+  background-color: var(--dark-green);
+  transition: all 0.2s ease-in-out;
+}
+
+div.categoriesContainer > div:nth-child(1) {
+  border-radius: 1rem 1rem 0 0;
+  /* border-bottom: 1px solid lightgray; */
+}
+
+div.categoriesContainer > div:nth-child(1):hover {
+  background-color: var(--dark-green);
+  border-radius: 1rem 1rem 0 0;
+}
+
+div.categoriesContainer > div:last-child {
+  border-radius: 0 0 1rem 1rem;
+}
+
+div.categoriesContainer > div:last-child:hover {
+  background-color: var(--dark-green);
+  border-radius: 0 0 1rem 1rem;
+}

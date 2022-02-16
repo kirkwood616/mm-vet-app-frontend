@@ -1,0 +1,57 @@
+.GeneralBoard {
+  text-align: center;
+}
+
+.GeneralBoard .generalPostsContainer {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+  margin: 1rem auto 3rem auto;
+  margin-bottom: 3rem;
+  width: 90%;
+}
+
+.GeneralBoard .generalPost {
+  border-bottom: 1px solid lightgray;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+/*///// TEXT /////*/
+
+.GeneralBoard .userDateTime {
+  color: darkslategray;
+  font-style: italic;
+}
+
+.GeneralBoard .postMessage {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 1rem;
+}
+
+/*/ //// BUTTONS /////*/
+
+.GeneralBoard .postControlButton {
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 5px 1rem;
+  padding: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.GeneralBoard .postControlButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+.GeneralBoard .deletePostButton {
+  background-color: red;
+  color: white;
+}
+
+.GeneralBoard .editPostButton {
+  background-color: lightgray;
+}

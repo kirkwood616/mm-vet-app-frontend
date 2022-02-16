@@ -1,0 +1,129 @@
+.CreatePostForm {
+  background-color: var(--light-green);
+  border-radius: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  margin: 1rem auto;
+  padding: 1rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  transition: all 0.5s ease-out;
+}
+
+.CreatePostForm .createPostFormContainer {
+  margin: 1rem;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+}
+
+.GeneralBoard .doNotShow {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+}
+
+/*/////// INPUTS ///////*/
+
+.inputTitle {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.CreatePostForm form input {
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 0.4rem;
+  text-align: center;
+  width: 385px;
+  margin-bottom: 1rem;
+}
+
+.CreatePostForm form textarea {
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  min-height: 8rem;
+  max-width: 400px;
+  padding: 0.25rem;
+  text-align: center;
+  width: 500px;
+}
+
+/*/////// BUTTONS ///////*/
+
+.CreatePostForm .addCreatePostButton {
+  background-color: var(--dark-green);
+  border: none;
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  width: 200px;
+  transition: all 0.2s ease-in-out;
+}
+
+.CreatePostForm .addCreatePostButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+.CreatePostForm .cancelPostButton {
+  background-color: red;
+  transition: all 0.2s ease-in-out;
+}
+
+.CreatePostForm .cancelPostButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+.CreatePostForm .addPostButton {
+  background-color: var(--dark-green);
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: auto;
+  padding: 0.5rem;
+  min-width: 200px;
+  transition: all 0.2s ease-in-out;
+}
+
+.CreatePostForm .addPostButton:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
+}
+
+@media only screen and (max-width: 768px) {
+  .CreatePostForm {
+    width: 80%;
+  }
+
+  .CreatePostForm form input {
+    max-width: 75%;
+    width: 100%;
+  }
+
+  .CreatePostForm form textarea {
+    max-width: 75%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .CreatePostForm {
+    width: 80%;
+  }
+
+  .CreatePostForm form {
+    max-width: 50%;
+    text-align: center;
+  }
+}

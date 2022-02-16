@@ -16,12 +16,14 @@ function PetProfile() {
     <div className="PetProfile">
       <h1>{userPets[i].petFirstName}'s Profile</h1>
       <div className="petProfileInfo">
-        <img
-          src={userPets[i].picture.picture}
-          alt="paw icon"
-          onClick={() => setIsActive(!isActive)}
-        />
-        <p className={isActive ? "isActive" : "notActive"}>
+        <div className="imageContainer">
+          <img
+            src={userPets[i].picture.picture}
+            alt="paw icon"
+            onClick={() => setIsActive(!isActive)}
+          />
+        </div>
+        <p className={isActive ? "isActive upload" : "hidden upload"}>
           {/* <Link to={`/pet-profile/image-upload/${id}`}> */}
           <span
             className="uploadLink"

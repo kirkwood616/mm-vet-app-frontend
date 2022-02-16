@@ -25,6 +25,9 @@ import PetImageUpload from "./components/PetImageUpload";
 import ParasiteControl from "./components/ParasiteControl";
 import DietNutrition from "./components/DietNutrition";
 import SpayNeuter from "./components/SpayNeuter";
+import MessageBoardHome from "./components/message-board/MessageBoardHome";
+import GeneralBoard from "./components/message-board/GeneralBoard";
+import EditMessage from "./components/message-board/EditMessage";
 
 function App() {
   return (
@@ -60,6 +63,9 @@ function App() {
           <Route path="/parasite-control" element={<ParasiteControl />} />
           <Route path="/microchipping" element={<Microchipping />} />
           <Route path="/grooming" element={<Grooming />} />
+          <Route path="/message-board" element={<MessageBoardHome />} />
+          <Route path="/message-board/general" element={<GeneralBoard />} />
+          <Route path="/message-board/edit/:id" element={<EditMessage />} />
         </Routes>
         <Footer />
       </Router>
