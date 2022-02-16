@@ -16,8 +16,6 @@ function PetImageUpload() {
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
-  // console.log(baseImage);
-
   const onChangeImage = async (e: any) => {
     if (e.target.files[0]) {
       const file = e.target.files[0];
