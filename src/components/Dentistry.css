@@ -47,9 +47,23 @@
 .dentistryImage {
   display: block;
   max-height: 300px;
-  width: 90%;
+  /* width: 90%; */
   margin: 0 auto;
   border-radius: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .dentistryImageContainer,
+  .dentistryImage {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .dentistryImageContainer,
+  .dentistryImage {
+    width: 85%;
+  }
 }
 
 .dentistry .paragraph {

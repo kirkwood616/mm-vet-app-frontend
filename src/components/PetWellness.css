@@ -40,10 +40,24 @@
 .petWellnessImageContainer,
 .petWellnessImage {
     display: block;
-    width: 90%;
+    width: 90%; 
     max-height: 300px;
     margin: 0 auto;
     border-radius: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .petWellnessImageContainer,
+  .petWellnessImage {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .petWellnessImageContainer,
+  .petWellnessImage {
+    width: 85%;
+  }
 }
 
 .petWellness .paragraph{

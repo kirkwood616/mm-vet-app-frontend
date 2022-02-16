@@ -45,11 +45,26 @@
 .spayNeuterImageContainer,
 .spayNeuterImage {
     display: block;
-    width: 90%;
+    /* width: 90%; */
     max-height: 300px;
     margin: 0 auto;
     border-radius: 1rem;
 }
+
+@media only screen and (max-width: 768px) {
+  .spayNeuterImageContainer,
+  .spayNeuterImage {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .spayNeuterImageContainer,
+  .spayNeuterImage {
+    width: 85%;
+  }
+}
+
 
 .spayNeuter .paragraph{
     margin-top: 0.5rem;

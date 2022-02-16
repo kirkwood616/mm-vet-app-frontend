@@ -46,13 +46,27 @@
 .dietNutritionImageContainer,
 .dietNutritionImage {
   display: block;
-  width: 90%;
+  /* width: 90%; */
   max-height: 300px;
   margin: 0 auto;
   border-radius: 1rem;
 }
 
-.diet_Nutrition .paragraph {
+@media only screen and (max-width: 768px) {
+  .dietNutritionImageContainer,
+  .dietNutritionImage {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .dietNutritionImageContainer,
+  .dietNutritionImage {
+    width: 85%;
+  }
+}
+
+.dietNutrition .paragraph {
   margin-top: 0.5rem;
   padding: 2rem;
   padding-bottom: 0;
