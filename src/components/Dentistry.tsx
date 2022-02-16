@@ -3,21 +3,26 @@ import "./Dentistry.css";
 
 function Dentistry() {
   return (
-    <div className="Dentistry">
+    <div className="dentistry">
       <div className="container">
-        <h1>Dentistry</h1>
-        <div className="Dentistry icon">
+        <div className="dentistry icon">
           <img
-            src="./icons/double_arrow.svg"
+            src="./icons/arrowIcon.svg"
             alt="arrow-back"
-            height={20}
-            width={20}
-          /><Link to={"/services"}>Back to Our Services</Link>
+            height={40}
+            width={40}
+          />
+          <Link to={"/services"}>Back to Our Services</Link>
         </div>
-          <div className="Dentistry image">
-            <img src="./animal-photos/dental.jpg" alt="dental-services" />
-          </div>
-        <div className="Dentistry paragraph">
+        <h1>Dentistry</h1>
+        <div className="dentistryImageContainer">
+          <img
+            src="./animal-photos/dental.jpg"
+            alt="dental-services"
+            className="dentistryImage"
+          />
+        </div>
+        <div className="dentistry paragraph">
           <h3>Overview</h3>
           <br />
           <p>

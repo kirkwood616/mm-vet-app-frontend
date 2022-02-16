@@ -4,24 +4,27 @@ import "./PetWellness.css";
 
 function PetWellness() {
   return (
-    <div className="PetWellness">
+    <div className="petWellness">
       <div className="container">
-        <h1>Pet Wellness</h1>
-        <div className="PetWellness icon">
+        <div className="petWellness icon">
           <img
-            src="./icons/double_arrow.svg"
+            src="./icons/arrowIcon.svg"
             alt="arrow-back"
-            height={20}
-            width={20}
+            height={40}
+            width={40}
           />{" "}
           <Link to={"/services"}>Back to Our Services</Link>
-        </div>
+        </div> 
+        <h1>Pet Wellness</h1>
+        <br />
+        <div className="petWellnessImageContainer">
         <img
-          className="PetWellness image"
           src="./animal-photos/well.jpg"
           alt="pet-wellness-services"
+          className="petWellnessImage"
         />
-        <div className="PetWellness paragraph">
+        </div>
+        <div className="petWellness paragraph">
           <h2>Overview</h2>
           <br />
           <p>

@@ -1,46 +1,63 @@
-.Surgery {
-    padding: 2rem;
+.surgery h1 {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
 }
 
-.Surgery.image{
+.container {
+    /* position: relative; */
+    display: block;
+    align-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 5px 5px 15px rgba(0,0,0,.2);
+    border-radius: 1rem;
+    padding: 1rem;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .container {
+      width: 80%;
+    }
+}
+  @media only screen and (max-width: 480px) {
+    .container {
+      width: 70%;
+    }
+}
+
+.surgeryImageContainer{
     padding: 1rem;
     border: none;
     border-radius: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
+    margin: 0 auto;
 }
 
-.Surgery.icon > a{
+.surgery .icon > a{
     display: block;
     text-decoration: none;
     color: #777;
-    
 }
 
-.Surgery.image > img {
+.surgeryImageContainer,
+.surgeryImage {
     display: block;
-    width: 100%;
+    width: 90%;
     max-height: 300px;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    object-position: center;
-    transition: 200ms transform ease-in-out;
+    margin: 0 auto;
+    border-radius: 1rem;
 }
 
-.Surgery:hover > .Surgery.Surgery.image > img{
-    transform: scale3d(1.025);
-}
-
-.Surgery.paragraph{
-    margin-top: .5rem;
+.surgery .paragraph{
+    margin-top: 0.5rem;
     padding: 2rem;
     padding-bottom: 0;
-    font-size: .9rem;
+    font-size: 1rem;
     background-color: var(--white);
-    /* border: 1px solid #777; */
-    border-radius: .25em;
-
+    border: 1px solid #777;
+    border-radius: 0.25em;
 }
+

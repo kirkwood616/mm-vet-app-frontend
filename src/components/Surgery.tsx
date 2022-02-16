@@ -3,23 +3,28 @@ import "./Surgery.css";
 
 function Surgery() {
   return (
-    <div className="Surgery">
+    <div className="surgery">
       <div className="container">
-        <h1>Surgery</h1>
-        <div className="Surgery icon">
+        <div className="surgery icon">
           <img
-            src="./icons/double_arrow.svg"
+            src="./icons/arrowIcon.svg"
             alt="arrow-back"
-            height={20}
-            width={20}
+            height={40}
+            width={40}
           />
           <Link to={"/services"}>Back to Our Services</Link>
         </div>
-        <div className="Surgery image">
-          <img src="./animal-photos/surgery.jpg" alt="sergery-services" />
+        <h1>Surgery</h1>
+        <br />
+        <div className="surgeryImageContainer">
+          <img
+            src="./animal-photos/surgery.jpg"
+            alt="sergery-services"
+            className="surgeryImage"
+          />
         </div>
 
-        <div className="Surgery paragraph">
+        <div className="surgery paragraph">
           <p>
             Our clinic is equipped to perform a wide variety of soft tissue and
             orthopedic surgical procedures. Some of the common procedures
@@ -31,10 +36,10 @@ function Surgery() {
           <br />
           <p>
             Surgery is often the most effective way to treat many serious
-            injuries and disorders, and M&M Veterinary Clinic is proud
-            to offer state-of-the-art facilities and equipment. Our hospital
-            provides a full range of surgical services ranging from standard
-            spaying and neutering to advanced, highly specialized procedures.
+            injuries and disorders, and M&M Veterinary Clinic is proud to offer
+            state-of-the-art facilities and equipment. Our hospital provides a
+            full range of surgical services ranging from standard spaying and
+            neutering to advanced, highly specialized procedures.
           </p>
           <br />
           <ul>
@@ -48,10 +53,10 @@ function Surgery() {
           </ul>
           <br />
           <p>
-            Patient safety and comfort is our main priority. M&M
-            Veterinary Clinic’s experienced veterinary anesthesiologists provide
-            skilled pain management during and after all surgical procedures,
-            ensuring your pet recovers quickly and with minimum discomfort.
+            Patient safety and comfort is our main priority. M&M Veterinary
+            Clinic’s experienced veterinary anesthesiologists provide skilled
+            pain management during and after all surgical procedures, ensuring
+            your pet recovers quickly and with minimum discomfort.
           </p>
           <p>
             Our veterinary team will walk you through the entire process, giving

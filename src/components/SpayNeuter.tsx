@@ -3,26 +3,27 @@ import "./SpayNeuter.css";
 
 function SpayNeuter() {
   return (
-    <div className="Spay_Neuter">
+    <div className="spayNeuter">
       <div className="container">
-        <h1>Spay/Neuter</h1>
-        <div className="Spay_Neuter icon">
+        <div className="ppayNeuter icon">
           <img
-            src="./icons/double_arrow.svg"
+            src="./icons/arrowIcon.svg"
             alt="arrow-back"
-            height={20}
-            width={20}
+            height={40}
+            width={40}
           />
           <Link to={"/services"}>Back to Our Services</Link>
         </div>
-        <div className="Spay_Neuter image">
+        <h1>Spay/Neuter</h1>
+        <br />
+        <div className="spayNeuterImageContainer">
           <img
             src="./animal-photos/spay-neuter.jpg"
             alt="spay-neuter-services"
+            className="spayNeuterImage"
           />
         </div>
-
-        <div className="Spay_Neuter paragraph">
+        <div className="spayNeuter paragraph">
           <p>
             Spaying or neutering your pet can help them live a longer, healthier
             life, minimize behavior problems, and help control the population of
@@ -92,15 +93,18 @@ function SpayNeuter() {
             fluids on canine spays and castrations, as well as feline spays.
             This is important for maintaining blood pressure and perfusion to
             the kidneys and other organs as well as allowing immediate IV access
-            in the event of an emergency. We use advanced pain management
-            techniques in conjunction with anesthesia to make sure your pet is
-            as comfortable as possible during the procedure and after they are
-            discharged. Our spay and castration patients receive 2 or 3
-            different injectable pain medications during the procedure and
-            usually go home with oral pain medication. We also perform local
-            anesthetic blocks at the surgical site. Proper pain management makes
-            the procedure as comfortable as possible and allows for faster
-            recovery.
+            in the event of an emergency.
+          </p>
+          <br />
+          <p>
+            We use advanced pain management techniques in conjunction with
+            anesthesia to make sure your pet is as comfortable as possible
+            during the procedure and after they are discharged. Our spay and
+            castration patients receive 2 or 3 different injectable pain
+            medications during the procedure and usually go home with oral pain
+            medication. We also perform local anesthetic blocks at the surgical
+            site. Proper pain management makes the procedure as comfortable as
+            possible and allows for faster recovery.
           </p>
           <br />
         </div>

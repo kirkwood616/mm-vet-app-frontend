@@ -3,23 +3,23 @@ import "./DietNutrition.css";
 
 function DietNutrition() {
   return (
-    <div className="Diet_Nutrition">
+    <div className="dietNutrition">
       <div className="container">
-        <h1>Diet & Nutrition</h1>
-        <div className="Diet_Nutrition icon">
+        <div className="dietNutrition icon">
           <img
-            src="./icons/double_arrow.svg"
+            src="./icons/arrowIcon.svg"
             alt="arrow-back"
-            height={20}
-            width={20}
+            height={40}
+            width={40}
           />
           <Link to={"/services"}>Back to Our Services</Link>
         </div>
-        <div className="Diet_Nutrition image">
-          <img src="./animal-photos/diet.jpg" alt="diet-nutrition-services" />
+        <h1>Diet & Nutrition</h1>
+        <br />
+        <div className="dietNutritionImageContainer">
+          <img src="./animal-photos/diet.jpg" alt="diet-nutrition-services" className="dietNutritionImage" />
         </div>
-
-        <div className="Diet_Nutrition paragraph">
+        <div className="dietNutrition paragraph">
           <p>
             Proper diet and nutrition can help your pet fight against disease,
             maintain a proper weight, and promote the overall well-being of your

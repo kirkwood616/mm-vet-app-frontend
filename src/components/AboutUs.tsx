@@ -3,50 +3,46 @@ import "./AboutUs.css";
 function AboutUs() {
   return (
     <div className="AboutUs">
-      <section className="AboutUs Mission image">
-        <br />
-        <h3>ABOUT US</h3>
-        <br />
-        <h1>WELCOME TO M&M VETERINARY CLINIC</h1>
-        <br />
-        <img
-          className="image"
-          src="./animal-photos/aboutUs.png"
-          alt="cute cats and dog"
-        />
-        <br />
-        <h2>Our Mission</h2>
-        <br />
-        <p>
-          Our Mission is to provide quality veterinary service that is
-          affordable to the surrounding community. We desire to provide the
-          highest quality medical and surgical care to our patients. We strive
-          to offer clients the best possible customer service in a welcoming
-          environment.{" "}
-        </p>
-        <br />
-        <p>
-          M&M Veterinary Clinic veterinarians and technicians are committed to
-          excellence. Our world-class staff combines cutting-edge veterinary
-          technology with decades of experience to provide the highest level of
-          care for your pet.
-        </p>
-        <br />
-      </section>
-      <section className="AboutUs Doctor">
-        <br />
-        <div className="doctorCardContainer">
-          <h1>OUR DOCTOR</h1>
-          <br />
+      <br />
+      <h3>ABOUT US</h3>
+      <br />
+      <h1>WELCOME TO M&M VETERINARY CLINIC</h1>
+      <br />
+      <img
+        className="aboutUsImage"
+        src="./animal-photos/aboutUs.png"
+        alt="cute cats and dog"
+      />
+      <br />
+      <h2>Our Mission</h2>
+      <br />
+      <p>
+        Our Mission is to provide quality veterinary service that is affordable
+        to the surrounding community. We desire to provide the highest quality
+        medical and surgical care to our patients. We strive to offer clients
+        the best possible customer service in a welcoming environment.{" "}
+      </p>
+      <br />
+      <p>
+        M&M Veterinary Clinic veterinarians and technicians are committed to
+        excellence. Our world-class staff combines cutting-edge veterinary
+        technology with decades of experience to provide the highest level of
+        care for your pet.
+      </p>
+      <br />
+
+      <div className="AboutUsDoctor">
+          <h1 className="doctorCardTitle">OUR DOCTOR</h1>
           <div className="doctorCard">
-            <h3 className="doctorCard title">Doctor ipsum</h3>
             <img
-              className="doctorCard image"
+              className="doctorCardImage"
               src="./animal-photos/DR.jpg"
               alt="Veterinarian"
             />
             <br />
-            <p className="doctorCard desc">
+            <div className="doctorCardContent">
+            <h3 className="doctorCardTitle">Doctor Ipsum</h3>
+            <p className="doctorCardDescription">
               Eh? Doctor who? What's he talking about…? We're trying to defeat
               the Daleks, not start a jumble sale! We are always in trouble!
               Isn't it extraordinary—it follows us everywhere. I am the Doctor!
@@ -61,16 +57,17 @@ function AboutUs() {
             </p>
             <br />
           </div>
+          </div>
 
           <div className="doctorCard">
-            <h3 className="doctorCard title">Dr.Ipsum </h3>
             <img
-              className="doctorCard image"
+              className="doctorCardImage"
               src="./animal-photos/drIpsum.jpg"
               alt="Veterinarian"
             />
             <br />
-            <p className="doctorCard desc">
+            <h3 className="doctorCardTitle">Dr.Ipsum </h3>
+            <p className="doctorCardDescription">
               You may disguise your features but you can never disguise your
               intent. This thing is smaller on the inside than it is on the
               outside. There's always something to look at if you open your
@@ -85,14 +82,14 @@ function AboutUs() {
           </div>
 
           <div className="doctorCard">
-            <h3 className="doctorCard title">Dr.Ipsum too</h3>
             <img
-              className="doctorCard image"
+              className="doctorCardImage"
               src="./animal-photos/drToo.jpg"
               alt="Veterinarian"
             />
             <br />
-            <p className="doctorCard desc">
+            <h3 className="doctorCardTitle">Dr.Ipsum too</h3>
+            <p className="doctorCardDescription">
               Why are you pointing your screwdrivers like that? They're
               scientific instruments, not water pistols. Are you capable of
               speaking without flapping your hands about? 'Timey' what? 'Timey
@@ -107,14 +104,14 @@ function AboutUs() {
           </div>
 
           <div className="doctorCard">
-            <h3 className="doctorCard title">Doctor Also Ipsum</h3>
             <img
-              className="doctorCard image"
-              src="./animal-photos/drAlso.jpg"
+              className="doctorCardImage"
+              src="./animal-photos/also.jpg"
               alt="Veterinarian"
             />
             <br />
-            <p className="doctorCard desc">
+            <h3 className="doctorCardTitle">Doctor Also Ipsum</h3>
+            <p className="doctorCardDescription">
               You may be a doctor. But I'm the Doctor. The definite article, you
               might say. Are you listening to me? What?! Come out. And don't
               touch anything! You're a clumsy, ham fisted idiot! It seems you
@@ -132,13 +129,14 @@ function AboutUs() {
           </div>
 
           <div className="doctorCard">
-            <h3 className="doctorCard title">Vet Tech Ipsum</h3>
             <img
-              className="doctorCard image"
+              className="doctorCardImage"
               src="./animal-photos/vetTech.png"
               alt="Veterinarian"
             />
-            <p className="doctorCard desc">
+            <br />
+            <h3 className="doctorCardTitle">Vet Tech Ipsum</h3>
+            <p className="doctorCardDescription">
               People assume that time is a strict progression of
               cause-and-effect... but actually, from a non-linear,
               non-subjective viewpoint, it's more like a big ball of
@@ -153,53 +151,63 @@ function AboutUs() {
             <br />
           </div>
         </div>
-      </section>
-
-      <section className="AboutUsContact">
-        <br />
-        <h1>VISIT US</h1>
-        <br />
-        <h2>M&M Veterinary Clinic: 555 Fifty Five St., Detroit, MI 48226</h2>
-        <table className="AboutUsHourTable">
+      <br />
+      <h1>VISIT US</h1>
+      <br />
+      <div className="AboutUsInfo">
+      <img src="/icons/map.svg" alt="Map Icon" className="icon" />
+      <h3>M&M Veterinary Clinic: 555 Fifty Five St., Detroit, MI 48226</h3>
+      <br />
+      </div>
+      <div className="AboutUsInfo">
+      <img src="/icons/mobile.svg" alt="Phone Icon" className="icon" />
+      <h3>Contact: +1.555-555-5555</h3>
+      <br />
+      </div>
+      <div className="AboutUsInfo">
+      <img src="/icons/mail.svg" alt="Mail Icon" className="icon" />
+      <h3>Email: info@m&m.vetclinic.com</h3>
+      <br />
+      </div>
+      <div className="AboutUsInfo">
+      <img src="/icons/time.svg" alt="Clock Icon" className="icon" />
+      <h3>Hours</h3>
+      <br />
+      
+      <table>
+        <tbody>
           <tr>
-            <th>
-              <h2>Hours</h2>
-            </th>
+            <th>Monday</th>
+            <td>8:00am-6:00pm</td>
           </tr>
           <tr>
-            <td>Monday</td>
-            <td> 8:00am-6:00pm</td>
+            <th>Tuesday</th>
+            <td>8:00am-6:00pm</td>
           </tr>
           <tr>
-            <td>Tuesday</td>
-            <td> 8:00am-6:00pm</td>
+            <th>Wednesday</th>
+            <td>8:00am-6:00pm</td>
           </tr>
           <tr>
-            <td>Wednesday</td>
-            <td> 8:00am-6:00pm</td>
+            <th>Thursday</th>
+            <td>8:00am-6:00pm</td>
           </tr>
           <tr>
-            <td>Thursday</td>
-            <td> 8:00am-6:00pm</td>
+            <th>Friday</th>
+            <td>8:00am-6:00pm</td>
           </tr>
           <tr>
-            <td>Friday</td>
-            <td> 8:00am-6:00pm</td>
+            <th>Saturday</th>
+            <td>8:00am-6:00pm</td>
           </tr>
           <tr>
-            <td>Saturday</td>
-            <td> 8:00am-6:00pm</td>
+            <th>Sanday</th>
+            <td>Closed</td>
           </tr>
-          <tr>
-            <td>Sunday</td>
-            <td> Closed</td>
-          </tr>
-        </table>
-        <br />
-        <h2>Contact: +1.555-555-5555</h2>
-        <br />
-        <h2>Email: info@m&m.vetclinic.com</h2>
-      </section>
+        </tbody>
+      </table>
+      <br />
+      </div>
     </div>
   );
 }
