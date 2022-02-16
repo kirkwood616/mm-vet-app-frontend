@@ -9,14 +9,43 @@ export function getPetAge(pet: Pet): Number {
   return age;
 }
 
-export function getDateTime(): String {
-  let today = new Date();
-  let dd = String(today.getDate()).padStart(2, "0");
-  let mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
-  let yyyy = today.getFullYear();
-  let time = `${String(today.getHours())}h:${String(
-    today.getMinutes()
-  )}m:${String(today.getSeconds())}s`;
-  let dateTime = `${mm}/${dd}/${yyyy} @ ${time}`;
-  return dateTime;
+export function getFormattedDateAndTime(date: Date) {
+  let hours = date.getHours();
+  let minutes: string | number = date.getMinutes();
+  let ampm = hours >= 12 ? "pm" : "am";
+  hours = hours % 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  let strTime = hours + ":" + minutes + "" + ampm;
+  return (
+    date.getMonth() +
+    1 +
+    "/" +
+    date.getDate() +
+    "/" +
+    date.getFullYear() +
+    " " +
+    strTime
+  );
+}
+
+export function getFormattedDate(date: Date) {
+  return date.getMonth() + 1 + "/" + date.getDate() + "/" + date.getFullYear();
+}
+
+export function getFormattedTimeFromInput(time: string): String {
+  let hours = Number(time.slice(0, 2));
+  let mins = Number(time.slice(3));
+  let ampm = hours >= 12 ? "pm" : "am";
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+  let minutes = mins < 10 ? `0${mins}` : String(mins);
+  let strTime = `${hours}:${minutes} ${ampm}`;
+  return strTime;
+}
+
+export function getFormattedDateFromInput(date: string): String {
+  let year = date.slice(0, 4);
+  let mmdd = date.slice(5);
+  return `${mmdd}-${year}`;
 }
