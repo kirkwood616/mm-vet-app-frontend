@@ -2,6 +2,7 @@ import axios from "axios";
 import User from "../models/User";
 import Pet from "../models/Pet";
 import MessageBoardPost from "../models/MessageBoardPost";
+import AppointmentRequest from "../models/AppointmentRequest";
 
 /////////////// CUSTOMERS ///////////////
 export function fetchAllUsers(): Promise<User[]> {
@@ -42,6 +43,19 @@ export function fetchPet(id: string): Promise<Pet> {
 export function updatePet(id: string, pet: Pet): Promise<Pet> {
   return axios
     .put(`http://localhost:5001/mm-vet-app/us-central1/api/pet/${id}`, pet)
+    .then((res) => res.data);
+}
+
+/////////////// REQUEST APPOINTMENT ///////////////
+
+export function sendAppointmentRequest(
+  request: AppointmentRequest
+): Promise<Pet> {
+  return axios
+    .post(
+      `http://localhost:5001/mm-vet-app/us-central1/api/appointment-requests/`,
+      request
+    )
     .then((res) => res.data);
 }
 
