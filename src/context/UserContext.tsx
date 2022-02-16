@@ -13,6 +13,8 @@ interface UserContextModel {
   handleEmail: (input: string) => void;
   handleUserPets: (user: User) => void;
   handleGeneralMessageBoard: () => void;
+  handleUpdateMessage: (id: string, postEdit: MessageBoardPost) => void;
+  handleDeleteGeneralMessage: (id: string) => void;
 }
 
 const defaultValue: UserContextModel = {
@@ -40,6 +42,8 @@ const defaultValue: UserContextModel = {
   handleEmail: () => {},
   handleUserPets: () => {},
   handleGeneralMessageBoard: () => {},
+  handleUpdateMessage: () => {},
+  handleDeleteGeneralMessage: () => {},
 };
 
 const UserContext = createContext(defaultValue);

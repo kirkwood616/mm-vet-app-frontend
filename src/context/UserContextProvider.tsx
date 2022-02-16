@@ -2,6 +2,7 @@ import { FormEvent, ReactNode, useEffect, useState } from "react";
 import UserContext from "./UserContext";
 import User from "../models/User";
 import {
+  deleteMessageFromBoard,
   fetchGeneralPosts,
   fetchPet,
   fetchUserByEmail,
@@ -41,6 +42,30 @@ export default function UserContextProvider({ children }: Props) {
   function handleGeneralMessageBoard(): void {
     setGeneralMessageBoard([]);
     fetchGeneralPosts().then((data) => setGeneralMessageBoard(data));
+  }
+
+  function handleUpdateMessage(id: string, postEdit: MessageBoardPost): void {
+    let index: number = generalMessageBoard.findIndex((e) => e._id === id);
+
+    if (generalMessageBoard.length && index + 1) {
+      setGeneralMessageBoard((prev) => [
+        ...prev.slice(0, index),
+        Object.assign({}, prev[index], postEdit),
+        ...prev.slice(index + 1),
+      ]);
+    }
+  }
+
+  function handleDeleteGeneralMessage(id: string): void {
+    let index: number = generalMessageBoard.findIndex((e) => e._id === id);
+
+    if (generalMessageBoard.length && index + 1) {
+      setGeneralMessageBoard((prev) => [
+        ...prev.slice(0, index),
+        ...prev.slice(index + 1),
+      ]);
+    }
+    deleteMessageFromBoard(id);
   }
 
   function handleEmail(input: string): void {
@@ -84,6 +109,8 @@ export default function UserContextProvider({ children }: Props) {
         handleEmail,
         handleUserPets,
         handleGeneralMessageBoard,
+        handleUpdateMessage,
+        handleDeleteGeneralMessage,
         generalMessageBoard,
         isLoggedIn,
       }}
