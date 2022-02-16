@@ -3,7 +3,7 @@ import { FormEvent, useContext, useState } from "react";
 import { useLocation } from "react-router-dom";
 import UserContext from "../../context/UserContext";
 import MessageBoardPost from "../../models/MessageBoardPost";
-import { getDateTime } from "../../functions/functions";
+import { getFormattedDateAndTime } from "../../functions/functions";
 import { postMessageToBoard } from "../../services/VetApiService";
 
 function CreatePostForm() {
@@ -22,7 +22,7 @@ function CreatePostForm() {
     e.preventDefault();
     setIsLoading(true);
     let newPost: MessageBoardPost = {
-      dateTime: String(getDateTime()),
+      dateTime: String(getFormattedDateAndTime(new Date())),
       board: String(currentBoard),
       user: String(user.firstName) + " " + String(user.lastName),
       title: String(title),
