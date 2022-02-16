@@ -1,4 +1,4 @@
-// import "./EditMessage.css";
+import "./EditMessage.css";
 import { FormEvent, useContext, useState } from "react";
 import UserContext from "../../context/UserContext";
 import MessageBoardPost from "../../models/MessageBoardPost";
@@ -7,7 +7,6 @@ import {
   updateMessageFromBoard,
 } from "../../services/VetApiService";
 import { useParams } from "react-router-dom";
-import { getDateTime } from "../../functions/functions";
 import { useNavigate } from "react-router-dom";
 
 function EditMessage() {
@@ -18,7 +17,8 @@ function EditMessage() {
   let postId = useParams();
   let postToEdit = generalMessageBoard.find((post) => post._id === postId.id);
 
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState<String>(`${postToEdit?.message}`);
+  const [isLoading, setIsLoading] = useState(false);
 
   const navigate = useNavigate();
 
@@ -30,7 +30,7 @@ function EditMessage() {
         board: postToEdit.board,
         user: postToEdit.user,
         title: postToEdit.title,
-        message: `${message} *Edited on ${String(getDateTime())}*`,
+        message: String(message),
         replies: postToEdit.replies,
       };
       updateMessageFromBoard(postId.id!, newPostEdit);
@@ -46,10 +46,10 @@ function EditMessage() {
   }
   return (
     <div className="EditMessage">
-      <h1>EDIT</h1>
+      <h1>EDIT POST</h1>
       <form method="post" onSubmit={handleEditSubmit}>
         <label htmlFor="name">
-          <p>User</p>
+          <p className="inputTitle">User</p>
         </label>
         <input
           readOnly
@@ -59,7 +59,7 @@ function EditMessage() {
           defaultValue={`${user.firstName} ${user.lastName}`}
         />
         <label htmlFor="title">
-          <p>Title</p>
+          <p className="inputTitle">Title</p>
         </label>
         <input
           readOnly
@@ -70,7 +70,7 @@ function EditMessage() {
           placeholder="Message Title"
         />
         <label htmlFor="message">
-          <p>Message</p>
+          <p className="inputTitle">Message</p>
         </label>
         <textarea
           name="message"
@@ -79,8 +79,17 @@ function EditMessage() {
           placeholder="Message"
           onChange={(e) => setMessage(e.target.value)}
         />
-        <button type="submit">Save Changes</button>
+        <button
+          type="submit"
+          className="saveChangesButton"
+          onClick={() => setIsLoading(true)}
+        >
+          Save Changes
+        </button>
       </form>
+      <div className={isLoading ? "loadingScreen" : "hiddenLoadScreen"}>
+        <div className={isLoading ? "lds-hourglass" : "hiddenLoadScreen"}></div>
+      </div>
     </div>
   );
 }

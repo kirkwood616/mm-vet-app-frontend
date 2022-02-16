@@ -1,0 +1,55 @@
+.EditMessage {
+  background-color: var(--light-green);
+  border-radius: 1rem;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding-bottom: 3rem;
+  text-align: center;
+  width: 75%;
+}
+
+.EditMessage h1 {
+  margin: 1rem;
+}
+
+.EditMessage form input {
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 0.4rem;
+  text-align: center;
+  width: 385px;
+  margin-bottom: 1rem;
+}
+
+.EditMessage form textarea {
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  min-height: 8rem;
+  max-width: 400px;
+  padding: 0.25rem;
+  text-align: center;
+  width: 500px;
+}
+
+.EditMessage .saveChangesButton {
+  background-color: var(--dark-green);
+  border: none;
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: auto;
+  padding: 0.5rem;
+  width: 200px;
+  transition: all 0.2s ease-in-out;
+}
+
+.EditMessage .saveChangesButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}

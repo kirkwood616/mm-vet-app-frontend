@@ -9,7 +9,6 @@ function GeneralBoard() {
   let { generalMessageBoard } = useContext(UserContext);
   let { handleDeleteGeneralMessage } = useContext(UserContext);
   let { user } = useContext(UserContext);
-  const [isCreateActive, setIsCreateActive] = useState(false);
   const navigate = useNavigate();
 
   function handleDeleteMessage(id: string): void {
@@ -20,37 +19,30 @@ function GeneralBoard() {
   return (
     <div className="GeneralBoard">
       <h1>General Discussion Board</h1>
-      <button
-        className="addCreatePostContainer"
-        onClick={() => setIsCreateActive(!isCreateActive)}
-      >
-        {isCreateActive ? "CANCEL POST" : "+ Create Post"}
-      </button>
+      <CreatePostForm />
       <div className="generalPostsContainer">
-        <div
-          className={isCreateActive ? "createPostFormContainer" : "doNotShow"}
-        >
-          <CreatePostForm createActive={isCreateActive} />
-        </div>
-        <h2>CONTENT</h2>
         {generalMessageBoard.map((post, index) => (
           <div className="generalPost" key={index}>
-            <p>{post.title}</p>
-            <p>
+            <h2>{post.title}</h2>
+            <p className="userDateTime">
               by {post.user} on {post.dateTime}
             </p>
-            <p>{post.message}</p>
-            <p>{post.replies.length} Replies</p>
+            <p className="postMessage">{post.message}</p>
+            {/* <p>{post.replies.length} Replies</p> */}
 
             {post.user === `${user.firstName} ${user.lastName}` ? (
               <div className="editDelete">
-                <button onClick={() => handleDeleteMessage(String(post._id))}>
-                  DELETE POST
-                </button>
                 <button
+                  className="postControlButton editPostButton"
                   onClick={() => navigate(`/message-board/edit/${post._id}`)}
                 >
                   EDIT POST
+                </button>
+                <button
+                  className="postControlButton deletePostButton"
+                  onClick={() => handleDeleteMessage(String(post._id))}
+                >
+                  DELETE POST
                 </button>
               </div>
             ) : (
