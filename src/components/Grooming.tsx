@@ -3,18 +3,18 @@ import "./Grooming.css";
 
 function Grooming() {
   return (
-    <div className="Grooming">
+    <div className="grooming">
       <div className="container">
-        <h1>Grooming</h1>
-        <div className="Grooming icon">
-          <img
-            src="./icons/double_arrow.svg"
+        <div className="grooming icon">
+             <img
+            src="./icons/arrowIcon.svg"
             alt="arrow-back"
-            height={20}
-            width={20}
-          />
-          <Link to={"/services"}>Back to Our Services</Link>
+            height={40}
+            width={40}
+          /><Link to={"/services"}>Back to Our Services</Link>
         </div>
+        <h1>Grooming</h1>
+        <br />
         <div className="groomingImageContainer">
           <img
             src="./animal-photos/dogG.png"
@@ -22,7 +22,7 @@ function Grooming() {
             className="groomingImage"
           />
         </div>
-        <div className="Grooming paragraph">
+        <div className="grooming paragraph">
           <p>
             We offer the finest in all breed grooming services for your pet. Our
             groomers are experienced, kind, and hard-working!

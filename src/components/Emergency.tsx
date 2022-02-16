@@ -5,14 +5,18 @@ function Emergency() {
   return (
     <div className="Emergency">
       <h1>EMERGENCY INFORMATION</h1>
-      <div className="Emergency info">
-        <img className="Emergency info" src="./animal-photos/er.jpg" alt="" />
+      <div className="emergencyInfo">
+        <img className="emergencyimage" src="./animal-photos/er.jpg" alt="" />
+       <br />
         <p>
           If you have an emergency after our regular business hours please
           contact:
         </p>
+        
         <li>
-          Animal Poison Control Center at (888)426-4435 |(888) 426-4435.{" "}
+          Animal Poison Control Center 
+          at (888)426-4435 | (888) 426-4435.{" "}
+          <br />
           <a
             href="https://www.aspca.org/pet-care/animal-poison-control"
             target="_blank"
@@ -21,6 +25,7 @@ function Emergency() {
             ASPCA Click here
           </a>
         </li>
+        
         <li>
           <a
             href="https://www.google.com/maps/search/emergency+animal+hospital+detroit/@42.4367417,-83.3964396,10z/data=!4m3!2m2!5m1!2e3"

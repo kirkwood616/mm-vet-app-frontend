@@ -1,46 +1,63 @@
-.Parasite_Control {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
+.parasiteControl h1,
+h2 {
+  display: flex;
+  justify-content: center;
 }
 
-.Parasite_Control.image{
-    padding: 1rem;
-    border: none;
-    border-radius: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
+.container {
+  /* position: relative; */
+  display: block;
+  align-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  padding: 1rem;
+  padding-left: 35px;
+  padding-right: 35px;
 }
 
-.Parasite_Control.icon > a{
-    display: block;
-    text-decoration: none;
-    color: #777;
-    
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 70%;
+  }
 }
 
-.Parasite_Control.image > img {
-    display: block;
-    width: 100%;
-    max-height: 300px;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    object-position: center;
-    transition: 200ms transform ease-in-out;
+.parasiteControlImageContainer {
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  margin: 0 auto;
 }
 
-.Parasite_Control:hover > .Parasite_Control.Parasite_Control.image > img{
-    transform: scale3d(1.025);
+.parasiteControl .icon > a {
+  display: block;
+  text-decoration: none;
+  color: #777;
 }
 
-.Parasite_Control.paragraph{
-    margin-top: .5rem;
-    padding: 2rem;
-    padding-bottom: 0;
-    font-size: .9rem;
-    background-color: var(--white);
-    /* border: 1px solid #777; */
-    border-radius: .25em;
+.parasiteControlImageContainer,
+.parasiteControlImage {
+  display: block;
+  width: 90%;
+  max-height: 300px;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
 
+.parasiteControl .paragraph {
+  margin-top: 0.5rem;
+  padding: 2rem;
+  padding-bottom: 0;
+  font-size: 1rem;
+  background-color: var(--white);
+  border: 1px solid #777;
+  border-radius: 0.25em;
 }

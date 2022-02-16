@@ -3,26 +3,28 @@ import "./ParasiteControl.css";
 
 function ParasiteControl() {
   return (
-    <div className="Parasite_Control">
+    <div className="parasiteControl">
       <div className="container">
-        <h1>Parasite Control (Fleas, Ticks & Heartworms)</h1>
-        <div className="Parasite_Control icon">
+        <div className="parasiteControl icon">
           <img
-            src="./icons/double_arrow.svg"
+            src="./icons/arrowIcon.svg"
             alt="arrow-back"
-            height={20}
-            width={20}
+            height={40}
+            width={40}
           />
           <Link to={"/services"}>Back to Our Services</Link>
         </div>
-        <div className="Parasite_Control image">
+        <h1>Parasite Control</h1> 
+        <h2>(Fleas, Ticks & Heartworms)</h2>
+        <br />
+        <div className="parasiteControlImageContainer">
           <img
             src="./animal-photos/parasite-control-ser.jpg"
             alt="Parasite-Control-Services"
+            className="parasiteControlImage"
           />
         </div>
-
-        <div className="Parasite_Control paragraph">
+        <div className="parasiteControl paragraph">
           <p>
             Parasites such as fleas and ticks can be very damaging to your pet’s
             health. Preventive measures should be taken year-round to inhibit
@@ -46,7 +48,8 @@ function ParasiteControl() {
           </p>
           <br />
           <h3>Why are parasites dangerous?</h3>
-          <h4>Fleas:</h4>
+          <br />
+          <h3>Fleas:</h3>
           <p>
             Fleas are small, wingless, brown, fast moving insects you can see in
             your pet’s fur. Some animals are allergic to the saliva of fleas,
@@ -56,7 +59,7 @@ function ParasiteControl() {
             fleas are also capable of transmitting serious diseases.
           </p>
           <br />
-          <h4>Ticks:</h4>
+          <h3>Ticks:</h3>
           <p>
             Ticks are members of the spider family and live in cracks and
             crevices in the home or outside in vegetation such as grassy
@@ -74,7 +77,7 @@ function ParasiteControl() {
             limit the impact of the tick.
           </p>
           <br />
-          <h4>Heartworm Disease:</h4>
+          <h3>Heartworm Disease:</h3>
           <p>
             Heartworms are transmitted when an infected mosquito bites your pet.
             Heartworms are parasites that live in the heart and its surrounding
@@ -88,9 +91,10 @@ function ParasiteControl() {
           <img
             src="./animal-photos/treatment.jpg"
             alt="treatment-for-parasites-service"
+            className="parasiteControlImage"
           />
           <br />
-          <h4>Fleas:</h4>
+          <h3>Fleas:</h3>
           <p>
             If your pet is showing signs of fleas such as continuous scratching,
             gnawing or licking, schedule an appointment immediately.
@@ -99,7 +103,7 @@ function ParasiteControl() {
             pet’s abdomen or by combing your pet’s coat with a fine-tooth comb.
           </p>
           <br />
-          <h4>Ticks</h4>
+          <h3>Ticks</h3>
           <p>
             If you see a tick on your pet, do not try and burn it off with a
             match. This does not work and could harm your pet. It’s much safer
@@ -108,7 +112,7 @@ function ParasiteControl() {
             tick.
           </p>
           <br />
-          <h4>Heartworm Disease:</h4>
+          <h3>Heartworm Disease:</h3>
           <p>
             The best treatment for heartworms is prevention. One of the most
             common and effective prevention methods is a monthly oral

@@ -3,26 +3,28 @@ import "./Vaccinations.css";
 
 function Vaccinations() {
   return (
-    <div className="Vaccinations">
+    <div className="vaccinations">
       <div className="container">
-        <h1>Vaccinations</h1>
-        <div className="Vaccinations icon">
+        <div className="vaccinations icon">
           <img
-            src="./icons/double_arrow.svg"
+            src="./icons/arrowIcon.svg"
             alt="arrow-back"
-            height={20}
-            width={20}
+            height={40}
+            width={40}
           />
           <Link to={"/services"}>Back to Our Services</Link>
         </div>
-        <div className="Vaccinations image">
+        <h1>Vaccinations</h1>
+        <br />
+        <div className="vaccinationsImageContainer">
           <img
             src="./animal-photos/vaccinations.jpg"
             alt="vaccinations-services"
+            className="vaccinationsImage"
           />
         </div>
 
-        <div className="Vaccinations paragraph">
+        <div className="vaccinations paragraph">
           <p>
             Young animals are like kids—it’s a never-ending job to keep them
             safe and happy. Vaccinating your pet is a relatively inexpensive but
@@ -70,7 +72,7 @@ function Vaccinations() {
             disease. Your M&M Veterinary Clinic veterinarian can advise you
             which vaccinations are required or recommended for your pet based on
             age, health, and lifestyle. For more information or to schedule an
-            appointment, call us at(555)555-5555.
+            appointment, call us at (555)555-5555.
           </p>
           <br />
         </div>

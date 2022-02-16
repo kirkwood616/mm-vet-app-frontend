@@ -3,26 +3,27 @@ import "./Microchipping.css";
 
 function Microchipping() {
   return (
-    <div className="Microchipping">
+    <div className="microchipping">
       <div className="container">
-        <h1>Microchipping</h1>
-        <div className="Microchipping icon">
+        <div className="microchipping icon">
           <img
-            src="./icons/double_arrow.svg"
+            src="./icons/arrowIcon.svg"
             alt="arrow-back"
-            height={20}
-            width={20}
+            height={40}
+            width={40}
           />
           <Link to={"/services"}>Back to Our Services</Link>
         </div>
-        <div className="Microchipping image">
+        <h1>Microchipping</h1>
+        <br />
+        <div className="microchippingImageContainer">
           <img
             src="./animal-photos/microchipping.jpg"
             alt="microchipping-services"
+            className="microchippingImage"
           />
         </div>
-
-        <div className="Microchipping paragraph">
+        <div className="microchipping paragraph">
           <p>
             Microchip identification is the most reliable way to reunite lost
             pets with their owners.
@@ -84,8 +85,7 @@ function Microchipping() {
               rel="noopener noreferrer"
             >
               Click here
-            </a>
-            to access the Universal Pet Microchip Lookup.
+            </a> to access the Universal Pet Microchip Lookup.
           </p>
           <br />
         </div>
