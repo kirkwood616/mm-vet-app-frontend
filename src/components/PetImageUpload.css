@@ -77,3 +77,9 @@ input[type="file"]::file-selector-button {
   margin: auto;
   padding: 1rem;
 }
+
+@media only screen and (max-width: 768px) {
+  .PetImageUpload .petImageUploadForm {
+    width: 75%;
+  }
+}

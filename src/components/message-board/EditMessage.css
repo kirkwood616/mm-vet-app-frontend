@@ -29,7 +29,7 @@
   border-radius: 0.5rem;
   min-height: 8rem;
   max-width: 400px;
-  padding: 0.25rem;
+  padding: 0.35rem;
   text-align: center;
   width: 500px;
 }
@@ -52,4 +52,20 @@
 .EditMessage .saveChangesButton:hover {
   transform: scale(1.05);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+@media only screen and (max-width: 768px) {
+  .EditMessage {
+    width: 90%;
+    margin: 1rem auto;
+  }
+  .EditMessage form input {
+    width: 100%;
+  }
+  .EditMessage form textarea {
+    width: 100%;
+  }
+  .EditMessage form {
+    width: 75%;
+  }
 }
