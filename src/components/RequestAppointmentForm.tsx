@@ -1,11 +1,17 @@
 import "./RequestAptForm.css";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import UserContext from "../context/UserContext";
 
 function RequestAptForm() {
   let { user } = useContext(UserContext);
   let { userPets } = useContext(UserContext);
+  const name = `${user.firstName} ${user.lastName}`;
+  const [petName, setPetName] = useState("");
+  const [requestDate, setRequestDate] = useState("");
+  const [requestTime, setRequestTime] = useState("");
+  const [requestReason, setRequestReason] = useState("");
+  console.log(requestReason);
 
   return (
     <div className="RequestAptForm">
@@ -24,7 +30,13 @@ function RequestAptForm() {
           <span className="formFieldTitle">Pet Name:</span>
         </label>
         {/* <input type="text" name="pet-name" id="pet-name" /> */}
-        <select name="pet-name" id="pet-name" defaultValue={"select"} required>
+        <select
+          name="pet-name"
+          id="pet-name"
+          defaultValue={"select"}
+          required
+          onChange={(e) => setPetName(e.target.value)}
+        >
           <option value={"select"} disabled>
             --- Select Pet ---
           </option>
@@ -43,6 +55,7 @@ function RequestAptForm() {
           data-role="calendarpicker"
           id="calendar"
           required
+          onChange={(e) => setRequestDate(e.target.value)}
         ></input>
         <label htmlFor="time">
           <span className="formFieldTitle">Time:</span>
@@ -54,11 +67,17 @@ function RequestAptForm() {
           min={"08:00"}
           max={"18:00"}
           required
+          onChange={(e) => setRequestTime(e.target.value)}
         />
         <label htmlFor="note">
           <span className="formFieldTitle">Reason For Request:</span>
         </label>
-        <textarea name="note" id="note" required></textarea>
+        <textarea
+          name="note"
+          id="note"
+          required
+          onChange={(e) => setRequestReason(e.target.value)}
+        ></textarea>
         <Link to={"/request-confirmation"}>
           <button>Send Request</button>
         </Link>
