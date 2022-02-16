@@ -1,12 +1,21 @@
 import { useContext, useState } from "react";
 import UserContext from "../../context/UserContext";
+import { fetchGeneralPosts } from "../../services/VetApiService";
 import CreatePostForm from "./CreatePostForm";
 import "./GeneralBoard.css";
+import { useNavigate } from "react-router-dom";
 
 function GeneralBoard() {
   let { generalMessageBoard } = useContext(UserContext);
+  let { handleDeleteGeneralMessage } = useContext(UserContext);
   let { user } = useContext(UserContext);
   const [isCreateActive, setIsCreateActive] = useState(false);
+  const navigate = useNavigate();
+
+  function handleDeleteMessage(id: string): void {
+    handleDeleteGeneralMessage(id);
+    fetchGeneralPosts();
+  }
 
   return (
     <div className="GeneralBoard">
@@ -32,11 +41,21 @@ function GeneralBoard() {
             </p>
             <p>{post.message}</p>
             <p>{post.replies.length} Replies</p>
-            <p>
-              {post.user === `${user.firstName} ${user.lastName}`
-                ? "DELETE POST"
-                : ""}
-            </p>
+
+            {post.user === `${user.firstName} ${user.lastName}` ? (
+              <div className="editDelete">
+                <button onClick={() => handleDeleteMessage(String(post._id))}>
+                  DELETE POST
+                </button>
+                <button
+                  onClick={() => navigate(`/message-board/edit/${post._id}`)}
+                >
+                  EDIT POST
+                </button>
+              </div>
+            ) : (
+              ""
+            )}
           </div>
         ))}
       </div>
