@@ -13,10 +13,12 @@ interface Props {
 function CreatePostForm({ createActive }: Props) {
   let { user } = useContext(UserContext);
   let { handleGeneralMessageBoard } = useContext(UserContext);
+  const location = useLocation();
+
   const [title, setTitle] = useState("");
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const location = useLocation();
+
   let currentBoard = location.pathname.slice(15);
 
   function handlePostSubmit(e: FormEvent) {
