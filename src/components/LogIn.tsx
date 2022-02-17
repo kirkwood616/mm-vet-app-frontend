@@ -1,6 +1,7 @@
 import "./LogIn.css";
 import { useContext } from "react";
 import UserContext from "../context/UserContext";
+import LandingInfo from "./LandingInfo";
 
 function LogIn() {
   let { handleLogIn } = useContext(UserContext);
@@ -8,6 +9,7 @@ function LogIn() {
 
   return (
     <div className="LogIn">
+      <LandingInfo />
       <div className="logInForm">
         <h1>Log In</h1>
         <form method="get" className="form" onSubmit={handleLogIn}>
