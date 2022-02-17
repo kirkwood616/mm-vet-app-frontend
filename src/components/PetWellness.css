@@ -19,20 +19,10 @@
     padding-right: 35px;
   }
 
-  @media only screen and (max-width: 768px) {
-    .container {
-      width: 80%;
-    }
-}
-  
-  @media only screen and (max-width: 480px) {
-    .container {
-      width: 70%;
-    }
-}
-
 .petWellness .icon > a{
-    display: block;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     color: #777;  
     text-decoration: none;
 }
@@ -40,24 +30,10 @@
 .petWellnessImageContainer,
 .petWellnessImage {
     display: block;
-    width: 90%; 
+    /* width: 90%;  */
     max-height: 300px;
     margin: 0 auto;
     border-radius: 1rem;
-}
-
-@media only screen and (max-width: 768px) {
-  .petWellnessImageContainer,
-  .petWellnessImage {
-    width: 85%;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .petWellnessImageContainer,
-  .petWellnessImage {
-    width: 85%;
-  }
 }
 
 .petWellness .paragraph{
@@ -69,3 +45,24 @@
     border: 1px solid #777;
     border-radius: 0.25em;
 }
+
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 70%;
+  }
+  .petWellnessImageContainer,
+  .petWellnessImage {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 80%;
+  }
+  .petWellnessImageContainer,
+  .petWellnessImage {
+    width: 85%;
+  }
+}
+

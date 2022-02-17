@@ -19,56 +19,24 @@ h2 {
   padding-right: 35px;
 }
 
-@media only screen and (max-width: 768px) {
-  .container {
-    width: 80%;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .container {
-    width: 70%;
-  }
-}
-
-.parasiteControlImageContainer {
-  padding: 1rem;
-  border: none;
-  border-radius: 1rem;
-  margin: 0 auto;
-}
-
-.parasiteControl .icon > a {
-  display: block;
+.parasiteControl .icon > a{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #777;  
   text-decoration: none;
-  color: #777;
 }
 
 .parasiteControlImageContainer,
 .parasiteControlImage {
   display: block;
-  /* width: 90%; */
+  /* width: 90%;  */
   max-height: 300px;
   margin: 0 auto;
   border-radius: 1rem;
 }
 
-@media only screen and (max-width: 768px) {
-  .parasiteControlImageContainer,
-  .parasiteControlImage {
-    width: 85%;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .parasiteControlImageContainer,
-  .parasiteControlImage {
-    width: 85%;
-  }
-}
-
-
-
-.parasiteControl .paragraph {
+.parasiteControl .paragraph{
   margin-top: 0.5rem;
   padding: 2rem;
   padding-bottom: 0;
@@ -76,4 +44,24 @@ h2 {
   background-color: var(--white);
   border: 1px solid #777;
   border-radius: 0.25em;
+}
+
+@media only screen and (max-width: 480px) {
+.container {
+  width: 70%;
+}
+.parasiteControlImageContainer,
+.parasiteControlImage {
+  width: 85%;
+}
+}
+
+@media only screen and (max-width: 768px) {
+.container {
+  width: 80%;
+}
+.parasiteControlImageContainer,
+.parasiteControlImage {
+  width: 85%;
+}
 }
