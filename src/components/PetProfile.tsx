@@ -19,7 +19,7 @@ function PetProfile() {
         <div className="imageContainer">
           <img
             src={userPets[i].picture.picture}
-            alt="paw icon"
+            alt={`${userPets[i].petFirstName}`}
             onClick={() => setIsActive(!isActive)}
           />
         </div>
@@ -84,7 +84,7 @@ function PetProfile() {
             <tr>
               <th>Health Records</th>
               <td className="last">
-                <Link to={"/health-records"}>Health Records</Link>
+                <Link to={`/health-records/${id}`}>Health Records</Link>
               </td>
             </tr>
           </tbody>
