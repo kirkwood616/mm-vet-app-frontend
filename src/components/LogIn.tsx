@@ -1,10 +1,8 @@
 import "./LogIn.css";
 import { useContext } from "react";
 import UserContext from "../context/UserContext";
-import { Link } from "react-router-dom";
 
 function LogIn() {
-  let { user, isLoggedIn } = useContext(UserContext);
   let { handleLogIn } = useContext(UserContext);
   let { handleEmail } = useContext(UserContext);
 
@@ -38,10 +36,10 @@ function LogIn() {
           <input type="submit" value="Log In" className="logInButton" />
         </form>
 
-        <p>Don't have an account?</p>
+        {/* <p>Don't have an account?</p>
         <p>
           <Link to="/">Create An Account</Link>
-        </p>
+        </p> */}
       </div>
     </div>
   );

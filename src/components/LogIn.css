@@ -1,6 +1,6 @@
 .LogIn {
   padding: 2rem;
-  width: auto;
+  /* width: auto; */
   text-align: center;
   display: flex;
   justify-content: center;
@@ -19,15 +19,15 @@
   border-radius: 15px;
   box-shadow: 0 0 10px black;
   background-color: var(--light-green);
-  width: 400px;
-  min-width: 300px;
+  width: 325px;
+  /* min-width: 300px; */
   height: 300px;
   padding: 15px;
-  margin: 0;
+  /* margin: 0; */
 }
 
 .LogIn .inputField {
-  width: 100%;
+  width: 90%;
   padding: 0.5rem;
   margin-bottom: 1rem;
   border: 1px solid black;
@@ -50,4 +50,10 @@
 .LogIn .formTitle {
   display: block;
   font-size: 1rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .LogIn .logInForm {
+    width: 100%;
+  }
 }
