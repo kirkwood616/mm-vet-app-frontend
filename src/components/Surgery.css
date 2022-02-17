@@ -19,6 +19,7 @@
   }
 
   .surgery .icon > a{
+    width: fit-content;
     display: flex;
     justify-content: flex-start;
     align-items: center;
