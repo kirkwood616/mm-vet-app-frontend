@@ -28,48 +28,54 @@ import SpayNeuter from "./components/SpayNeuter";
 import MessageBoardHome from "./components/message-board/MessageBoardHome";
 import GeneralBoard from "./components/message-board/GeneralBoard";
 import EditMessage from "./components/message-board/EditMessage";
-import ReplyToPost from "./components/message-board/ReplyToPost";
+import ScrollToTop from "./ScrollToTop";
+// import ReplyToPost from "./components/message-board/ReplyToPost";
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/emergency" element={<Emergency />} />
-          <Route path="/health-records/:id" element={<HealthRecords />} />
-          <Route path="/pet-profile/:id" element={<PetProfile />} />
-          <Route
-            path="/pet-profile/image-upload/:id"
-            element={<PetImageUpload />}
-          />
-          <Route path="/user-profile" element={<UserProfile />} />
-          <Route path="/request-appointment" element={<RequestAppointment />} />
-          <Route
-            path="/request-confirmation"
-            element={<RequestConfirmation />}
-          />
-          <Route path="/home-menu" element={<HomeMenu />} />
-          <Route path="/log-in" element={<LogIn />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/your-pets" element={<YourPets />} />
-          <Route path="/pet-wellness" element={<PetWellness />} />
-          <Route path="/dentistry" element={<Dentistry />} />
-          <Route path="/diet-nutrition" element={<DietNutrition />} />
-          <Route path="/vaccinations" element={<Vaccinations />} />
-          <Route path="/spay-neuter" element={<SpayNeuter />} />
-          <Route path="/surgery" element={<Surgery />} />
-          <Route path="/parasite-control" element={<ParasiteControl />} />
-          <Route path="/microchipping" element={<Microchipping />} />
-          <Route path="/grooming" element={<Grooming />} />
-          <Route path="/message-board" element={<MessageBoardHome />} />
-          <Route path="/message-board/general" element={<GeneralBoard />} />
-          <Route path="/message-board/edit/:id" element={<EditMessage />} />
-          <Route path="/message-board/reply/:id" element={<ReplyToPost />} />
-        </Routes>
-        <Footer />
+        <ScrollToTop>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/emergency" element={<Emergency />} />
+            <Route path="/health-records/:id" element={<HealthRecords />} />
+            <Route path="/pet-profile/:id" element={<PetProfile />} />
+            <Route
+              path="/pet-profile/image-upload/:id"
+              element={<PetImageUpload />}
+            />
+            <Route path="/user-profile" element={<UserProfile />} />
+            <Route
+              path="/request-appointment"
+              element={<RequestAppointment />}
+            />
+            <Route
+              path="/request-confirmation"
+              element={<RequestConfirmation />}
+            />
+            <Route path="/home-menu" element={<HomeMenu />} />
+            <Route path="/log-in" element={<LogIn />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/your-pets" element={<YourPets />} />
+            <Route path="/pet-wellness" element={<PetWellness />} />
+            <Route path="/dentistry" element={<Dentistry />} />
+            <Route path="/diet-nutrition" element={<DietNutrition />} />
+            <Route path="/vaccinations" element={<Vaccinations />} />
+            <Route path="/spay-neuter" element={<SpayNeuter />} />
+            <Route path="/surgery" element={<Surgery />} />
+            <Route path="/parasite-control" element={<ParasiteControl />} />
+            <Route path="/microchipping" element={<Microchipping />} />
+            <Route path="/grooming" element={<Grooming />} />
+            <Route path="/message-board" element={<MessageBoardHome />} />
+            <Route path="/message-board/general" element={<GeneralBoard />} />
+            <Route path="/message-board/edit/:id" element={<EditMessage />} />
+            {/* <Route path="/message-board/reply/:id" element={<ReplyToPost />} /> */}
+          </Routes>
+          <Footer />
+        </ScrollToTop>
       </Router>
     </div>
   );
