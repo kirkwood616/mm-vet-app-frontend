@@ -25,7 +25,7 @@ function MessageBoardHome() {
             </Link>
           </div>
           <div className="divider">
-            <Link to={"/message-board/medical"}>
+            <Link to={"/message-board/under-construction"}>
               <div className="category">
                 <h2>Medical</h2>
                 <p className="boardDescription">
@@ -35,7 +35,7 @@ function MessageBoardHome() {
             </Link>
           </div>
           <div className="divider">
-            <Link to={"/message-board/cats"}>
+            <Link to={"/message-board/under-construction"}>
               <div className="category">
                 <h2>Cats</h2>
                 <p className="boardDescription">All things cats.</p>
@@ -43,7 +43,7 @@ function MessageBoardHome() {
             </Link>
           </div>
           <div className="divider">
-            <Link to={"/message-board/dogs"}>
+            <Link to={"/message-board/under-construction"}>
               <div className="category">
                 <h2>Dogs</h2>
                 <p className="boardDescription">All things dogs.</p>
@@ -51,7 +51,7 @@ function MessageBoardHome() {
             </Link>
           </div>
           <div>
-            <Link to={"/message-board/lost-pets"}>
+            <Link to={"/message-board/under-construction"}>
               <div className="category">
                 <h2>Lost Pets</h2>
                 <p className="boardDescription">

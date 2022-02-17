@@ -13,11 +13,19 @@ function YourPets() {
         {userPets.map((pet, index) => (
           <Link to={`/pet-profile/${pet._id}`} key={index}>
             <div className="yourPetBar">
-              <img
-                src={userPets[index].picture.picture}
-                alt={`${userPets[index].petFirstName}`}
-                className="userPetPic"
-              />
+              {userPets[index].picture.picture.length ? (
+                <img
+                  src={userPets[index].picture.picture}
+                  alt={`${userPets[index].petFirstName}`}
+                  className="userPetPic"
+                />
+              ) : (
+                <img
+                  src="/M&M logo plain.png"
+                  alt="M and M logo"
+                  className="userPetPic"
+                />
+              )}
               <h2>{pet.petFirstName}</h2>
             </div>
           </Link>

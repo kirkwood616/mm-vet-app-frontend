@@ -18,11 +18,19 @@ function PetProfile() {
       <h1>{userPets[i].petFirstName}'s Profile</h1>
       <div className="petProfileInfo">
         <div className="imageContainer">
-          <img
-            src={userPets[i].picture.picture}
-            alt={`${userPets[i].petFirstName}`}
-            onClick={() => setIsActive(!isActive)}
-          />
+          {userPets[i].picture.picture.length ? (
+            <img
+              src={userPets[i].picture.picture}
+              alt={`${userPets[i].petFirstName}`}
+              onClick={() => setIsActive(!isActive)}
+            />
+          ) : (
+            <img
+              src="/M&M logo plain.png"
+              alt="M and M logo"
+              onClick={() => setIsActive(!isActive)}
+            />
+          )}
         </div>
         <p className={isActive ? "isActive upload" : "hidden upload"}>
           <span

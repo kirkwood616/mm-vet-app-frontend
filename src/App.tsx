@@ -29,6 +29,7 @@ import MessageBoardHome from "./components/message-board/MessageBoardHome";
 import GeneralBoard from "./components/message-board/GeneralBoard";
 import EditMessage from "./components/message-board/EditMessage";
 import ScrollToTop from "./ScrollToTop";
+import UnderConstruction from "./components/message-board/UnderConstruction";
 // import ReplyToPost from "./components/message-board/ReplyToPost";
 
 function App() {
@@ -73,6 +74,10 @@ function App() {
             <Route path="/message-board/general" element={<GeneralBoard />} />
             <Route path="/message-board/edit/:id" element={<EditMessage />} />
             {/* <Route path="/message-board/reply/:id" element={<ReplyToPost />} /> */}
+            <Route
+              path="/message-board/under-construction"
+              element={<UnderConstruction />}
+            />
           </Routes>
           <Footer />
         </ScrollToTop>
