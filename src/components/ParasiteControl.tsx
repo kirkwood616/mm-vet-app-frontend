@@ -6,13 +6,14 @@ function ParasiteControl() {
     <div className="parasiteControl">
       <div className="container">
         <div className="parasiteControl icon">
-          <img
+          <Link to={"/services"}>
+            <img
             src="./icons/arrowIcon.svg"
             alt="arrow-back"
             height={40}
             width={40}
           />
-          <Link to={"/services"}>Back to Our Services</Link>
+          Back to Our Services</Link>
         </div>
         <h1>Parasite Control</h1> 
         <h2>(Fleas, Ticks & Heartworms)</h2>

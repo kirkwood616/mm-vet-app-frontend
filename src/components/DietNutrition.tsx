@@ -6,13 +6,14 @@ function DietNutrition() {
     <div className="dietNutrition">
       <div className="container">
         <div className="dietNutrition icon">
-          <img
+          <Link to={"/services"}>
+            <img
             src="./icons/arrowIcon.svg"
             alt="arrow-back"
             height={40}
             width={40}
           />
-          <Link to={"/services"}>Back to Our Services</Link>
+          Back to Our Services</Link>
         </div>
         <h1>Diet & Nutrition</h1>
         <br />

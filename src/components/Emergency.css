@@ -13,7 +13,7 @@
 .emergencyInfo {
   background-color: var(--light-green);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
-  width: 65%;
+  /* width: 65%; */
   padding: 2rem;
   margin: auto;
   line-height: 2;
