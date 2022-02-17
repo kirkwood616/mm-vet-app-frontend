@@ -1,18 +1,60 @@
 .HealthRecords {
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: 100%;
 }
 
-.HealthRecords .recordsContainer {
-  background-color: var(--light-green);
-  width: 400px;
-  height: 400px;
+.recordsContainer {
+  /* background-color: var(--light-green); */
+  width: 450px;
+  height: 450px;
+  margin: auto;
 }
 
-.HealthRecords ul {
-  list-style-type: none;
+.recordsContainer > .petPicture {
+  border-radius: 50%;
+  box-shadow: 0 0 5px black;
+  cursor: pointer;
+  height: 150px;
+  width: 150px;
+}
+
+.recordsContainer .header {
+  background-color: var(--dark-green);
+  border-radius: 1rem 1rem 0 0;
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 0.75rem 0;
+}
+
+.recordsContainer .body {
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+
+.recordsContainer .title {
+  background-color: #ddd;
+  font-weight: bold;
+  padding: 0.5rem 0;
+}
+
+.recordsContainer .info {
+  background-color: white;
+  padding: 0.5rem 0;
+}
+
+.requestVaccinationText {
+  color: red;
+  padding: 1rem 1rem;
+  /* font-weight: bold; */
+}
+
+@media only screen and (max-width: 480px) {
+  .recordsContainer {
+    width: 100%;
+  }
 }
