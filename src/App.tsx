@@ -28,6 +28,7 @@ import SpayNeuter from "./components/SpayNeuter";
 import MessageBoardHome from "./components/message-board/MessageBoardHome";
 import GeneralBoard from "./components/message-board/GeneralBoard";
 import EditMessage from "./components/message-board/EditMessage";
+import ReplyToPost from "./components/message-board/ReplyToPost";
 
 function App() {
   return (
@@ -66,6 +67,7 @@ function App() {
           <Route path="/message-board" element={<MessageBoardHome />} />
           <Route path="/message-board/general" element={<GeneralBoard />} />
           <Route path="/message-board/edit/:id" element={<EditMessage />} />
+          <Route path="/message-board/reply/:id" element={<ReplyToPost />} />
         </Routes>
         <Footer />
       </Router>

@@ -17,6 +17,71 @@
   padding: 0.5rem;
 }
 
+.GeneralBoard .repliesBarContainer {
+  background-color: var(--dark-green);
+  border-radius: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+/* ////////////////  .upload = replyContainer */
+/* .GeneralBoard .repliesBarContainer .isActive {
+  transform: scale(1.05);
+  transition: all 0.5s ease-in-out;
+}
+
+.GeneralBoard .hidden .reply {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.GeneralBoard .isActive .reply {
+  visibility: visible;
+  opacity: 1;
+} */
+
+/* .GeneralBoard .hidden,
+.replyContainer {
+  border-radius: 1rem;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.GeneralBoard .isActive .replyContainer {
+  transform: scale(1.05);
+  transition: all 0.5s ease-in-out;
+} */
+
+/* //////////////// */
+
+.GeneralBoard .replyContainer .reply {
+  padding: 1rem;
+}
+
+.GeneralBoard .replyContainer .reply:nth-child(1) {
+  /* border-radius: 1rem 1rem 0 0; */
+}
+
+.GeneralBoard .replyContainer .reply:last-child {
+  border-radius: 0 0 1rem 1rem;
+}
+
+.GeneralBoard .replyContainer .reply:nth-child(odd) {
+  background-color: var(--medium-green);
+}
+
+.GeneralBoard .replyContainer .reply:nth-child(even) {
+  background-color: var(--light-green);
+}
+
+/* .GeneralBoard .reply {
+  background-color: red;
+} */
+
 /*///// TEXT /////*/
 
 .GeneralBoard .userDateTime {
@@ -45,6 +110,11 @@
 .GeneralBoard .postControlButton:hover {
   transform: scale(1.05);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+.replyButton {
+  background-color: var(--dark-green);
+  width: 100px;
 }
 
 .GeneralBoard .deletePostButton {

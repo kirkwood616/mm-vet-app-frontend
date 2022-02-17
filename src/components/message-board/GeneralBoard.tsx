@@ -10,6 +10,7 @@ function GeneralBoard() {
   let { handleDeleteGeneralMessage } = useContext(UserContext);
   let { user } = useContext(UserContext);
   const navigate = useNavigate();
+  // const [isRepliesActive, setIsRepliesActive] = useState(false);
 
   function handleDeleteMessage(id: string): void {
     handleDeleteGeneralMessage(id);
@@ -28,6 +29,14 @@ function GeneralBoard() {
               by {post.user} on {post.dateTime}
             </p>
             <p className="postMessage">{post.message}</p>
+            {/* <div className="replyButtonContainer">
+              <button
+                className="postControlButton replyButton"
+                onClick={() => navigate(`/message-board/reply/${post._id}`)}
+              >
+                REPLY
+              </button>
+            </div> */}
             {/* <p>{post.replies.length} Replies</p> */}
 
             {post.user === `${user.firstName} ${user.lastName}` ? (
@@ -48,6 +57,34 @@ function GeneralBoard() {
             ) : (
               ""
             )}
+            {/* {post.replies.length ? (
+              <div
+                className="repliesBarContainer"
+                onClick={() => setIsRepliesActive(!isRepliesActive)}
+              >
+                <h1>REPLIES</h1>
+                <div
+                  className={
+                    isRepliesActive
+                      ? "isActive replyContainer"
+                      : "hidden replyContainer"
+                  }
+                >
+                  {generalMessageBoard.map((reply, index) => (
+                    <div className="reply" key={index}>
+                      <p>{reply.title}</p>
+                      <p>
+                        by {reply.user} @ {reply.dateTime}
+                      </p>
+                      <p>{reply.message}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              ""
+            )} */}
+            {/* separate */}
           </div>
         ))}
       </div>
