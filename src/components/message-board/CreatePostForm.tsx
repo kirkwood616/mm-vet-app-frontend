@@ -35,6 +35,7 @@ function CreatePostForm() {
     setTimeout(function () {
       handleGeneralMessageBoard();
       setIsLoading(false);
+      setIsCreateActive(false);
     }, 1000);
   }
 
