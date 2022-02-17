@@ -1,12 +1,22 @@
-import Pet from "../models/Pet";
+// export function getPetAge(date: string): Number {
+//   let dob = new Date(date);
+//   let month_diff = Date.now() - dob.getTime();
+//   let age_dt = new Date(month_diff);
+//   let year = age_dt.getUTCFullYear();
+//   let age = Math.abs(year - 1970);
+//   return age;
+// }
 
-export function getPetAge(pet: Pet): Number {
-  let dob = new Date(pet.dateOfBirth);
-  let month_diff = Date.now() - dob.getTime();
-  let age_dt = new Date(month_diff);
-  let year = age_dt.getUTCFullYear();
-  let age = Math.abs(year - 1970);
-  return age;
+export function getPetAge(input: string): Number {
+  let date = input;
+  let year = date.slice(6);
+  let mmdd = date.slice(0, 5);
+  let intlDate = year + "-" + mmdd;
+  let newDate: any = new Date();
+  let newIntlDob: any = new Date(intlDate);
+  let ageInMilliseconds = newDate - newIntlDob;
+
+  return Math.floor(ageInMilliseconds / 1000 / 60 / 60 / 24 / 365);
 }
 
 export function getFormattedDateAndTime(date: Date) {

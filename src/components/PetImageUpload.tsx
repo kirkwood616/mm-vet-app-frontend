@@ -3,7 +3,7 @@ import { FormEvent, useContext, useState } from "react";
 import UserContext from "../context/UserContext";
 import { useParams, useNavigate } from "react-router-dom";
 import Pet from "../models/Pet";
-import { fetchPet, updatePet } from "../services/VetApiService";
+import { updatePet } from "../services/VetApiService";
 import UserPicture from "../models/UserPicture";
 
 function PetImageUpload() {
@@ -77,6 +77,7 @@ function PetImageUpload() {
         diet: userPets[i].diet,
         picture: newImage,
         medicalRecords: userPets[i].medicalRecords,
+        vaccinations: userPets[i].vaccinations,
       };
       updatePet(id!, newPetPicture);
       apiDelay();

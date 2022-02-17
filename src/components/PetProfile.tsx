@@ -11,6 +11,7 @@ function PetProfile() {
   let i = userPets.findIndex((pet) => pet._id === id);
   const [isActive, setIsActive] = useState(false);
   const navigate = useNavigate();
+  console.log(userPets[i].dateOfBirth);
 
   return (
     <div className="PetProfile">
@@ -19,19 +20,17 @@ function PetProfile() {
         <div className="imageContainer">
           <img
             src={userPets[i].picture.picture}
-            alt="paw icon"
+            alt={`${userPets[i].petFirstName}`}
             onClick={() => setIsActive(!isActive)}
           />
         </div>
         <p className={isActive ? "isActive upload" : "hidden upload"}>
-          {/* <Link to={`/pet-profile/image-upload/${id}`}> */}
           <span
             className="uploadLink"
             onClick={() => navigate(`/pet-profile/image-upload/${id}`)}
           >
             Upload Image
           </span>
-          {/* </Link> */}
         </p>
         <table>
           <tbody>
@@ -43,7 +42,7 @@ function PetProfile() {
             </tr>
             <tr>
               <th>Age</th>
-              <td>{getPetAge(userPets[i])}</td>
+              <td>{getPetAge(userPets[i].dateOfBirth)}</td>
             </tr>
             <tr>
               <th>Date of Birth</th>
@@ -84,7 +83,7 @@ function PetProfile() {
             <tr>
               <th>Health Records</th>
               <td className="last">
-                <Link to={"/health-records"}>Health Records</Link>
+                <Link to={`/health-records/${id}`}>Health Records</Link>
               </td>
             </tr>
           </tbody>
