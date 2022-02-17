@@ -1,5 +1,6 @@
 import MedicalRecord from "./MedicalRecord";
 import UserPicture from "./UserPicture";
+import Vaccination from "./Vaccinations";
 
 interface Pet {
   _id?: string;
@@ -17,6 +18,7 @@ interface Pet {
   diet: string;
   picture: UserPicture;
   medicalRecords: MedicalRecord[];
+  vaccinations: Vaccination[];
 }
 
 export default Pet;
