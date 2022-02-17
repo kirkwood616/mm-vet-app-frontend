@@ -61,6 +61,7 @@
 .UserProfile .infoContainer td {
   text-align: center;
   border-bottom: 1px solid #ddd;
+  padding: 0.5rem;
 }
 
 .UserProfile .infoContainer table .first {
