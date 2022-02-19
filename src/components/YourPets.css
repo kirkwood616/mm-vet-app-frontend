@@ -53,3 +53,33 @@
   transform: scale(1.05);
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.75);
 }
+
+@media only screen and (max-width: 480px) {
+  .YourPets .yourPetBar {
+    width: 250px;
+  }
+
+  .yourPetBar .userPetPic {
+    height: 75px;
+    width: 75px;
+  }
+
+  .yourPetBar > h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .YourPets .yourPetBar {
+    width: 200px;
+  }
+
+  .yourPetBar .userPetPic {
+    height: 50px;
+    width: 50px;
+  }
+
+  .yourPetBar > h2 {
+    font-size: 1.25rem;
+  }
+}
