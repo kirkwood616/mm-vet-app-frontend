@@ -75,19 +75,22 @@
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
 }
 
-.menuTrigger span {
+.menuTrigger > span {
   font-weight: 700;
   vertical-align: middle;
   font-size: 1.5rem;
   margin: 0 10px;
-}
-
-.menuTrigger img {
-  fill: black;
+  color: black;
 }
 
 @media only screen and (max-width: 480px) {
   .menu {
     width: 95vw;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .menuTrigger > span {
+    display: none;
   }
 }
