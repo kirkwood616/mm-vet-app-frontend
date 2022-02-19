@@ -19,6 +19,10 @@
   flex-direction: column;
 }
 
+h1 {
+  text-align: center;
+}
+
 .loadingScreen {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
