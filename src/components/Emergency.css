@@ -2,29 +2,39 @@
   border: none;
   border-radius: 1rem;
   background-color: var(--medium-green);
+  padding: 1rem;
+  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
-  margin: auto;
+}
+
+.Emergency > h1 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.emergencyInfo > p {
+  line-height: 2;
+  margin-top: 1rem;
 }
 
 .emergencyInfo {
   background-color: var(--light-green);
+  border-radius: 1rem;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
-  /* width: 65%; */
   padding: 2rem;
-  margin: auto;
-  line-height: 2;
+  text-align: center;
 }
 
-.emergencyInfo, .emergencyImage{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.emergencyInfo .emergencyImage {
   border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.emergencyInfo a {
+  color: blue;
 }
 
 .backToHomeMenu {
@@ -34,8 +44,20 @@
   color: var(--white);
   text-align: center;
   text-decoration: none;
-  background-color: var(--dark-green); 
+  background-color: var(--dark-green);
   border-radius: 5px;
-  padding: .5rem;
+  padding: 0.5rem;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .emergencyInfo .emergencyImage {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .emergencyInfo .emergencyImage {
+    width: 100%;
+  }
 }
