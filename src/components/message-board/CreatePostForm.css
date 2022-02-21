@@ -4,20 +4,19 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   margin: 1rem auto;
   padding: 1rem;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: auto;
+  width: 650px;
   transition: all 0.5s ease-out;
 }
 
 .CreatePostForm .createPostFormContainer {
-  margin: 1rem;
+  margin: 1rem 0;
   transition: all 0.5s ease-in-out;
   display: flex;
   justify-content: center;
+}
+
+.CreatePostForm .createPostFormContainer form {
+  width: 100%;
 }
 
 .GeneralBoard .doNotShow {
@@ -26,30 +25,29 @@
   height: 0;
 }
 
+.CreatePostForm .createPostFormContainer p {
+  font-weight: bold;
+  margin-top: 0.75rem;
+}
+
 /*/////// INPUTS ///////*/
 
-.inputTitle {
-  font-weight: bold;
-  margin-bottom: 3px;
-}
-
-.CreatePostForm form input {
+.CreatePostForm .createPostFormContainer input[type="text"],
+textarea {
   border: 1px solid black;
   border-radius: 0.5rem;
-  padding: 0.4rem;
-  text-align: center;
-  width: 385px;
-  margin-bottom: 1rem;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  resize: vertical;
+  width: 75%;
 }
 
-.CreatePostForm form textarea {
-  border: 1px solid black;
-  border-radius: 0.5rem;
-  min-height: 8rem;
-  max-width: 400px;
-  padding: 0.25rem;
+.CreatePostForm .createPostFormContainer input[type="text"] {
   text-align: center;
-  width: 500px;
+}
+
+.CreatePostForm .createPostFormContainer textarea {
+  min-height: 150px;
 }
 
 /*/////// BUTTONS ///////*/
@@ -82,7 +80,7 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 }
 
-.CreatePostForm .addPostButton {
+.CreatePostForm .createPostFormContainer form .addPostButton {
   background-color: var(--dark-green);
   border: none;
   border-radius: 0.5rem;
@@ -93,7 +91,7 @@
   font-weight: bold;
   margin: auto;
   padding: 0.5rem;
-  min-width: 200px;
+  width: 200px;
   transition: all 0.2s ease-in-out;
 }
 
@@ -104,26 +102,30 @@
 
 @media only screen and (max-width: 768px) {
   .CreatePostForm {
-    width: 80%;
+    width: 85%;
   }
 
-  .CreatePostForm form input {
-    max-width: 75%;
-    width: 100%;
-  }
-
-  .CreatePostForm form textarea {
-    max-width: 75%;
+  .CreatePostForm .createPostFormContainer input[type="text"],
+  textarea {
+    width: 85%;
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .CreatePostForm {
-    width: 80%;
+@media only screen and (max-width: 480px) {
+  .CreatePostForm .createPostFormContainer form input[type="text"],
+  textarea {
+    width: 100%;
   }
 
-  .CreatePostForm form {
-    max-width: 50%;
-    text-align: center;
+  .CreatePostForm .createPostFormContainer form .addPostButton {
+    width: 100%;
+  }
+
+  .CreatePostForm .addCreatePostButton {
+    width: 100%;
+  }
+
+  .CreatePostForm .cancelPostButton {
+    width: 100%;
   }
 }
