@@ -58,7 +58,7 @@ function CreatePostForm() {
         }
         onClick={() => handleCreateCancelClick()}
       >
-        {isCreateActive ? "CANCEL POST" : "+ CREATE POST"}
+        {isCreateActive ? "CANCEL POST" : "CREATE POST"}
       </button>
 
       <div className={isLoading ? "loadingScreen" : "hiddenLoadScreen"}>
