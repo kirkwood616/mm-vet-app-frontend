@@ -93,6 +93,7 @@
   font-size: 1.1rem;
   font-weight: 500;
   margin: 1rem;
+  white-space: pre-line;
 }
 
 /*/ //// BUTTONS /////*/
