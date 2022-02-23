@@ -14,7 +14,6 @@ function LogIn() {
 
   return (
     <div className="LogIn">
-      <LandingInfo />
       <div className="logInForm">
         <h1>Log In</h1>
         <form method="get" className="form" onSubmit={handleLogIn}>
@@ -42,12 +41,8 @@ function LogIn() {
 
           <input type="submit" value="Log In" className="logInButton" />
         </form>
-
-        {/* <p>Don't have an account?</p>
-        <p>
-          <Link to="/">Create An Account</Link>
-        </p> */}
       </div>
+      <LandingInfo />
     </div>
   );
 }
