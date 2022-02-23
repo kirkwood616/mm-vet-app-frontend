@@ -30,6 +30,7 @@ import GeneralBoard from "./components/message-board/GeneralBoard";
 import EditMessage from "./components/message-board/EditMessage";
 import ScrollToTop from "./ScrollToTop";
 import UnderConstruction from "./components/message-board/UnderConstruction";
+import SingleService from "./components/SingleService";
 // import ReplyToPost from "./components/message-board/ReplyToPost";
 
 function App() {
@@ -60,6 +61,7 @@ function App() {
             <Route path="/home-menu" element={<HomeMenu />} />
             <Route path="/log-in" element={<LogIn />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/services/service" element={<SingleService />} />
             <Route path="/your-pets" element={<YourPets />} />
             <Route path="/pet-wellness" element={<PetWellness />} />
             <Route path="/dentistry" element={<Dentistry />} />
