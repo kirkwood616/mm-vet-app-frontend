@@ -10,3 +10,9 @@
   height: 100px;
   margin: 0.75rem;
 }
+
+@media only screen and (max-width: 480px) {
+  .Header .headerLogo {
+    height: 75px;
+  }
+}
