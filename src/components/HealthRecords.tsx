@@ -19,7 +19,6 @@ function HealthRecords() {
         />
         <h2>{currentPet?.petFirstName}</h2>
         <div className="header">VACCINATIONS</div>
-        {/* {currentPet?.vaccinations} */}
         {currentPet?.vaccinations ? (
           <div className="body">
             {currentPet?.vaccinations.map((item, index) => (
