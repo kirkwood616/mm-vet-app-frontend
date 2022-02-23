@@ -1,38 +1,32 @@
 import "./SingleService.css";
 import cleanData from "../functions/sanitize";
-import Service from "../models/Service";
 import { useContext } from "react";
 import UserContext from "../context/UserContext";
-// import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import BackToServices from "./BackToServices";
 
 function SingleService() {
+  let { route } = useParams();
   let { services } = useContext(UserContext);
-
-  console.log(services);
-
-  // let data = {
-  //   serviceName: "Service",
-  //   serviceRoute: "service",
-  //   serviceImagePath: "well.jpg",
-  //   serviceDescription: "Lorem Ipsum",
-  //   serviceBody: "<p>Serve Info</p><p>More Info Here</p>",
-  // };
+  let service = services.find((service) => service.serviceRoute === route);
+  console.log(route);
 
   return (
     <div className="SingleService">
-      <h1>{services[0].serviceName}</h1>
+      <h1>{service?.serviceName}</h1>
       <div className="serviceInfoContainer">
         <img
-          src={`/animal-photos/${services[0].serviceImagePath}`}
-          alt={`${services[0].serviceName}`}
+          src={`/animal-photos/${service?.serviceImagePath}`}
+          alt={`${service?.serviceName}`}
           className="serviceImage"
         />
         <div
           className="serviceInfo"
           dangerouslySetInnerHTML={{
-            __html: cleanData(String(services[0].serviceBody)),
+            __html: cleanData(String(service?.serviceBody)),
           }}
         ></div>
+        <BackToServices />
       </div>
     </div>
   );

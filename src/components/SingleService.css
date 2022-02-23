@@ -1,22 +1,76 @@
 .SingleService {
-  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.SingleService a {
+  color: blue;
 }
 
 .SingleService .serviceInfoContainer {
-  background-color: yellow;
-  width: 100%;
+  background-color: var(--light-green);
+  border-radius: 1rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  margin: 1rem auto 3rem;
+  padding: 1.5rem;
+  width: 75%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .SingleService .serviceInfoContainer .serviceInfo {
-  background-color: burlywood;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 2rem 2rem 1rem;
+  position: relative;
   width: 75%;
 }
 
 .SingleService .serviceImage {
   border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
   max-height: 300px;
+}
+
+.SingleService .serviceInfo > h2,
+h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.SingleService .serviceInfo p,
+ul {
+  margin-bottom: 1rem;
+}
+
+.SingleService .serviceInfo ul {
+  list-style-position: inside;
+}
+
+@media only screen and (max-width: 768px) {
+  .SingleService .serviceImage {
+    width: 75%;
+  }
+
+  .SingleService .serviceInfoContainer {
+    margin: 1rem 0;
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .SingleService .serviceInfoContainer {
+    margin: 1rem 0;
+    padding: 1.5rem 0;
+    width: 100%;
+  }
+
+  .SingleService .serviceInfoContainer .serviceInfo {
+    padding: 1rem;
+    width: 85%;
+  }
 }
