@@ -5,10 +5,12 @@ import {
   deleteMessageFromBoard,
   fetchGeneralPosts,
   fetchPet,
+  fetchServices,
   fetchUserByEmail,
 } from "../services/VetApiService";
 import Pet from "../models/Pet";
 import MessageBoardPost from "../models/MessageBoardPost";
+import Service from "../models/Service";
 
 interface Props {
   children: ReactNode;
@@ -38,6 +40,7 @@ export default function UserContextProvider({ children }: Props) {
   const [email, setEmail] = useState<string>("");
   const [user, setUser] = useState<User>(initialUserState);
   const [userPets, setUserPets] = useState<Pet[]>([]);
+  const [services, setServices] = useState<Service[]>([]);
 
   function handleGeneralMessageBoard(): void {
     setGeneralMessageBoard([]);
@@ -92,6 +95,14 @@ export default function UserContextProvider({ children }: Props) {
     });
   }
 
+  function handleServices(): void {
+    if (services.length) {
+      return;
+    } else {
+      fetchServices().then((data) => setServices(data));
+    }
+  }
+
   useEffect(() => {
     if (user.email) {
       setIsLoggedIn(true);
@@ -104,9 +115,11 @@ export default function UserContextProvider({ children }: Props) {
       value={{
         user,
         userPets,
+        services,
         handleLogIn,
         handleLogOut,
         handleEmail,
+        handleServices,
         handleUserPets,
         handleGeneralMessageBoard,
         handleUpdateMessage,
