@@ -3,6 +3,7 @@ import User from "../models/User";
 import Pet from "../models/Pet";
 import MessageBoardPost from "../models/MessageBoardPost";
 import AppointmentRequest from "../models/AppointmentRequest";
+import Service from "../models/Service";
 
 /////////////// CUSTOMERS ///////////////
 export function fetchAllUsers(): Promise<User[]> {
@@ -57,6 +58,18 @@ export function sendAppointmentRequest(
       request
     )
     .then((res) => res.data);
+}
+
+//////////////////// SERVICES ////////////////////
+
+// GET
+export function fetchServices(): Promise<Service[]> {
+  return (
+    axios
+      // .get(`https://us-central1-mm-vet-app.cloudfunctions.net/api/services`)
+      .get(`http://localhost:5001/mm-vet-app/us-central1/api/services`)
+      .then((res) => res.data)
+  );
 }
 
 /////////////// MESSAGE BOARD ///////////////
