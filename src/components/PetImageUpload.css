@@ -8,6 +8,7 @@
 .PetImageUpload .petImageUploadForm {
   background-color: var(--light-green);
   border-radius: 1rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,15 +1,19 @@
 import "./LogIn.css";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import UserContext from "../context/UserContext";
 import LandingInfo from "./LandingInfo";
 
 function LogIn() {
   let { handleLogIn } = useContext(UserContext);
   let { handleEmail } = useContext(UserContext);
+  let { handleServices } = useContext(UserContext);
+
+  useEffect(() => {
+    handleServices();
+  });
 
   return (
     <div className="LogIn">
-      <LandingInfo />
       <div className="logInForm">
         <h1>Log In</h1>
         <form method="get" className="form" onSubmit={handleLogIn}>
@@ -37,12 +41,8 @@ function LogIn() {
 
           <input type="submit" value="Log In" className="logInButton" />
         </form>
-
-        {/* <p>Don't have an account?</p>
-        <p>
-          <Link to="/">Create An Account</Link>
-        </p> */}
       </div>
+      <LandingInfo />
     </div>
   );
 }

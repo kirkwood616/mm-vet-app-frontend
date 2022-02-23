@@ -5,10 +5,9 @@
 }
 
 .recordsContainer {
-  /* background-color: var(--light-green); */
   width: 450px;
   height: 450px;
-  margin: auto;
+  margin: 1rem auto 2rem auto;
 }
 
 .recordsContainer > .petPicture {
@@ -22,15 +21,18 @@
 .recordsContainer .header {
   background-color: var(--dark-green);
   border-radius: 1rem 1rem 0 0;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
   color: white;
   font-weight: bold;
   font-size: 1.25rem;
+  margin-top: 1rem;
   padding: 0.75rem 0;
 }
 
 .recordsContainer .body {
   background-color: white;
   border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   padding-bottom: 1rem;
@@ -50,7 +52,6 @@
 .requestVaccinationText {
   color: red;
   padding: 1rem 1rem;
-  /* font-weight: bold; */
 }
 
 @media only screen and (max-width: 480px) {

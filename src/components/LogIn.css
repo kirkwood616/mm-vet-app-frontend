@@ -1,9 +1,9 @@
 .LogIn {
   padding: 2rem;
-  /* width: auto; */
   text-align: center;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .LogIn h1 {
@@ -20,10 +20,8 @@
   box-shadow: 0 0 10px black;
   background-color: var(--light-green);
   width: 325px;
-  /* min-width: 300px; */
   height: 300px;
   padding: 15px;
-  /* margin: 0; */
 }
 
 .LogIn .inputField {

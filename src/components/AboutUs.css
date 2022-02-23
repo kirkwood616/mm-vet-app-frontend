@@ -7,14 +7,15 @@
 }
 
 .doctorCard {
-  display: flex;
-  flex-direction: column;
-  max-width: 960px;
-  padding: 20px 20px 28px 20px;
-  box-sizing: border-box;
-  margin: 20px;
+  margin: 1rem auto;
+  background-color: white;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
   border-radius: 1rem;
+  box-sizing: border-box;
+  padding: 20px 20px 28px 20px;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
 }
 
 .doctorCardImage {
@@ -22,7 +23,7 @@
   max-height: 300px;
   border-radius: 1rem;
   object-fit: cover;
-  margin: 0 auto;
+  margin: 0 auto 1rem;
 }
 
 .doctorCardDescription {
@@ -35,11 +36,7 @@
 .doctorCardTitle {
   font-size: 1rem;
   line-height: 1.5;
-  background-image: linear-gradient(
-    90deg,
-    var(--light-green),
-    var(--dark-green)
-  );
+  background-image: linear-gradient(90deg, white, var(--dark-green));
   background-repeat: no-repeat;
   background-position: 0 85%;
   padding: 0 5px;
@@ -47,25 +44,70 @@
   border-radius: 5px;
 }
 
-.aboutUsImage > img {
-  border-radius: 1rem;
-}
-
-.AboutUs,
-.aboutUsImage {
-  padding: 1.5rem;
-  line-height: 1.5;
+.AboutUs {
   font-size: 1rem;
   margin: 0 auto;
-  background-color: var(--light-green);
-  width: 60%;
   text-align: center;
+  width: 100%;
 }
 
-.AboutUsInfo .icon {
+.AboutUs .aboutUsInfoContainer {
+  background-color: var(--light-green);
+  border-radius: 1rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  margin: 1rem auto;
+  padding: 1.5rem;
+  width: 75%;
+}
+
+.aboutUsInfoContainer > h2 {
+  margin-bottom: 1rem;
+}
+
+.aboutUsInfoContainer > p {
+  margin-bottom: 1rem;
+}
+
+.AboutUs .aboutUsImage {
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+  margin: 1rem 0;
+  width: 60%;
+}
+
+.AboutUs .infoContainer {
+  margin: 2rem auto 1rem auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.aboutUsInfo {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+  margin: 1rem;
+  width: 220px;
+}
+
+.hours {
+  margin: 0 auto 1rem auto;
+}
+
+.aboutUsInfo > .icon {
   display: inline-block;
-  padding: 10px;
-  height: 3rem;
+  height: 2.5rem;
+}
+
+.aboutUsInfo > h4 {
+  margin: 0;
+}
+
+.aboutUsInfo > a {
+  margin: 0;
 }
 
 .AboutUs table {
@@ -113,7 +155,7 @@
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-.AboutUs table tbody tr:nth-child(12) {
+.AboutUs table tbody tr:nth-child(7) {
   border-radius: 0 0 1rem 1rem;
   border: none;
 }
@@ -123,18 +165,40 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .AboutUs {
+  .AboutUs .aboutUsInfoContainer {
     width: 85%;
+  }
+
+  .AboutUs table {
+    width: 90%;
+  }
+
+  .doctorCard {
+    width: 85%;
+  }
+
+  .aboutUsInfo {
+    width: 75%;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .AboutUs {
-    width: 85%;
+    width: 100%;
+  }
+
+  .AboutUs .aboutUsInfoContainer {
+    width: 100%;
+    padding: 0;
+    padding-top: 1rem;
+  }
+
+  .doctorCard {
+    width: 95%;
   }
 
   .AboutUs table {
-    width: 100%;
+    width: 90%;
   }
 
   .AboutUs table tbody {

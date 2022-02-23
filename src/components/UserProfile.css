@@ -9,6 +9,7 @@
 .UserProfile .infoContainer {
   background-color: var(--light-green);
   border-radius: 1rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
   padding: 1.5rem;
   width: 50%;
   text-align: center;
@@ -48,8 +49,8 @@
   border: none;
 }
 
-.UserProfile .infoContainer table td .last {
-  border: none;
+.UserProfile .infoContainer table tr:last-child td {
+  border-bottom: none;
 }
 
 .UserProfile .infoContainer th {

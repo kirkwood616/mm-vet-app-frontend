@@ -10,6 +10,7 @@
 .messageBoardCategories {
   background-color: var(--light-green);
   border-radius: 1rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
   padding: 1rem;
   width: 75%;
 }
@@ -53,7 +54,6 @@ div.categoriesContainer > div:hover {
 
 div.categoriesContainer > div:nth-child(1) {
   border-radius: 1rem 1rem 0 0;
-  /* border-bottom: 1px solid lightgray; */
 }
 
 div.categoriesContainer > div:nth-child(1):hover {
@@ -68,4 +68,15 @@ div.categoriesContainer > div:last-child {
 div.categoriesContainer > div:last-child:hover {
   background-color: var(--dark-green);
   border-radius: 0 0 1rem 1rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .MessageBoardHome .messageBoardCategories {
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .MessageBoardHome .messageBoardCategories .categoriesContainer {
+    max-width: 90%;
+  }
 }

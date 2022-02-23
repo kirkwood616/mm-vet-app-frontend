@@ -1,0 +1,21 @@
+.BackToServices {
+  background-color: var(--dark-green);
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  margin: 1.5rem 0 0.75rem 0;
+  max-width: 250px;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.BackToServices .petWellness > a {
+  color: white;
+  font-weight: bold;
+  margin: auto;
+  text-decoration: none;
+  width: fit-content;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
