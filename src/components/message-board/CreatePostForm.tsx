@@ -5,6 +5,7 @@ import UserContext from "../../context/UserContext";
 import MessageBoardPost from "../../models/MessageBoardPost";
 import { getFormattedDateAndTime } from "../../functions/functions";
 import { postMessageToBoard } from "../../services/VetApiService";
+import cleanData from "../../functions/sanitize";
 
 function CreatePostForm() {
   let { user } = useContext(UserContext);
@@ -25,8 +26,8 @@ function CreatePostForm() {
       dateTime: String(getFormattedDateAndTime(new Date())),
       board: String(currentBoard),
       user: String(user.firstName) + " " + String(user.lastName),
-      title: String(title),
-      message: String(message),
+      title: cleanData(String(title)),
+      message: cleanData(String(message)),
       replies: [],
     };
     postMessageToBoard(newPost);

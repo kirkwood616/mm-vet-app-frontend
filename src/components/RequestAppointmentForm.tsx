@@ -8,6 +8,7 @@ import {
 import AppointmentRequest from "../models/AppointmentRequest";
 import { sendAppointmentRequest } from "../services/VetApiService";
 import { useNavigate } from "react-router-dom";
+import cleanData from "../functions/sanitize";
 
 function RequestAptForm() {
   let { user } = useContext(UserContext);
@@ -26,7 +27,7 @@ function RequestAptForm() {
       userPet: petName,
       requestDate: String(getFormattedDateFromInput(requestDate)),
       requestTime: String(getFormattedTimeFromInput(requestTime)),
-      requestReason: requestReason,
+      requestReason: cleanData(requestReason),
     };
     sendAppointmentRequest(newRequest);
     setPetName("");

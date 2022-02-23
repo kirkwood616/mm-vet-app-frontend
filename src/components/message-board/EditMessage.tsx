@@ -8,6 +8,7 @@ import {
 } from "../../services/VetApiService";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import cleanData from "../../functions/sanitize";
 
 function EditMessage() {
   let { user } = useContext(UserContext);
@@ -30,7 +31,7 @@ function EditMessage() {
         board: postToEdit.board,
         user: postToEdit.user,
         title: postToEdit.title,
-        message: String(message),
+        message: cleanData(String(message)),
         replies: postToEdit.replies,
       };
       updateMessageFromBoard(postId.id!, newPostEdit);
