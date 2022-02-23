@@ -9,6 +9,7 @@
 .RequestAppointment .requestContainer {
   background-color: var(--light-green);
   border-radius: 1rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
   padding: 2rem;
   text-align: center;
   max-width: 50%;
@@ -29,7 +30,7 @@
 }
 
 .RequestAppointment h1,
-h4 {
+.RequestAppointment h4 {
   text-align: center;
   margin: 1rem;
 }
