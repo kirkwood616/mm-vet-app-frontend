@@ -64,9 +64,6 @@ function UserProfile() {
             </tr>
           </tbody>
         </table>
-        <span className="updateLink">
-          <Link to={"/"}>Update Your Contact Info</Link>
-        </span>
       </div>
       <br />
     </div>
