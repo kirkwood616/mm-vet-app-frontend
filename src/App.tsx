@@ -15,16 +15,7 @@ import YourPets from "./components/YourPets";
 import HomeMenu from "./components/HomeMenu";
 import LogIn from "./components/LogIn";
 import Footer from "./components/Footer";
-import PetWellness from "./components/PetWellness";
-import Dentistry from "./components/Dentistry";
-import Vaccinations from "./components/Vaccinations";
-import Surgery from "./components/Surgery";
-import Microchipping from "./components/Microchipping";
-import Grooming from "./components/Grooming";
 import PetImageUpload from "./components/PetImageUpload";
-import ParasiteControl from "./components/ParasiteControl";
-import DietNutrition from "./components/DietNutrition";
-import SpayNeuter from "./components/SpayNeuter";
 import MessageBoardHome from "./components/message-board/MessageBoardHome";
 import GeneralBoard from "./components/message-board/GeneralBoard";
 import EditMessage from "./components/message-board/EditMessage";
@@ -61,17 +52,8 @@ function App() {
             <Route path="/home-menu" element={<HomeMenu />} />
             <Route path="/log-in" element={<LogIn />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/services/service" element={<SingleService />} />
+            <Route path="/services/:route" element={<SingleService />} />
             <Route path="/your-pets" element={<YourPets />} />
-            <Route path="/pet-wellness" element={<PetWellness />} />
-            <Route path="/dentistry" element={<Dentistry />} />
-            <Route path="/diet-nutrition" element={<DietNutrition />} />
-            <Route path="/vaccinations" element={<Vaccinations />} />
-            <Route path="/spay-neuter" element={<SpayNeuter />} />
-            <Route path="/surgery" element={<Surgery />} />
-            <Route path="/parasite-control" element={<ParasiteControl />} />
-            <Route path="/microchipping" element={<Microchipping />} />
-            <Route path="/grooming" element={<Grooming />} />
             <Route path="/message-board" element={<MessageBoardHome />} />
             <Route path="/message-board/general" element={<GeneralBoard />} />
             <Route path="/message-board/edit/:id" element={<EditMessage />} />
