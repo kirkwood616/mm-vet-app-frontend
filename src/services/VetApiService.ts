@@ -64,12 +64,9 @@ export function sendAppointmentRequest(
 
 // GET
 export function fetchServices(): Promise<Service[]> {
-  return (
-    axios
-      // .get(`https://us-central1-mm-vet-app.cloudfunctions.net/api/services`)
-      .get(`http://localhost:5001/mm-vet-app/us-central1/api/services`)
-      .then((res) => res.data)
-  );
+  return axios
+    .get(`https://us-central1-mm-vet-app.cloudfunctions.net/api/services`)
+    .then((res) => res.data);
 }
 
 /////////////// MESSAGE BOARD ///////////////
