@@ -11,7 +11,6 @@ function PetProfile() {
   let i = userPets.findIndex((pet) => pet._id === id);
   const [isActive, setIsActive] = useState(false);
   const navigate = useNavigate();
-  console.log(userPets[i].dateOfBirth);
 
   return (
     <div className="PetProfile">

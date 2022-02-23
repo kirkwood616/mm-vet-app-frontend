@@ -9,7 +9,6 @@ function SingleService() {
   let { route } = useParams();
   let { services } = useContext(UserContext);
   let service = services.find((service) => service.serviceRoute === route);
-  console.log(route);
 
   return (
     <div className="SingleService">
