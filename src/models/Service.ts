@@ -1,5 +1,6 @@
 interface Service {
   _id?: String;
+  serviceId: Number;
   serviceName: String;
   serviceRoute: String;
   serviceImagePath: String;
