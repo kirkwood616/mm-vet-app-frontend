@@ -1,11 +1,3 @@
-:root {
-  --white: white;
-  --black: black;
-  --light-green: #ebf6f1;
-  --medium-green: #dfebd3;
-  --dark-green: #9da653;
-}
-
 *,
 *::before,
 *::after {
@@ -13,113 +5,114 @@
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-
-/* *,*::before,*::after {
-  font-family: 'Open Sans', sans-serif;
-}
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'); */
-
-/* font-family: 'Fira Sans', sans-serif;
-  font-family: 'Lexend Exa', sans-serif;
-  font-family: 'Pacifico', cursive;
-  font-family: 'Poppins', sans-serif;
-  font-family: 'Cookie', cursive; */
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Lexend+Exa:wght@200;500;700&family=Pacifico&family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cookie&family=Fira+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Lexend+Exa:wght@200;500;700&family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400&display=swap");
 
-/* All Cards in Services Component */
+.Services {
+  margin-bottom: 2rem;
+}
 
 .servicesHeader {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1rem;
-  max-width: 600px;
   background-color: var(--light-green);
   border: none;
   border-radius: 1rem;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  margin: 0 auto 1rem auto;
+  max-width: 750px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.cards-container {
-  /* display: grid; */
+.servicesHeader > h1 {
+  margin-bottom: 0.5rem;
+}
+
+.servicesHeader > p {
+  margin: 0.5rem;
+}
+
+.cardsContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  /* height: 100%; */
   padding: 0.8rem;
-  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
   gap: 1rem;
 }
 
-.card {
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: space-between;
-  /* vertical-align: middle; */
-  overflow: hidden;
-  --padding: 1rem;
-  border: none;
-  border-radius: 1rem;
-  background-color: var(--light-green);
-  max-width: 300px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: all 0.1s ease-in;
-}
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+.card > h2 {
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
-.card-header {
+.card {
+  background-color: var(--light-green);
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  overflow: hidden;
+  --padding: 1rem;
+  transition: all 0.1s ease-in;
+  display: flex;
+  flex-direction: column;
+}
+.card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.03);
+}
+
+.cardHeader {
   font-size: 1.5rem;
   padding: var(--padding);
   padding-bottom: 0;
 }
-.card-header.card-image {
+
+.cardHeader.cardImage {
   overflow: hidden;
   padding: 0;
 }
-.card-header.card-image > img {
-  display: block;
-  width: 100%;
-  max-height: 200px;
+
+.cardHeader.cardImage > img {
   aspect-ratio: 16/9;
+  display: block;
+  max-height: 200px;
   object-fit: cover;
   object-position: center;
+  width: 100%;
 }
 
-.card-body {
+.cardBody {
   font-size: 1rem;
   padding: 0 var(--padding);
 }
 
-.card-footer {
-  margin-top: 1rem;
+.cardFooter {
+  margin-top: auto;
   padding: var(--padding);
-  /* padding-top: 0; */
   display: flex;
   justify-content: center;
-  align-items: flex-end;
 }
 
-.card-footer .readMore {
+.cardFooter .readMore {
   background-color: var(--dark-green);
-  color: var(--white);
   border: 1px solid var(--dark-green);
-  font-size: 1rem;
-  text-decoration: none;
-  padding: 0.5em 0.75em;
   border-radius: 0.25em;
+  color: var(--white);
   cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5em 0.75em;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  width: 150px;
 }
 
-.card-footer .readMore:hover,
-.readMore:focus {
+.cardFooter .readMore:hover {
   background-color: var(--medium-green);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   color: #9da653;
+  transform: scale(1.05);
 }
