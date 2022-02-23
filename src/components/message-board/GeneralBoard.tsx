@@ -4,6 +4,7 @@ import { fetchGeneralPosts } from "../../services/VetApiService";
 import CreatePostForm from "./CreatePostForm";
 import "./GeneralBoard.css";
 import { useNavigate } from "react-router-dom";
+import cleanData from "../../functions/sanitize";
 
 function GeneralBoard() {
   let { generalMessageBoard } = useContext(UserContext);
@@ -24,11 +25,11 @@ function GeneralBoard() {
       <div className="generalPostsContainer">
         {generalMessageBoard.map((post, index) => (
           <div className="generalPost" key={index}>
-            <h2>{post.title}</h2>
+            <h2>{cleanData(post.title)}</h2>
             <p className="userDateTime">
-              by {post.user} on {post.dateTime}
+              by {cleanData(post.user)} on {cleanData(post.dateTime)}
             </p>
-            <p className="postMessage">{post.message}</p>
+            <p className="postMessage">{cleanData(post.message)}</p>
             {/* <div className="replyButtonContainer">
               <button
                 className="postControlButton replyButton"
