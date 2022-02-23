@@ -1,11 +1,16 @@
 import "./LogIn.css";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import UserContext from "../context/UserContext";
 import LandingInfo from "./LandingInfo";
 
 function LogIn() {
   let { handleLogIn } = useContext(UserContext);
   let { handleEmail } = useContext(UserContext);
+  let { handleServices } = useContext(UserContext);
+
+  useEffect(() => {
+    handleServices();
+  });
 
   return (
     <div className="LogIn">
