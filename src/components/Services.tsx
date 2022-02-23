@@ -6,18 +6,20 @@ function Services() {
     <div className="Services">
       <br />
       <div className="servicesHeader">
+        <Link to={"/services/service"}>SERVICE PAGE</Link>
         <h1>Our Services</h1>
         <br />
         <p>
           We understand that a pet is part of the family. Our goal is to provide
           each one with a long, healthy and happy life. The day your pet enters
-          our hospital it becomes part of our family too. 
-          </p>
-          <br />
-          <p>
-          From new puppy and kittens to graying seniors, we are there every step of the way. 
-          Our comprehensive suite of veterinary services ensures that every aspect
-          of their well-being is given the excellent care they deserve.
+          our hospital it becomes part of our family too.
+        </p>
+        <br />
+        <p>
+          From new puppy and kittens to graying seniors, we are there every step
+          of the way. Our comprehensive suite of veterinary services ensures
+          that every aspect of their well-being is given the excellent care they
+          deserve.
         </p>
         <br />
       </div>
@@ -51,8 +53,8 @@ function Services() {
             <h1>Dentistry</h1>
             <br />
             <p>
-              Why pet's dental care is very important, the fact is that by
-              age three, 80% of dogs and 70% of cats have some evidence of
+              Why pet's dental care is very important, the fact is that by age
+              three, 80% of dogs and 70% of cats have some evidence of
               periodontal disease. Periodic dental exams help maintain proper
               oral hygiene and prevent future problems.
             </p>
