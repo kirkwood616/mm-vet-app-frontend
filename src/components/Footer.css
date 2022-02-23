@@ -28,7 +28,7 @@
   height: 2rem;
 }
 
-.Footer h3 {
+.Footer > h3 {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 1.25rem;
@@ -62,11 +62,15 @@
 }
 
 @media only screen and (max-width: 480px) {
-  .Footer h3 {
-    font-size: 1.75rem;
+  .Footer > h3 {
+    font-size: 1.5rem;
   }
 
   .Footer .info {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+  }
+
+  .Footer .icon {
+    height: 1.5rem;
   }
 }
